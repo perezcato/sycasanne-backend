@@ -12,12 +12,5 @@ class ESchoolResource extends Model
 
     protected $table = 'ConfigDb';
 
-
-    public static function setDatabaseConnection($config = [])
-    {
-        if($config['host'] && $config['db'] && $config['username'] && $config['password']){
-            
-        }
-        return false;
-    }
+    public $timestamps = false;
 }

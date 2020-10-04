@@ -1,11 +1,11 @@
 <?php
 
-namespace Database\Factories\Config;
+namespace Database\Factories\Configuration;
 
 use App\Models\Configuration\ESchoolResource;
 use Illuminate\Database\Eloquent\Factories\Factory;
 
-class ConfigFactory extends Factory
+class ESchoolResourceFactory extends Factory
 {
     /**
      * The name of the factory's corresponding model.
@@ -19,10 +19,10 @@ class ConfigFactory extends Factory
      *
      * @return array
      */
-    public function definition()
+    public function definition(): array
     {
         return [
-            'TheCode' => $this->faker->unique()->name,
+            'TheCode' => $this->faker->unique()->word,
             'CompanyName' => $this->faker->company,
             'LogoUrl' => $this->faker->imageUrl(600,600),
             'dbHost' => 'localhost',

@@ -2,11 +2,10 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="c9df5a71-8ba1-4d96-8e7f-f05450f24239" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/dataSources.local.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources.local.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/dataSources.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/Models/Configuration/ESchoolResource.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Models/Configuration/ESchoolResource.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/config/database.php" beforeDir="false" afterPath="$PROJECT_DIR$/config/database.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/database/factories/Config/ConfigFactory.php" beforeDir="false" afterPath="$PROJECT_DIR$/database/factories/Config/ConfigFactory.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/database/seeders/DatabaseSeeder.php" beforeDir="false" afterPath="$PROJECT_DIR$/database/seeders/DatabaseSeeder.php" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -177,7 +176,7 @@
       <workItem from="1601594619171" duration="371000" />
       <workItem from="1601615847216" duration="16000" />
       <workItem from="1601800002325" duration="6850000" />
-      <workItem from="1601826489430" duration="1827000" />
+      <workItem from="1601826489430" duration="4596000" />
     </task>
     <servers />
   </component>
@@ -202,22 +201,22 @@
       <screen x="0" y="24" width="1366" height="744" />
     </state>
     <state x="482" y="211" key="FileChooserDialogImpl/0.24.1366.744@0.24.1366.744" timestamp="1601808354962" />
-    <state width="909" height="341" key="GridCell.Tab.0.bottom" timestamp="1601827713605">
+    <state width="909" height="252" key="GridCell.Tab.0.bottom" timestamp="1601848363178">
       <screen x="0" y="24" width="1366" height="744" />
     </state>
-    <state width="909" height="341" key="GridCell.Tab.0.bottom/0.24.1366.744@0.24.1366.744" timestamp="1601827713605" />
-    <state width="909" height="341" key="GridCell.Tab.0.center" timestamp="1601827713605">
+    <state width="909" height="252" key="GridCell.Tab.0.bottom/0.24.1366.744@0.24.1366.744" timestamp="1601848363178" />
+    <state width="909" height="252" key="GridCell.Tab.0.center" timestamp="1601848363176">
       <screen x="0" y="24" width="1366" height="744" />
     </state>
-    <state width="909" height="341" key="GridCell.Tab.0.center/0.24.1366.744@0.24.1366.744" timestamp="1601827713605" />
-    <state width="909" height="341" key="GridCell.Tab.0.left" timestamp="1601827713604">
+    <state width="909" height="252" key="GridCell.Tab.0.center/0.24.1366.744@0.24.1366.744" timestamp="1601848363176" />
+    <state width="909" height="252" key="GridCell.Tab.0.left" timestamp="1601848363174">
       <screen x="0" y="24" width="1366" height="744" />
     </state>
-    <state width="909" height="341" key="GridCell.Tab.0.left/0.24.1366.744@0.24.1366.744" timestamp="1601827713604" />
-    <state width="909" height="341" key="GridCell.Tab.0.right" timestamp="1601827713605">
+    <state width="909" height="252" key="GridCell.Tab.0.left/0.24.1366.744@0.24.1366.744" timestamp="1601848363174" />
+    <state width="909" height="252" key="GridCell.Tab.0.right" timestamp="1601848363177">
       <screen x="0" y="24" width="1366" height="744" />
     </state>
-    <state width="909" height="341" key="GridCell.Tab.0.right/0.24.1366.744@0.24.1366.744" timestamp="1601827713605" />
+    <state width="909" height="252" key="GridCell.Tab.0.right/0.24.1366.744@0.24.1366.744" timestamp="1601848363177" />
     <state x="550" y="99" width="522" height="618" key="com.intellij.database.view.ui.AbstractDbRefactoringDialog" timestamp="1601827673013">
       <screen x="0" y="24" width="1366" height="744" />
     </state>
