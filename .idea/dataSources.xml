@@ -7,5 +7,11 @@
       <jdbc-driver>com.mysql.cj.jdbc.Driver</jdbc-driver>
       <jdbc-url>jdbc:mysql://107.180.51.38:3306/infosourcedb</jdbc-url>
     </data-source>
+    <data-source source="LOCAL" name="sycasane-local" uuid="6ced678b-29b7-437d-951d-9045dfae3bd3">
+      <driver-ref>mysql.8</driver-ref>
+      <synchronize>true</synchronize>
+      <jdbc-driver>com.mysql.cj.jdbc.Driver</jdbc-driver>
+      <jdbc-url>jdbc:mysql://localhost:3306/sycanne</jdbc-url>
+    </data-source>
   </component>
 </project>
