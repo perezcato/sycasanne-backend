@@ -3,9 +3,6 @@
   <component name="ChangeListManager">
     <list default="true" id="c9df5a71-8ba1-4d96-8e7f-f05450f24239" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Models/Configuration/ESchoolResource.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Models/Configuration/ESchoolResource.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/database/factories/Config/ConfigFactory.php" beforeDir="false" afterPath="$PROJECT_DIR$/database/factories/Config/ConfigFactory.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/database/seeders/DatabaseSeeder.php" beforeDir="false" afterPath="$PROJECT_DIR$/database/seeders/DatabaseSeeder.php" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -176,7 +173,8 @@
       <workItem from="1601594619171" duration="371000" />
       <workItem from="1601615847216" duration="16000" />
       <workItem from="1601800002325" duration="6850000" />
-      <workItem from="1601826489430" duration="4596000" />
+      <workItem from="1601826489430" duration="4813000" />
+      <workItem from="1601860421781" duration="11000" />
     </task>
     <servers />
   </component>
