@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="DataSourceManagerImpl" format="xml" multifile-model="true">
+    <data-source source="LOCAL" name="sycasane" uuid="5562a338-1358-4d3e-9bd2-05401cc4252e">
+      <driver-ref>mysql.8</driver-ref>
+      <synchronize>true</synchronize>
+      <jdbc-driver>com.mysql.cj.jdbc.Driver</jdbc-driver>
+      <jdbc-url>jdbc:mysql://107.180.51.38:3306/infosourcedb</jdbc-url>
+    </data-source>
+    <data-source source="LOCAL" name="demo_database" uuid="0b505bba-d8ad-4cbe-b2ed-43a0a6454661">
+      <driver-ref>mysql.8</driver-ref>
+      <synchronize>true</synchronize>
+      <jdbc-driver>com.mysql.cj.jdbc.Driver</jdbc-driver>
+      <jdbc-url>jdbc:mysql://107.180.51.38:3306/infosourcedb</jdbc-url>
+    </data-source>
+  </component>
+</project>
