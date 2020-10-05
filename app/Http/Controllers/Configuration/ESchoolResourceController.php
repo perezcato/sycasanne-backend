@@ -11,8 +11,9 @@ class ESchoolResourceController extends Controller
 {
     public function index(ESchoolResourceRequest $request)
     {
-        $school = ESchoolResource::where('code',$request->input('code'))
-            ->select('SchoolLogo','SchoolName','Index')->get();
+        $school = ESchoolResource::where('TheCode',$request->input('code'))
+            ->select('MyIndex','CompanyLogo','CompanyName','LogoURL')
+            ->get();
 
         return response()->json([
             'data' => $school

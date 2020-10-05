@@ -9,5 +9,5 @@ class ESchoolResource extends Model
 {
     use HasFactory;
 
-    protected $table = 'ESchoolResource';
+    protected $table = 'ConfigDb';
 }
