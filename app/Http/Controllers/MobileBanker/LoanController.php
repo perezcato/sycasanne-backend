@@ -12,7 +12,7 @@ class LoanController extends Controller
     public function index(Request $request)
     {
         $loan = $request->input('data.loan_query');
-        $loan = is_numeric($loan)? Loan::select('LApplicIndex','ClientName','ClientRef','Amt')
+        $loan = is_numeric($loan) ? Loan::select('LApplicIndex','ClientName','ClientRef','Amt')
             ->where('LApplicIndex',$loan)->get() :
             Loan::select('LApplicIndex','ClientName','ClientRef','Amt')
                 ->where('ClientName','LIKE','%'.$loan.'%')->get();

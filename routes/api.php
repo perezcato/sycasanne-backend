@@ -8,6 +8,10 @@ use App\Http\Controllers\Auth\LoginController;
 Route::post('/config',[ESchoolResourceController::class,'index'])
     ->name('config.index');
 
+Route::get('/test', function (){
+    return 'done';
+});
+
 Route::middleware(['db'])->group(function(){
     Route::post('/login',[LoginController::class,'login']);
     Route::post('/loans',[LoanController::class, 'index']);
