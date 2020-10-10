@@ -19,43 +19,7 @@
     <select />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="c9df5a71-8ba1-4d96-8e7f-f05450f24239" name="Default Changelist" comment="modified the helpers function for the database connection">
-      <change afterPath="$PROJECT_DIR$/.idea/dataSources/0b505bba-d8ad-4cbe-b2ed-43a0a6454661/storage_v2/_src_/schema/infosourcedb.h7AnKQ.zip" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/Http/Controllers/MobileBanking/LoanController.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/Models/MobileBanking/Loan.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/idea/codeStyles/codeStyleConfig.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/idea/dataSources.local.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/idea/dataSources.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/idea/dataSources/208dc211-f70c-4bad-b950-60fea1654a96/storage_v2/_src_/schema/infosourcedb.h7AnKQ.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/idea/dataSources/5562a338-1358-4d3e-9bd2-05401cc4252e.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/idea/dataSources/5562a338-1358-4d3e-9bd2-05401cc4252e/storage_v2/_src_/schema/information_schema.FNRwLQ.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/idea/dataSources/5562a338-1358-4d3e-9bd2-05401cc4252e/storage_v2/_src_/schema/infosourcedb.h7AnKQ.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/idea/dataSources/5562a338-1358-4d3e-9bd2-05401cc4252e/storage_v2/_src_/schema/infosourcedb.h7AnKQ.zip" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/idea/modules.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/idea/php.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/idea/phpunit.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/idea/sycasanne-backend.iml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/idea/vcs.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/idea/workspace.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/package-lock.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/dataSources.local.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources.local.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/dataSources.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/dataSources/208dc211-f70c-4bad-b950-60fea1654a96.xml" beforeDir="false" afterPath="$PROJECT_DIR$/idea/dataSources/208dc211-f70c-4bad-b950-60fea1654a96.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/dataSources/208dc211-f70c-4bad-b950-60fea1654a96/storage_v2/_src_/schema/infosourcedb.h7AnKQ.meta" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources/0b505bba-d8ad-4cbe-b2ed-43a0a6454661/storage_v2/_src_/schema/infosourcedb.h7AnKQ.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/dataSources/208dc211-f70c-4bad-b950-60fea1654a96/storage_v2/_src_/schema/infosourcedb.h7AnKQ.zip" beforeDir="false" afterPath="$PROJECT_DIR$/idea/dataSources/208dc211-f70c-4bad-b950-60fea1654a96/storage_v2/_src_/schema/infosourcedb.h7AnKQ.zip" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/dataSources/6ced678b-29b7-437d-951d-9045dfae3bd3.xml" beforeDir="false" afterPath="$PROJECT_DIR$/idea/dataSources/6ced678b-29b7-437d-951d-9045dfae3bd3.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/dataSources/6ced678b-29b7-437d-951d-9045dfae3bd3/storage_v2/_src_/schema/information_schema.FNRwLQ.meta" beforeDir="false" afterPath="$PROJECT_DIR$/idea/dataSources/208dc211-f70c-4bad-b950-60fea1654a96/storage_v2/_src_/schema/information_schema.FNRwLQ.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/dataSources/6ced678b-29b7-437d-951d-9045dfae3bd3/storage_v2/_src_/schema/sycanne.4dqHlw.meta" beforeDir="false" afterPath="$PROJECT_DIR$/idea/dataSources/6ced678b-29b7-437d-951d-9045dfae3bd3/storage_v2/_src_/schema/sycanne.4dqHlw.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/dataSources/6ced678b-29b7-437d-951d-9045dfae3bd3/storage_v2/_src_/schema/sycanne.4dqHlw.zip" beforeDir="false" afterPath="$PROJECT_DIR$/idea/dataSources/6ced678b-29b7-437d-951d-9045dfae3bd3/storage_v2/_src_/schema/sycanne.4dqHlw.zip" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/phpunit.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/phpunit.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/sycasanne-backend.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/sycasanne-backend.iml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Http/Kernel.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Kernel.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Http/Resources/Config/ConfigResource.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Resources/Config/ConfigResource.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Providers/RouteServiceProvider.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Providers/RouteServiceProvider.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/server.php" beforeDir="false" />
-    </list>
+    <list default="true" id="c9df5a71-8ba1-4d96-8e7f-f05450f24239" name="Default Changelist" comment="modified the helpers function for the database connection" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -228,7 +192,7 @@
       <workItem from="1601826489430" duration="4813000" />
       <workItem from="1601860421781" duration="11000" />
       <workItem from="1601952866640" duration="10000" />
-      <workItem from="1602194625641" duration="1689000" />
+      <workItem from="1602194625641" duration="2341000" />
     </task>
     <task id="LOCAL-00001" summary="done resolving the conflicts">
       <created>1601933280637</created>
@@ -244,7 +208,14 @@
       <option name="project" value="LOCAL" />
       <updated>1601952390127</updated>
     </task>
-    <option name="localTasksCounter" value="3" />
+    <task id="LOCAL-00003" summary="done with login details">
+      <created>1602310500627</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1602310500627</updated>
+    </task>
+    <option name="localTasksCounter" value="4" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -266,7 +237,8 @@
     <MESSAGE value="Merge branch 'master' of github.com:perezcato/sycasanne-backend&#10;&#10;# Conflicts:&#10;#&#9;.idea/workspace.xml" />
     <MESSAGE value="done resolving the conflicts" />
     <MESSAGE value="modified the helpers function for the database connection" />
-    <option name="LAST_COMMIT_MESSAGE" value="modified the helpers function for the database connection" />
+    <MESSAGE value="done with login details" />
+    <option name="LAST_COMMIT_MESSAGE" value="done with login details" />
   </component>
   <component name="WindowStateProjectService">
     <state x="275" y="46" width="800" height="665" key="#com.intellij.execution.impl.EditConfigurationsDialog" timestamp="1601827623917">
