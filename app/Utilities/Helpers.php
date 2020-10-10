@@ -6,11 +6,11 @@ use Illuminate\Support\Facades\Schema;
 
 if(!function_exists('connectToDatabaseFromRequest')){
     function connectToDatabaseFromRequest(Request $request){
-        $dbHost = $request->header('dbHost');
-        $dbPort = $request->header('dbPort');
-        $dbUsername = $request->header('dbUsername');
-        $dbPassword = $request->header('dbPassword');
-        $dbName = $request->header('dbName');
+        $dbHost = $request->input('database.host');
+        $dbPort = $request->input('database.port');
+        $dbUsername = $request->input('database.username');
+        $dbPassword = $request->input('database.password');
+        $dbName = $request->header('database.name');
 
         if($dbHost && $dbPort && $dbUsername && $dbPassword && $dbName){
             config([

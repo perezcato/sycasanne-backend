@@ -19,7 +19,11 @@
     <select />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="c9df5a71-8ba1-4d96-8e7f-f05450f24239" name="Default Changelist" comment="modified the helpers function for the database connection" />
+    <list default="true" id="c9df5a71-8ba1-4d96-8e7f-f05450f24239" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/MobileBanker/LoanController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/MobileBanker/LoanController.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/routes/api.php" beforeDir="false" afterPath="$PROJECT_DIR$/routes/api.php" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -152,6 +156,7 @@
     </include_path>
   </component>
   <component name="ProjectId" id="1iHUSABPzRB7nN7xiWAZSFzy5hQ" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
@@ -191,31 +196,7 @@
       <workItem from="1601800002325" duration="6850000" />
       <workItem from="1601826489430" duration="4813000" />
       <workItem from="1601860421781" duration="11000" />
-      <workItem from="1601952866640" duration="10000" />
-      <workItem from="1602194625641" duration="2341000" />
     </task>
-    <task id="LOCAL-00001" summary="done resolving the conflicts">
-      <created>1601933280637</created>
-      <option name="number" value="00001" />
-      <option name="presentableId" value="LOCAL-00001" />
-      <option name="project" value="LOCAL" />
-      <updated>1601933280637</updated>
-    </task>
-    <task id="LOCAL-00002" summary="modified the helpers function for the database connection">
-      <created>1601952390127</created>
-      <option name="number" value="00002" />
-      <option name="presentableId" value="LOCAL-00002" />
-      <option name="project" value="LOCAL" />
-      <updated>1601952390127</updated>
-    </task>
-    <task id="LOCAL-00003" summary="done with login details">
-      <created>1602310500627</created>
-      <option name="number" value="00003" />
-      <option name="presentableId" value="LOCAL-00003" />
-      <option name="project" value="LOCAL" />
-      <updated>1602310500627</updated>
-    </task>
-    <option name="localTasksCounter" value="4" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -232,13 +213,6 @@
       </map>
     </option>
     <option name="oldMeFiltersMigrated" value="true" />
-  </component>
-  <component name="VcsManagerConfiguration">
-    <MESSAGE value="Merge branch 'master' of github.com:perezcato/sycasanne-backend&#10;&#10;# Conflicts:&#10;#&#9;.idea/workspace.xml" />
-    <MESSAGE value="done resolving the conflicts" />
-    <MESSAGE value="modified the helpers function for the database connection" />
-    <MESSAGE value="done with login details" />
-    <option name="LAST_COMMIT_MESSAGE" value="done with login details" />
   </component>
   <component name="WindowStateProjectService">
     <state x="275" y="46" width="800" height="665" key="#com.intellij.execution.impl.EditConfigurationsDialog" timestamp="1601827623917">
@@ -274,14 +248,6 @@
       <screen x="0" y="24" width="1366" height="744" />
     </state>
     <state width="909" height="252" key="GridCell.Tab.0.right/0.24.1366.744@0.24.1366.744" timestamp="1601848363177" />
-    <state width="239" height="472" key="HiddenNamespacesPopup" timestamp="1602195254305">
-      <screen x="0" y="24" width="1366" height="744" />
-    </state>
-    <state width="239" height="472" key="HiddenNamespacesPopup/0.24.1366.744@0.24.1366.744" timestamp="1602195254305" />
-    <state x="378" y="191" width="600" height="410" key="Vcs.Push.Dialog.v2" timestamp="1601952401955">
-      <screen x="0" y="24" width="1366" height="744" />
-    </state>
-    <state x="378" y="191" width="600" height="410" key="Vcs.Push.Dialog.v2/0.24.1366.744@0.24.1366.744" timestamp="1601952401955" />
     <state x="550" y="99" width="522" height="618" key="com.intellij.database.view.ui.AbstractDbRefactoringDialog" timestamp="1601827673013">
       <screen x="0" y="24" width="1366" height="744" />
     </state>
