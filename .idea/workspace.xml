@@ -21,6 +21,8 @@
   <component name="ChangeListManager">
     <list default="true" id="c9df5a71-8ba1-4d96-8e7f-f05450f24239" name="Default Changelist" comment="modified the helpers function for the database connection">
       <change afterPath="$PROJECT_DIR$/.idea/dataSources/0b505bba-d8ad-4cbe-b2ed-43a0a6454661/storage_v2/_src_/schema/infosourcedb.h7AnKQ.zip" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/Http/Controllers/MobileBanking/LoanController.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/Models/MobileBanking/Loan.php" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/idea/codeStyles/codeStyleConfig.xml" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/idea/dataSources.local.xml" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/idea/dataSources.xml" afterDir="false" />
@@ -226,7 +228,7 @@
       <workItem from="1601826489430" duration="4813000" />
       <workItem from="1601860421781" duration="11000" />
       <workItem from="1601952866640" duration="10000" />
-      <workItem from="1602194625641" duration="597000" />
+      <workItem from="1602194625641" duration="1689000" />
     </task>
     <task id="LOCAL-00001" summary="done resolving the conflicts">
       <created>1601933280637</created>
@@ -300,10 +302,10 @@
       <screen x="0" y="24" width="1366" height="744" />
     </state>
     <state width="909" height="252" key="GridCell.Tab.0.right/0.24.1366.744@0.24.1366.744" timestamp="1601848363177" />
-    <state width="239" height="472" key="HiddenNamespacesPopup" timestamp="1602194718158">
+    <state width="239" height="472" key="HiddenNamespacesPopup" timestamp="1602195254305">
       <screen x="0" y="24" width="1366" height="744" />
     </state>
-    <state width="239" height="472" key="HiddenNamespacesPopup/0.24.1366.744@0.24.1366.744" timestamp="1602194718158" />
+    <state width="239" height="472" key="HiddenNamespacesPopup/0.24.1366.744@0.24.1366.744" timestamp="1602195254305" />
     <state x="378" y="191" width="600" height="410" key="Vcs.Push.Dialog.v2" timestamp="1601952401955">
       <screen x="0" y="24" width="1366" height="744" />
     </state>
