@@ -10,5 +10,11 @@ class LoanRepayment extends Model
     use HasFactory;
 
     protected $connection = 'company_database';
-    protected $table = 'LoanRepayment';
+    protected $table = 'loanrepaymentapi';
+
+    protected $fillable = [
+        'LoanRef','ReAmount','TheDate'
+    ];
+
+    public $timestamps = false;
 }
