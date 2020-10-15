@@ -28,7 +28,15 @@ class LoginController extends Controller
            ], Response::HTTP_NOT_FOUND);
        }
 
-       $userToken = $user->createToken($user->UserName);
+       $userToken = Str::uuid();
+
+       DB::connection('mysql')
+           ->table('user_tokens')
+           ->insert([
+               'user_id' => $user->getAttribute('MyIndex'),
+               'name' => $user->getAttribute('UserName'),
+               'token' => $userToken
+           ]);
 
         return response()->json([
             'id' => $user->getAttribute('MyIndex'),

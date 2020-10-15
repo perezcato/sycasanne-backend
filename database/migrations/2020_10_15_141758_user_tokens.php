@@ -15,6 +15,7 @@ class UserTokens extends Migration
     {
         Schema::create('user_tokens', function (Blueprint $table){
             $table->id();
+            $table->integer('user_id');
             $table->string('name');
             $table->string('token');
             $table->dateTime('expiry_date')->nullable();
