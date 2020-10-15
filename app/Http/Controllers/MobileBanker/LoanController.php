@@ -9,7 +9,7 @@ use Illuminate\Http\Request;
 
 class LoanController extends Controller
 {
-    public function index(Request $request)
+    public function index(Request $req41uest)
     {
         $loan = $request->input('data.loan_query');
         $loan = is_numeric($loan) ? Loan::select('LApplicIndex','ClientName','ClientRef','Amt')

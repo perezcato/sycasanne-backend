@@ -65,7 +65,7 @@ return [
         'company_database' => [
             'driver' => 'mysql',
             'url' => env('COMPANY_DATABASE_URL'),
-            'host' => env('COMPANY_DB_HOST', '192.168.2.100'),
+            'host' => env('COMPANY_DB_HOST', '41.218.225.78'),
             'port' => env('COMPANY_DB_PORT', '3306'),
             'database' => env('COMPANY_DB_DATABASE', 'welcome'),
             'username' => env('COMPANY_DB_USERNAME', 'usrwelcome'),

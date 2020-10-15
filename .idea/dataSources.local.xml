@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="dataSourceStorageLocal">
-    <data-source name="sycasane" uuid="208dc211-f70c-4bad-b950-60fea1654a96">
+    <data-source name="sycasane" uuid="5562a338-1358-4d3e-9bd2-05401cc4252e">
       <database-info product="" version="" jdbc-version="" driver-name="" driver-version="" dbms="MYSQL" exact-version="0" />
       <schema-mapping />
     </data-source>
-    <data-source name="sycasane-local" uuid="6ced678b-29b7-437d-951d-9045dfae3bd3">
+    <data-source name="demo_database" uuid="0b505bba-d8ad-4cbe-b2ed-43a0a6454661">
       <database-info product="" version="" jdbc-version="" driver-name="" driver-version="" dbms="MYSQL" exact-version="0" />
       <schema-mapping />
     </data-source>
