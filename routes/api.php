@@ -2,7 +2,7 @@
 
 use App\Http\Controllers\Configuration\ESchoolResourceController;
 use App\Http\Controllers\MobileBanker\LoanController;
-use App\Http\Controllers\MobileBanker\LoanRepayment;
+use App\Http\Controllers\MobileBanker\LoanRepaymentController;
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\Auth\LoginController;
 
@@ -16,5 +16,5 @@ Route::get('/test', function (){
 Route::middleware(['db'])->group(function(){
     Route::post('/login',[LoginController::class,'login']);
     Route::post('/loans',[LoanController::class, 'index']);
-    Route::post('/loans/repayment',[LoanRepayment::class, 'index']);
+    Route::post('/loans/repayment',[LoanRepaymentController::class, 'index']);
 });

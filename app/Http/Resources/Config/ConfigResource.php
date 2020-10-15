@@ -20,7 +20,7 @@ class ConfigResource extends JsonResource
             'code' => $this->TheCode,
             'company_details' => [
                 'name' => $this->CompanyName,
-                'logo_url' => asset('/storage/company_logos/'.$this->LogoURL),
+                'logo_url' => asset('/company_logos/'.$this->LogoURL),
             ],
             'database' => [
                 'host' => $this->dbHost,

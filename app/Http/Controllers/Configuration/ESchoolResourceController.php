@@ -13,7 +13,7 @@ class ESchoolResourceController extends Controller
 {
     public function index(ESchoolResourceRequest $request)
     {
-        $school = ESchoolResource::where('TheCode', $request->input('code'))
+        $school = ESchoolResource::where('TheCode', 'LIKE','%'.$request->input('code').'%')
             ->select('MyIndex', 'TheCode', 'CompanyName', 'CompanyLogo', 'LogoURL',
                 'dbHost', 'dbName', 'dbPort', 'dbUsername', 'dbPassword')->first();
 

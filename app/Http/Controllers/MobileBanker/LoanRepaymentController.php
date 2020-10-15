@@ -3,23 +3,18 @@
 namespace App\Http\Controllers\MobileBanker;
 
 use App\Http\Controllers\Controller;
+use App\Http\Requests\MobileBanker\LoanRepaymentRequest;
+use App\Models\MobileBanker\LoanRepayment;
 use App\Models\MobileBanker\LoanRepayment as Repayment;
 use Illuminate\Http\Request;
 use Illuminate\Http\Response;
 use Illuminate\Support\Facades\DB;
 use Illuminate\Support\Str;
 
-class LoanRepayment extends Controller
+class LoanRepaymentController extends Controller
 {
-    public function index(Request $request)
+    public function index(LoanRepaymentRequest $request)
     {
-        $this->validate($request,[
-           'data.loan_amount' => ['required'],
-           'data.loan_ref' => ['required'],
-           'data.client_ref' => ['required'],
-           'data.loan_description' => ['required'],
-        ]);
-
         $loanRepayment = Repayment::create([
             'LoanRef' => $request->input('data.loan_ref'),
             'ClientRef' => $request->input('data.client_ref'),
