@@ -13,11 +13,16 @@ class ESchoolResourceController extends Controller
 {
     public function index(ESchoolResourceRequest $request)
     {
-        $school = ESchoolResource::where('TheCode', 'LIKE','%'.$request->input('code').'%')
-            ->select('MyIndex', 'TheCode', 'CompanyName', 'CompanyLogo', 'LogoURL',
-                'dbHost', 'dbName', 'dbPort', 'dbUsername', 'dbPassword')->first();
+        $school = ESchoolResource::where('TheCode',$request->input('code'))
+            ->select('MyIndex', 'TheCode', 'CompanyName',
+                'CompanyLogo', 'LogoURL', 'dbHost',
+                'dbName', 'dbPort', 'dbUsername',
+                'dbPassword')->first();
 
         return $school ? (new ConfigResource($school))->response() :
-            response()->json(['message' => 'company not found'],Response::HTTP_NOT_FOUND);
+            response()->json([
+                'message' => 'company not found'
+            ],
+                Response::HTTP_NOT_FOUND);
     }
 }

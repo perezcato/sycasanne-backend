@@ -3,33 +3,32 @@
 namespace App\Http\Controllers\Auth;
 
 use App\Http\Controllers\Controller;
+use App\Http\Requests\Auth\LoginRequest;
 use App\Models\Auth\User;
 use Illuminate\Http\Request;
+use Illuminate\Http\Response;
 use Illuminate\Support\Facades\DB;
 use Illuminate\Support\Str;
 use Illuminate\Validation\ValidationException;
 
 class LoginController extends Controller
 {
-    public function login(Request $request)
+    public function login(LoginRequest $request)
     {
-        $this->validate($request, [
-           'data.username' => ['required'],
-            'data.password' => ['required']
-        ]);
 
         $password = md5($request->input('data.password'));
+
         $user = User::where('UserName', $request->input('data.username'))
             ->where('Userpass',$password)
             ->first();
 
        if(!$user){
-           throw ValidationException::withMessages([
-              'auth' => 'invalid username/password'
-           ]);
+           return response()->json([
+               'message' => 'Invalid username/password'
+           ], Response::HTTP_NOT_FOUND);
        }
 
-       $userToken = Str::uuid()->toString();
+       $userToken = $user->createToken($user->UserName);
 
         return response()->json([
             'id' => $user->getAttribute('MyIndex'),

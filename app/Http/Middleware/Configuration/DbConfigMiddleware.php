@@ -21,7 +21,7 @@ class DbConfigMiddleware
     {
         if(!$this->connectToDatabaseFromRequest($request)){
             return response()->json([
-                'error' => 'Database not set'
+                'error' => 'Invalid database credentials'
             ], Response::HTTP_BAD_REQUEST);
         }
         return $next($request);
@@ -29,7 +29,6 @@ class DbConfigMiddleware
 
     private function connectToDatabaseFromRequest(Request $request)
     {
-
         $dbHost = $request->input('database.host');
         $dbPort = $request->input('database.port');
         $dbUsername = $request->input('database.username');
@@ -44,7 +43,6 @@ class DbConfigMiddleware
                 'database.connections.company_database.username' => $dbUsername,
                 'database.connections.company_database.password' => $dbPassword,
             ]);
-
             DB::purge('company_database');
             DB::reconnect('company_database');
             Schema::connection('company_database')->getConnection()->reconnect();

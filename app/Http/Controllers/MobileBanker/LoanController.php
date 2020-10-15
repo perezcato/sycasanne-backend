@@ -12,21 +12,12 @@ class LoanController extends Controller
     public function index(Request $request)
     {
         $loan = $request->input('data.loan_query');
+
         $loan = is_numeric($loan) ? Loan::select('LApplicIndex','ClientName','ClientRef','Amt')
-            ->where('LApplicIndex',$loan)->get() :
+            ->where('LApplicIndex',$loan)->paginate(15) :
             Loan::select('LApplicIndex','ClientName','ClientRef','Amt')
-                ->where('ClientName','LIKE','%'.$loan.'%')->get();
+                ->where('ClientName','LIKE','%'.$loan.'%')->paginate(15);
 
         return LoanResource::collection($loan);
     }
-
-    public function show($load_id)
-    {
-        $loan = Loan::select('LApplicIndex','ClientName','ClientRef','Amt')
-            ->where('LApplicIndex',$load_id)
-            ->get();
-
-        return (new LoanResource($loan))->response();
-    }
-
 }
