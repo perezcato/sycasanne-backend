@@ -3,6 +3,7 @@
 namespace App\Http;
 
 use App\Http\Middleware\Configuration\DbConfigMiddleware;
+use App\Http\Middleware\Configuration\VerifyUserMiddleware;
 use Illuminate\Foundation\Http\Kernel as HttpKernel;
 
 class Kernel extends HttpKernel
@@ -63,6 +64,7 @@ class Kernel extends HttpKernel
         'signed' => \Illuminate\Routing\Middleware\ValidateSignature::class,
         'throttle' => \Illuminate\Routing\Middleware\ThrottleRequests::class,
         'verified' => \Illuminate\Auth\Middleware\EnsureEmailIsVerified::class,
-        'db' => DbConfigMiddleware::class
+        'db' => DbConfigMiddleware::class,
+        'user.token' => VerifyUserMiddleware::class,
     ];
 }

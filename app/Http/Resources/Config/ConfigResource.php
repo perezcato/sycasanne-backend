@@ -4,6 +4,7 @@ namespace App\Http\Resources\Config;
 
 use Illuminate\Http\Request;
 use Illuminate\Http\Resources\Json\JsonResource;
+use Illuminate\Support\Facades\Storage;
 
 class ConfigResource extends JsonResource
 {
@@ -20,8 +21,7 @@ class ConfigResource extends JsonResource
             'code' => $this->TheCode,
             'company_details' => [
                 'name' => $this->CompanyName,
-//                'logo' => $this->CompanyLogo,
-                'logo_url' => $this->LogoURL,
+                'logo_url' => asset('/company_logos/'.$this->LogoURL),
             ],
             'database' => [
                 'host' => $this->dbHost,
