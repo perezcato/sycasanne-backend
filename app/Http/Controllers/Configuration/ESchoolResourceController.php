@@ -7,6 +7,7 @@ use App\Http\Requests\Configuration\ESchoolResourceRequest;
 use App\Http\Resources\Config\ConfigResource;
 use App\Models\Configuration\ESchoolResource;
 use Illuminate\Http\Response;
+use Illuminate\Support\Str;
 
 class ESchoolResourceController extends Controller
 {
@@ -17,6 +18,8 @@ class ESchoolResourceController extends Controller
                 'CompanyLogo', 'LogoURL', 'dbHost',
                 'dbName', 'dbPort', 'dbUsername',
                 'dbPassword')->first();
+
+        $deviceUUID = Str::uuid();
 
         return $school ? (new ConfigResource($school))->response() :
             response()->json([
