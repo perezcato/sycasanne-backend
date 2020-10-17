@@ -4,12 +4,15 @@ namespace App\Http\Controllers\Auth;
 
 use App\Http\Controllers\Controller;
 use App\Http\Requests\Auth\LoginRequest;
+use App\Http\Requests\Auth\RegisterDeviceRequest;
+use App\Http\Requests\Auth\TokenRequest;
+use App\Http\Requests\Auth\VerifyTokenRequest;
+use App\Mail\ActivationToken;
+use App\Models\Auth\Device;
 use App\Models\User;
-use Carbon\Carbon;
-use Illuminate\Http\Request;
+use Illuminate\Http\JsonResponse;
 use Illuminate\Http\Response;
-use Illuminate\Support\Facades\DB;
-use Illuminate\Support\Str;
+use Illuminate\Support\Facades\Mail;
 
 class LoginController extends Controller
 {
@@ -39,24 +42,30 @@ class LoginController extends Controller
         ]);
     }
 
-    public function requestToken(Request $request)
+    public function requestToken(TokenRequest $request):JsonResponse
     {
-        $this->validate($request, [
-            'user_contact' => ['required']
-        ]);
+        $token = Device::generateToken($request->input('deviceUUID'));
+        Mail::to($request->input('contact'))->send(new ActivationToken($token));
 
-        $activationToken = Str::random(6);
-
-        $tokenExpiry = Carbon::tomorrow()->toDateTime();
-
-        DB::connection('mysql')->table('appdevices')
-            ->insert([
-                'DeviceToken' => $activationToken,
-                'DeviceTokenExpiry' => $tokenExpiry,
-                'DeviceTokenStatus' => 'valid'
-            ]);
-
+        return response()->json(['message' => 'Activation code sent']);
     }
+
+    public function registerDevice(RegisterDeviceRequest $request):JsonResponse
+    {
+        Device::register($request->input('deviceUUID'));
+
+        return response()->json(['message'=>'Device Registered'], Response::HTTP_OK);
+    }
+
+    public function verifyToken(VerifyTokenRequest $request):JsonResponse
+    {
+        $verify = Device::verifyToken($request->input('verification_token'));
+
+        return $verify ? response()->json(['message' => 'Device Verified'],Response::HTTP_OK) :
+            response()->json(['message' => 'Device Unverified'],Response::HTTP_NOT_FOUND);
+    }
+
+
 
 
 }

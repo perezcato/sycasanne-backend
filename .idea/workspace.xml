@@ -20,18 +20,13 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="1f9f6e39-96c3-4389-9742-6e0c5aa9f17b" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/app/Http/Requests/Auth/RegisterDeviceRequest.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/Http/Requests/Auth/TokenRequest.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/Models/Auth/Device.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/resources/views/mails/verify.blade.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/Http/Controllers/Auth/LoginController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/Auth/LoginController.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/MobileBanker/LoanController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/MobileBanker/LoanController.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Http/Middleware/Configuration/DbConfigMiddleware.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Middleware/Configuration/DbConfigMiddleware.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Models/Auth/User.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Models/Auth/User.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Models/Configuration/ESchoolResource.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Models/Configuration/ESchoolResource.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Models/MobileBanker/Loan.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Models/MobileBanker/Loan.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Models/MobileBanker/LoanRepayment.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Models/MobileBanker/LoanRepayment.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Models/MobileBanking/Loan.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Models/MobileBanking/Loan.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Models/User.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Models/User.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Utilities/Helpers.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Utilities/Helpers.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/config/database.php" beforeDir="false" afterPath="$PROJECT_DIR$/config/database.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Models/User.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Models/Auth/User.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/routes/api.php" beforeDir="false" afterPath="$PROJECT_DIR$/routes/api.php" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -187,16 +182,27 @@
     <property name="vue.rearranger.settings.migration" value="true" />
   </component>
   <component name="RecentsManager">
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/app/Models/Auth" />
+    </key>
     <key name="CopyFile.RECENT_KEYS">
       <recent name="$PROJECT_DIR$" />
       <recent name="C:\xampp\htdocs\sycasanne\storage\app\public\company_logos" />
     </key>
   </component>
-  <component name="RunManager">
+  <component name="RunManager" selected="JavaScript Debug.LoginController.php">
+    <configuration name="LoginController.php" type="JavascriptDebugType" temporary="true" nameIsGenerated="true" uri="http://localhost:63342/sycasanne-backend/Http/Controllers/Auth/LoginController.php" useBuiltInWebServerPort="true">
+      <method v="2" />
+    </configuration>
     <configuration name="phpunit.xml" type="PHPUnitRunConfigurationType" factoryName="PHPUnit">
       <TestRunner scope="XML" />
       <method v="2" />
     </configuration>
+    <recent_temporary>
+      <list>
+        <item itemvalue="JavaScript Debug.LoginController.php" />
+      </list>
+    </recent_temporary>
   </component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="TaskManager">
@@ -218,7 +224,7 @@
       <workItem from="1602575839072" duration="7586000" />
       <workItem from="1602793668348" duration="4336000" />
       <workItem from="1602911585109" duration="10865000" />
-      <workItem from="1602941126957" duration="549000" />
+      <workItem from="1602941126957" duration="7185000" />
     </task>
     <task id="LOCAL-00001" summary="Fixed the authentication issues">
       <created>1602939772685</created>
@@ -227,7 +233,14 @@
       <option name="project" value="LOCAL" />
       <updated>1602939772685</updated>
     </task>
-    <option name="localTasksCounter" value="2" />
+    <task id="LOCAL-00002" summary="reconfigured the database connections for the application">
+      <created>1602941807108</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1602941807108</updated>
+    </task>
+    <option name="localTasksCounter" value="3" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -247,7 +260,8 @@
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="Fixed the authentication issues" />
-    <option name="LAST_COMMIT_MESSAGE" value="Fixed the authentication issues" />
+    <MESSAGE value="reconfigured the database connections for the application" />
+    <option name="LAST_COMMIT_MESSAGE" value="reconfigured the database connections for the application" />
   </component>
   <component name="WindowStateProjectService">
     <state x="311" y="88" width="940" height="744" key="#com.intellij.execution.impl.EditConfigurationsDialog" timestamp="1602938826490">
@@ -278,22 +292,30 @@
       <screen x="0" y="24" width="1366" height="744" />
     </state>
     <state x="482" y="211" key="FileChooserDialogImpl/0.24.1366.744@0.24.1366.744" timestamp="1601808354962" />
-    <state width="909" height="252" key="GridCell.Tab.0.bottom" timestamp="1601848363178">
-      <screen x="0" y="24" width="1366" height="744" />
+    <state width="1878" height="287" key="GridCell.Tab.0.bottom" timestamp="1602947870429">
+      <screen x="0" y="88" width="1920" height="1080" />
     </state>
     <state width="909" height="252" key="GridCell.Tab.0.bottom/0.24.1366.744@0.24.1366.744" timestamp="1601848363178" />
-    <state width="909" height="252" key="GridCell.Tab.0.center" timestamp="1601848363176">
-      <screen x="0" y="24" width="1366" height="744" />
+    <state width="1878" height="287" key="GridCell.Tab.0.bottom/1920.0.1366.768/0.88.1920.1080@0.88.1920.1080" timestamp="1602947870429" />
+    <state width="1878" height="287" key="GridCell.Tab.0.center" timestamp="1602947870428">
+      <screen x="0" y="88" width="1920" height="1080" />
     </state>
     <state width="909" height="252" key="GridCell.Tab.0.center/0.24.1366.744@0.24.1366.744" timestamp="1601848363176" />
-    <state width="909" height="252" key="GridCell.Tab.0.left" timestamp="1601848363174">
-      <screen x="0" y="24" width="1366" height="744" />
+    <state width="1878" height="287" key="GridCell.Tab.0.center/1920.0.1366.768/0.88.1920.1080@0.88.1920.1080" timestamp="1602947870428" />
+    <state width="1878" height="287" key="GridCell.Tab.0.left" timestamp="1602947870428">
+      <screen x="0" y="88" width="1920" height="1080" />
     </state>
     <state width="909" height="252" key="GridCell.Tab.0.left/0.24.1366.744@0.24.1366.744" timestamp="1601848363174" />
-    <state width="909" height="252" key="GridCell.Tab.0.right" timestamp="1601848363177">
-      <screen x="0" y="24" width="1366" height="744" />
+    <state width="1878" height="287" key="GridCell.Tab.0.left/1920.0.1366.768/0.88.1920.1080@0.88.1920.1080" timestamp="1602947870428" />
+    <state width="1878" height="287" key="GridCell.Tab.0.right" timestamp="1602947870428">
+      <screen x="0" y="88" width="1920" height="1080" />
     </state>
     <state width="909" height="252" key="GridCell.Tab.0.right/0.24.1366.744@0.24.1366.744" timestamp="1601848363177" />
+    <state width="1878" height="287" key="GridCell.Tab.0.right/1920.0.1366.768/0.88.1920.1080@0.88.1920.1080" timestamp="1602947870428" />
+    <state x="763" y="563" width="384" height="130" key="NewPhpFileDialog" timestamp="1602946132615">
+      <screen x="0" y="88" width="1920" height="1080" />
+    </state>
+    <state x="763" y="563" width="384" height="130" key="NewPhpFileDialog/1920.0.1366.768/0.88.1920.1080@0.88.1920.1080" timestamp="1602946132615" />
     <state x="550" y="99" width="522" height="618" key="com.intellij.database.view.ui.AbstractDbRefactoringDialog" timestamp="1601827673013">
       <screen x="0" y="24" width="1366" height="744" />
     </state>
