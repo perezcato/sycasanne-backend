@@ -11,7 +11,7 @@ class LoanRepayment extends Model
 {
     use HasFactory;
 
-    protected $connection = 'company_database';
+    protected $connection = 'mysql';
     protected $table = 'loanrepyment';
     public $timestamps = false;
     protected $fillable = [

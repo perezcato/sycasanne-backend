@@ -21,8 +21,18 @@
   <component name="ChangeListManager">
     <list default="true" id="1f9f6e39-96c3-4389-9742-6e0c5aa9f17b" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/Auth/LoginController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/Auth/LoginController.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/MobileBanker/LoanController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/MobileBanker/LoanController.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Http/Middleware/Configuration/DbConfigMiddleware.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Middleware/Configuration/DbConfigMiddleware.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Models/Auth/User.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Models/Auth/User.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Models/Configuration/ESchoolResource.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Models/Configuration/ESchoolResource.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Models/MobileBanker/Loan.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Models/MobileBanker/Loan.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Models/MobileBanker/LoanRepayment.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Models/MobileBanker/LoanRepayment.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Models/MobileBanking/Loan.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Models/MobileBanking/Loan.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Models/User.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Models/User.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Utilities/Helpers.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Utilities/Helpers.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/config/database.php" beforeDir="false" afterPath="$PROJECT_DIR$/config/database.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/database/migrations/2020_10_15_141758_user_tokens.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/routes/api.php" beforeDir="false" afterPath="$PROJECT_DIR$/routes/api.php" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -207,8 +217,17 @@
       <workItem from="1602489286116" duration="4158000" />
       <workItem from="1602575839072" duration="7586000" />
       <workItem from="1602793668348" duration="4336000" />
-      <workItem from="1602911585109" duration="10056000" />
+      <workItem from="1602911585109" duration="10865000" />
+      <workItem from="1602941126957" duration="549000" />
     </task>
+    <task id="LOCAL-00001" summary="Fixed the authentication issues">
+      <created>1602939772685</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1602939772685</updated>
+    </task>
+    <option name="localTasksCounter" value="2" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -225,6 +244,10 @@
       </map>
     </option>
     <option name="oldMeFiltersMigrated" value="true" />
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="Fixed the authentication issues" />
+    <option name="LAST_COMMIT_MESSAGE" value="Fixed the authentication issues" />
   </component>
   <component name="WindowStateProjectService">
     <state x="311" y="88" width="940" height="744" key="#com.intellij.execution.impl.EditConfigurationsDialog" timestamp="1602938826490">
@@ -275,6 +298,10 @@
       <screen x="0" y="24" width="1366" height="744" />
     </state>
     <state x="550" y="99" width="522" height="618" key="com.intellij.database.view.ui.AbstractDbRefactoringDialog/0.24.1366.744@0.24.1366.744" timestamp="1601827673013" />
+    <state x="663" y="229" width="593" height="798" key="find.popup" timestamp="1602941607553">
+      <screen x="0" y="88" width="1920" height="1080" />
+    </state>
+    <state x="663" y="229" width="593" height="798" key="find.popup/1920.0.1366.768/0.88.1920.1080@0.88.1920.1080" timestamp="1602941607553" />
     <state x="418" y="186" width="528" height="399" key="search.everywhere.popup" timestamp="1601801853220">
       <screen x="0" y="24" width="1366" height="744" />
     </state>

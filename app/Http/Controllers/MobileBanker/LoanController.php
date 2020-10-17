@@ -9,7 +9,7 @@ use Illuminate\Http\Request;
 
 class LoanController extends Controller
 {
-    public function index(Request $req41uest)
+    public function index(Request $request)
     {
         $loan = $request->input('data.loan_query');
 

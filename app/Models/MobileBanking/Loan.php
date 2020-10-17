@@ -9,6 +9,6 @@ class Loan extends Model
 {
     use HasFactory;
 
-    protected $connection = 'company_database';
+    protected $connection = 'mysql';
 
 }

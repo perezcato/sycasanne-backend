@@ -15,7 +15,7 @@ Route::get('/test', function (){
 
 Route::middleware(['db'])->group(function(){
     Route::post('/login',[LoginController::class,'login']);
-    Route::middleware('user.token')->group(function(){
+    Route::middleware('auth:sanctum')->group(function(){
         Route::post('/loans',[LoanController::class, 'index']);
         Route::post('/loans/repayment',[LoanRepaymentController::class, 'index']);
     });

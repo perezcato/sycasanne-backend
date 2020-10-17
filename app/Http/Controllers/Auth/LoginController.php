@@ -49,7 +49,7 @@ class LoginController extends Controller
 
         $tokenExpiry = Carbon::tomorrow()->toDateTime();
 
-        DB::connection('company_database')->table('appdevices')
+        DB::connection('mysql')->table('appdevices')
             ->insert([
                 'DeviceToken' => $activationToken,
                 'DeviceTokenExpiry' => $tokenExpiry,

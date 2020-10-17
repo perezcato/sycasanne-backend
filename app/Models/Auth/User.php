@@ -12,5 +12,5 @@ class User extends Model
     use HasApiTokens, HasFactory, Notifiable;
 
     protected $table = 'users';
-    protected $connection = 'company_database';
+    protected $connection = 'mysql';
 }

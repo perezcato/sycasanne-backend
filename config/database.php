@@ -43,7 +43,7 @@ return [
             'foreign_key_constraints' => env('DB_FOREIGN_KEYS', true),
         ],
 
-        'mysql' => [
+        'setting_database' => [
             'driver' => 'mysql',
             'url' => env('DATABASE_URL'),
             'host' => env('DB_HOST', '107.180.51.38'),
@@ -62,7 +62,7 @@ return [
                 PDO::MYSQL_ATTR_SSL_CA => env('MYSQL_ATTR_SSL_CA'),
             ]) : [],
         ],
-        'company_database' => [
+        'mysql' => [
             'driver' => 'mysql',
             'url' => env('COMPANY_DATABASE_URL'),
             'host' => env('COMPANY_DB_HOST', '41.218.225.78'),

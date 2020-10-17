@@ -11,5 +11,6 @@ class ESchoolResource extends Model
     use HasFactory;
 
     protected $table = 'ConfigDb';
+    protected $connection = 'setting_database';
     public $timestamps = false;
 }

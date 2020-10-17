@@ -15,7 +15,7 @@ class User extends Authenticatable
 {
     use HasFactory, Notifiable, HasApiTokens;
 
-    protected $connection = 'company_database';
+    protected $connection = 'mysql';
     protected $table = 'users';
     protected $primaryKey = 'MyIndex';
 
