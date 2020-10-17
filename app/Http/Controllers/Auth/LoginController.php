@@ -9,7 +9,7 @@ use App\Http\Requests\Auth\TokenRequest;
 use App\Http\Requests\Auth\VerifyTokenRequest;
 use App\Mail\ActivationToken;
 use App\Models\Auth\Device;
-use App\Models\User;
+use App\Models\Auth\User;
 use Illuminate\Http\JsonResponse;
 use Illuminate\Http\Response;
 use Illuminate\Support\Facades\Mail;
@@ -18,12 +18,7 @@ class LoginController extends Controller
 {
     public function login(LoginRequest $request)
     {
-
-        $password = md5($request->input('data.password'));
-
-        $user = User::where('UserName', $request->input('data.username'))
-            ->where('Userpass',$password)
-            ->first();
+        $user = User::validateUserFromRequest($request);
 
        if(!$user){
            return response()->json([
