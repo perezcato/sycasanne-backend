@@ -21,7 +21,8 @@
   <component name="ChangeListManager">
     <list default="true" id="1f9f6e39-96c3-4389-9742-6e0c5aa9f17b" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Models/User.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Models/User.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/config/database.php" beforeDir="false" afterPath="$PROJECT_DIR$/config/database.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/database/migrations/2020_10_15_141758_user_tokens.php" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -206,7 +207,7 @@
       <workItem from="1602489286116" duration="4158000" />
       <workItem from="1602575839072" duration="7586000" />
       <workItem from="1602793668348" duration="4336000" />
-      <workItem from="1602911585109" duration="8889000" />
+      <workItem from="1602911585109" duration="10056000" />
     </task>
     <servers />
   </component>
@@ -226,11 +227,12 @@
     <option name="oldMeFiltersMigrated" value="true" />
   </component>
   <component name="WindowStateProjectService">
-    <state x="426" y="24" width="940" height="744" key="#com.intellij.execution.impl.EditConfigurationsDialog" timestamp="1602801425268">
-      <screen x="0" y="88" width="1920" height="1080" />
+    <state x="311" y="88" width="940" height="744" key="#com.intellij.execution.impl.EditConfigurationsDialog" timestamp="1602938826490">
+      <screen x="0" y="24" width="3286" height="1144" />
     </state>
     <state x="275" y="22" key="#com.intellij.execution.impl.EditConfigurationsDialog/0.0.1366.728@0.0.1366.728" timestamp="1602583866401" />
     <state x="275" y="46" width="800" height="665" key="#com.intellij.execution.impl.EditConfigurationsDialog/0.24.1366.744@0.24.1366.744" timestamp="1601827623917" />
+    <state x="311" y="88" key="#com.intellij.execution.impl.EditConfigurationsDialog/0.24.3286.1144@0.24.3286.1144" timestamp="1602938826490" />
     <state x="426" y="24" width="940" height="744" key="#com.intellij.execution.impl.EditConfigurationsDialog/1920.0.1366.768/0.88.1920.1080@0.88.1920.1080" timestamp="1602801425268" />
     <state x="682" y="432" width="545" height="391" key="#com.intellij.fileTypes.FileTypeChooser" timestamp="1602925210390">
       <screen x="0" y="24" width="3286" height="1144" />

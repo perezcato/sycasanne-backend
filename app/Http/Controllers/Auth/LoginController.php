@@ -28,7 +28,6 @@ class LoginController extends Controller
            ], Response::HTTP_NOT_FOUND);
        }
 
-
        $userToken = $user->createToken($user->getAttribute('UserName'))
            ->plainTextToken;
 
