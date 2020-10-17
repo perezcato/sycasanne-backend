@@ -28,7 +28,7 @@ class User extends Authenticatable
      */
     public function tokens()
     {
-        return $this->morphMany(Sanctum::$personalAccessTokenModel, 'tokenable', 'user_id');
+        return $this->morphMany(Sanctum::$personalAccessTokenModel, 'tokenable');
     }
 
     /**
