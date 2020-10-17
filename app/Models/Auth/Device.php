@@ -12,6 +12,7 @@ class Device extends Model
     use HasFactory;
 
     protected $table = 'appdevices';
+    public $timestamps = false;
 
     protected $fillable = [
         'DeviceTokenExpiry','DeviceToken',
@@ -35,7 +36,7 @@ class Device extends Model
             ->update([
                 'DeviceToken'=> $activationToken,
                 'DeviceTokenExpiry' => (new Carbon())->addHours(2)->toDateTime(),
-                'DeviceTokenStatus' => 'valid'
+                'DaviceTokenStatus' => 'valid'
             ]);
 
         return $activationToken;

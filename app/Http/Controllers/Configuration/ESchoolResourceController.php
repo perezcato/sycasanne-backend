@@ -19,9 +19,7 @@ class ESchoolResourceController extends Controller
                 'dbName', 'dbPort', 'dbUsername',
                 'dbPassword')->first();
 
-        $deviceUUID = Str::uuid();
-
-        return $school ? (new ConfigResource($school))->response() :
+        return $school ? (new ConfigResource($school, Str::uuid()))->response() :
             response()->json([
                 'message' => 'company not found'
             ],

@@ -44,22 +44,22 @@ class LoginController extends Controller
 
     public function requestToken(TokenRequest $request):JsonResponse
     {
-        $token = Device::generateToken($request->input('deviceUUID'));
-        Mail::to($request->input('contact'))->send(new ActivationToken($token));
+        $token = Device::generateToken($request->input('data.deviceUUID'));
+        Mail::to($request->input('data.contact'))->send(new ActivationToken($token));
 
         return response()->json(['message' => 'Activation code sent']);
     }
 
     public function registerDevice(RegisterDeviceRequest $request):JsonResponse
     {
-        Device::register($request->input('deviceUUID'));
+        Device::register($request->input('data.deviceUUID'));
 
         return response()->json(['message'=>'Device Registered'], Response::HTTP_OK);
     }
 
     public function verifyToken(VerifyTokenRequest $request):JsonResponse
     {
-        $verify = Device::verifyToken($request->input('verification_token'));
+        $verify = Device::verifyToken($request->input('data.verification_token'));
 
         return $verify ? response()->json(['message' => 'Device Verified'],Response::HTTP_OK) :
             response()->json(['message' => 'Device Unverified'],Response::HTTP_NOT_FOUND);

@@ -8,6 +8,15 @@ use Illuminate\Support\Facades\Storage;
 
 class ConfigResource extends JsonResource
 {
+
+    private string $deviceUUID;
+
+    public function __construct($resource,$deviceUUID)
+    {
+        parent::__construct($resource);
+        $this->deviceUUID = $deviceUUID;
+    }
+
     /**
      * Transform the resource into an array.
      *
@@ -22,6 +31,7 @@ class ConfigResource extends JsonResource
             'company_details' => [
                 'name' => $this->CompanyName,
                 'logo_url' => asset('/company_logos/'.$this->LogoURL),
+                'deviceUUID' => $this->deviceUUID
             ],
             'database' => [
                 'host' => $this->dbHost,

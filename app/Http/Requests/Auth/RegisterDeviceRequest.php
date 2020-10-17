@@ -15,7 +15,7 @@ class RegisterDeviceRequest extends FormRequest
     public function rules():array
     {
         return [
-            'deviceUUID' => ['required']
+            'data.deviceUUID' => ['required']
         ];
     }
 }
