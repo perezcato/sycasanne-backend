@@ -6,7 +6,10 @@ use Illuminate\Contracts\Auth\MustVerifyEmail;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Foundation\Auth\User as Authenticatable;
 use Illuminate\Notifications\Notifiable;
+use Illuminate\Support\Str;
 use Laravel\Sanctum\HasApiTokens;
+use Laravel\Sanctum\NewAccessToken;
+use Laravel\Sanctum\Sanctum;
 
 class User extends Authenticatable
 {
@@ -14,5 +17,69 @@ class User extends Authenticatable
 
     protected $connection = 'company_database';
     protected $primaryKey = 'MyIndex';
+
+    protected $accessToken;
+
+    /**
+     * Get the access tokens that belong to model.
+     *
+     * @return \Illuminate\Database\Eloquent\Relations\MorphMany
+     */
+    public function tokens()
+    {
+        return $this->morphMany(Sanctum::$personalAccessTokenModel, 'tokenable', 'user_id','MyIndex');
+    }
+
+    /**
+     * Determine if the current API token has a given scope.
+     *
+     * @param  string  $ability
+     * @return bool
+     */
+    public function tokenCan(string $ability)
+    {
+        return $this->accessToken ? $this->accessToken->can($ability) : false;
+    }
+
+    /**
+     * Create a new personal access token for the user.
+     *
+     * @param  string  $name
+     * @param  array  $abilities
+     * @return \Laravel\Sanctum\NewAccessToken
+     */
+    public function createToken(string $name, array $abilities = ['*'])
+    {
+        $token = $this->tokens()->create([
+            'name' => $name,
+            'token' => hash('sha256', $plainTextToken = Str::random(40)),
+            'abilities' => $abilities,
+        ]);
+
+        return new NewAccessToken($token, $token->id.'|'.$plainTextToken);
+    }
+
+    /**
+     * Get the access token currently associated with the user.
+     *
+     * @return \Laravel\Sanctum\Contracts\HasAbilities
+     */
+    public function currentAccessToken()
+    {
+        return $this->accessToken;
+    }
+
+    /**
+     * Set the current access token for the user.
+     *
+     * @param  \Laravel\Sanctum\Contracts\HasAbilities  $accessToken
+     * @return $this
+     */
+    public function withAccessToken($accessToken)
+    {
+        $this->accessToken = $accessToken;
+
+        return $this;
+    }
 
 }

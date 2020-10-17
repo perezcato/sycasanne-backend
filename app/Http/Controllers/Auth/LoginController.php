@@ -4,13 +4,12 @@ namespace App\Http\Controllers\Auth;
 
 use App\Http\Controllers\Controller;
 use App\Http\Requests\Auth\LoginRequest;
-use App\Models\Auth\User;
+use App\Models\User;
 use Carbon\Carbon;
 use Illuminate\Http\Request;
 use Illuminate\Http\Response;
 use Illuminate\Support\Facades\DB;
 use Illuminate\Support\Str;
-use Illuminate\Validation\ValidationException;
 
 class LoginController extends Controller
 {
@@ -29,15 +28,9 @@ class LoginController extends Controller
            ], Response::HTTP_NOT_FOUND);
        }
 
-       $userToken = Str::uuid();
 
-       DB::connection('mysql')
-           ->table('user_tokens')
-           ->insert([
-               'user_id' => $user->getAttribute('MyIndex'),
-               'name' => $user->getAttribute('UserName'),
-               'token' => $userToken
-           ]);
+       $userToken = $user->createToken($user->getAttribute('UserName'))
+           ->plainTextToken;
 
         return response()->json([
             'id' => $user->getAttribute('MyIndex'),
@@ -54,6 +47,7 @@ class LoginController extends Controller
         ]);
 
         $activationToken = Str::random(6);
+
         $tokenExpiry = Carbon::tomorrow()->toDateTime();
 
         DB::connection('company_database')->table('appdevices')
