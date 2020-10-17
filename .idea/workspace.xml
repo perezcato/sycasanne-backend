@@ -21,9 +21,6 @@
   <component name="ChangeListManager">
     <list default="true" id="1f9f6e39-96c3-4389-9742-6e0c5aa9f17b" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/Auth/LoginController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/Auth/LoginController.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Http/Requests/Auth/VerifyTokenRequest.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Requests/Auth/VerifyTokenRequest.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Models/Auth/User.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Models/Auth/User.php" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -220,7 +217,7 @@
       <workItem from="1602575839072" duration="7586000" />
       <workItem from="1602793668348" duration="4336000" />
       <workItem from="1602911585109" duration="10865000" />
-      <workItem from="1602941126957" duration="10696000" />
+      <workItem from="1602941126957" duration="12121000" />
     </task>
     <task id="LOCAL-00001" summary="Fixed the authentication issues">
       <created>1602939772685</created>
@@ -257,7 +254,14 @@
       <option name="project" value="LOCAL" />
       <updated>1602951028197</updated>
     </task>
-    <option name="localTasksCounter" value="6" />
+    <task id="LOCAL-00006" summary="refactored the LoginController.php">
+      <created>1602953387273</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1602953387273</updated>
+    </task>
+    <option name="localTasksCounter" value="7" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -280,7 +284,8 @@
     <MESSAGE value="reconfigured the database connections for the application" />
     <MESSAGE value="Done with the authentication of a device" />
     <MESSAGE value="did the correction for verification token flow" />
-    <option name="LAST_COMMIT_MESSAGE" value="did the correction for verification token flow" />
+    <MESSAGE value="refactored the LoginController.php" />
+    <option name="LAST_COMMIT_MESSAGE" value="refactored the LoginController.php" />
   </component>
   <component name="WindowStateProjectService">
     <state x="311" y="88" width="940" height="744" key="#com.intellij.execution.impl.EditConfigurationsDialog" timestamp="1602938826490">
@@ -311,26 +316,26 @@
       <screen x="0" y="24" width="1366" height="744" />
     </state>
     <state x="482" y="211" key="FileChooserDialogImpl/0.24.1366.744@0.24.1366.744" timestamp="1601808354962" />
-    <state width="1878" height="287" key="GridCell.Tab.0.bottom" timestamp="1602947870429">
+    <state width="1878" height="287" key="GridCell.Tab.0.bottom" timestamp="1602960893697">
       <screen x="0" y="88" width="1920" height="1080" />
     </state>
     <state width="909" height="252" key="GridCell.Tab.0.bottom/0.24.1366.744@0.24.1366.744" timestamp="1601848363178" />
-    <state width="1878" height="287" key="GridCell.Tab.0.bottom/1920.0.1366.768/0.88.1920.1080@0.88.1920.1080" timestamp="1602947870429" />
-    <state width="1878" height="287" key="GridCell.Tab.0.center" timestamp="1602947870428">
+    <state width="1878" height="287" key="GridCell.Tab.0.bottom/1920.0.1366.768/0.88.1920.1080@0.88.1920.1080" timestamp="1602960893697" />
+    <state width="1878" height="287" key="GridCell.Tab.0.center" timestamp="1602960893695">
       <screen x="0" y="88" width="1920" height="1080" />
     </state>
     <state width="909" height="252" key="GridCell.Tab.0.center/0.24.1366.744@0.24.1366.744" timestamp="1601848363176" />
-    <state width="1878" height="287" key="GridCell.Tab.0.center/1920.0.1366.768/0.88.1920.1080@0.88.1920.1080" timestamp="1602947870428" />
-    <state width="1878" height="287" key="GridCell.Tab.0.left" timestamp="1602947870428">
+    <state width="1878" height="287" key="GridCell.Tab.0.center/1920.0.1366.768/0.88.1920.1080@0.88.1920.1080" timestamp="1602960893695" />
+    <state width="1878" height="287" key="GridCell.Tab.0.left" timestamp="1602960893693">
       <screen x="0" y="88" width="1920" height="1080" />
     </state>
     <state width="909" height="252" key="GridCell.Tab.0.left/0.24.1366.744@0.24.1366.744" timestamp="1601848363174" />
-    <state width="1878" height="287" key="GridCell.Tab.0.left/1920.0.1366.768/0.88.1920.1080@0.88.1920.1080" timestamp="1602947870428" />
-    <state width="1878" height="287" key="GridCell.Tab.0.right" timestamp="1602947870428">
+    <state width="1878" height="287" key="GridCell.Tab.0.left/1920.0.1366.768/0.88.1920.1080@0.88.1920.1080" timestamp="1602960893693" />
+    <state width="1878" height="287" key="GridCell.Tab.0.right" timestamp="1602960893696">
       <screen x="0" y="88" width="1920" height="1080" />
     </state>
     <state width="909" height="252" key="GridCell.Tab.0.right/0.24.1366.744@0.24.1366.744" timestamp="1601848363177" />
-    <state width="1878" height="287" key="GridCell.Tab.0.right/1920.0.1366.768/0.88.1920.1080@0.88.1920.1080" timestamp="1602947870428" />
+    <state width="1878" height="287" key="GridCell.Tab.0.right/1920.0.1366.768/0.88.1920.1080@0.88.1920.1080" timestamp="1602960893696" />
     <state x="763" y="563" width="384" height="130" key="NewPhpFileDialog" timestamp="1602946132615">
       <screen x="0" y="88" width="1920" height="1080" />
     </state>
