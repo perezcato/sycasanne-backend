@@ -36,11 +36,11 @@ return [
     'mailers' => [
         'smtp' => [
             'transport' => 'smtp',
-            'host' => env('MAIL_HOST', 'smtp.sendgrid.net'),
-            'port' => env('MAIL_PORT', 587),
-            'encryption' => env('MAIL_ENCRYPTION', 'tls'),
-            'username' => env('perez2000'),
-            'password' => env('qwerty@1234'),
+            'host' => env('MAIL_HOST', 'smtp.gmail.net'),
+            'port' => env('MAIL_PORT', 465),
+            'encryption' => env('MAIL_ENCRYPTION', 'ssl'),
+            'username' => env('perezcatoc@gmail.com'),
+            'password' => env('3himak)wa12'),
             'timeout' => null,
             'auth_mode' => null,
         ],

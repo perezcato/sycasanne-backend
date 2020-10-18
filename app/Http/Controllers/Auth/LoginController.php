@@ -7,6 +7,7 @@ use App\Http\Requests\Auth\LoginRequest;
 use App\Http\Requests\Auth\RegisterDeviceRequest;
 use App\Http\Requests\Auth\TokenRequest;
 use App\Http\Requests\Auth\VerifyTokenRequest;
+use App\Libraries\SMS;
 use App\Mail\ActivationToken;
 use App\Models\Auth\Device;
 use App\Models\Auth\User;
@@ -37,10 +38,18 @@ class LoginController extends Controller
         ]);
     }
 
-    public function requestToken(TokenRequest $request):JsonResponse
+    public function requestToken(TokenRequest $request, SMS $sms):JsonResponse
     {
         $token = Device::generateToken($request->input('data.deviceUUID'));
-        Mail::to($request->input('data.contact'))->send(new ActivationToken($token));
+        //Mail::to($request->input('data.contact'))->send(new ActivationToken($token));
+
+        $sms->setUp([
+            'action' => 'send-sms',
+            'api_key' => 'OjRzOE83VHI2SjNpenlTQjA=',
+            'to' => $request->input('data.contact'),
+            'sms' => "Your activation code is {$token}",
+            'from' => 'Sycasane'
+        ])->send();
 
         return response()->json(['message' => 'Activation code sent']);
     }

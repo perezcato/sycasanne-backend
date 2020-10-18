@@ -14,7 +14,7 @@ class TokenRequest extends FormRequest
     public function rules(): array
     {
         return [
-            'data.contact' => ['required', 'email'],
+            'data.contact' => ['required'],
             'data.deviceUUID' => ['required']
         ];
     }
