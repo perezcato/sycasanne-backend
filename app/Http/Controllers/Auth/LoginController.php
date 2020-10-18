@@ -8,12 +8,10 @@ use App\Http\Requests\Auth\RegisterDeviceRequest;
 use App\Http\Requests\Auth\TokenRequest;
 use App\Http\Requests\Auth\VerifyTokenRequest;
 use App\Libraries\SMS;
-use App\Mail\ActivationToken;
 use App\Models\Auth\Device;
 use App\Models\Auth\User;
 use Illuminate\Http\JsonResponse;
 use Illuminate\Http\Response;
-use Illuminate\Support\Facades\Mail;
 
 class LoginController extends Controller
 {
@@ -41,7 +39,6 @@ class LoginController extends Controller
     public function requestToken(TokenRequest $request, SMS $sms):JsonResponse
     {
         $token = Device::generateToken($request->input('data.deviceUUID'));
-        //Mail::to($request->input('data.contact'))->send(new ActivationToken($token));
 
         $sms->setUp([
             'action' => 'send-sms',
@@ -66,7 +63,7 @@ class LoginController extends Controller
         $verify = Device::verifyToken($request->input('data.verification_token'));
 
         return $verify ? response()->json(['message' => 'Device Verified'],Response::HTTP_OK) :
-            response()->json(['message' => 'Device Unverified'],Response::HTTP_NOT_FOUND);
+            response()->json(['message' => 'Invalid Code'],Response::HTTP_NOT_FOUND);
     }
 
 

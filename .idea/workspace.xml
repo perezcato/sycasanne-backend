@@ -20,12 +20,9 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="1f9f6e39-96c3-4389-9742-6e0c5aa9f17b" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/app/Libraries/SMS.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/Http/Controllers/Auth/LoginController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/Auth/LoginController.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Http/Requests/Auth/TokenRequest.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Requests/Auth/TokenRequest.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Providers/AppServiceProvider.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Providers/AppServiceProvider.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/config/mail.php" beforeDir="false" afterPath="$PROJECT_DIR$/config/mail.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Models/Auth/Device.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Models/Auth/Device.php" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -224,7 +221,10 @@
       <workItem from="1602911585109" duration="10865000" />
       <workItem from="1602941126957" duration="12121000" />
       <workItem from="1602975124113" duration="734000" />
-      <workItem from="1603001816621" duration="8597000" />
+      <workItem from="1603001816621" duration="9042000" />
+      <workItem from="1603012437352" duration="47000" />
+      <workItem from="1603043705374" duration="176000" />
+      <workItem from="1603046700575" duration="736000" />
     </task>
     <task id="LOCAL-00001" summary="Fixed the authentication issues">
       <created>1602939772685</created>
@@ -289,7 +289,14 @@
       <option name="project" value="LOCAL" />
       <updated>1603003699610</updated>
     </task>
-    <option name="localTasksCounter" value="10" />
+    <task id="LOCAL-00010" summary="added sms support to the app">
+      <created>1603012205440</created>
+      <option name="number" value="00010" />
+      <option name="presentableId" value="LOCAL-00010" />
+      <option name="project" value="LOCAL" />
+      <updated>1603012205440</updated>
+    </task>
+    <option name="localTasksCounter" value="11" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -316,7 +323,8 @@
     <MESSAGE value="added the mail credentials from sendgrid" />
     <MESSAGE value="added the http library for mails" />
     <MESSAGE value="updated the mail settings" />
-    <option name="LAST_COMMIT_MESSAGE" value="updated the mail settings" />
+    <MESSAGE value="added sms support to the app" />
+    <option name="LAST_COMMIT_MESSAGE" value="added sms support to the app" />
   </component>
   <component name="WindowStateProjectService">
     <state x="311" y="88" width="940" height="744" key="#com.intellij.execution.impl.EditConfigurationsDialog" timestamp="1602938826490">

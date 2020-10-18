@@ -12,6 +12,7 @@ class Device extends Model
     use HasFactory;
 
     protected $table = 'appdevices';
+    protected $primaryKey = 'DevIndex';
     public $timestamps = false;
 
     protected $fillable = [
@@ -47,6 +48,13 @@ class Device extends Model
         $device = Device::where('DeviceToken',$activationToken)->first();
         $currentDate = Carbon::now();
 
-        return $device && $device->getAttribute('DeviceTokenExpiry') > $currentDate;
+        if($device && $device->getAttribute('DeviceTokenExpiry') > $currentDate){
+            $device->DeviceTokenExpiry = null;
+            $device->DaviceTokenStatus = 'verified';
+            $device->save();
+            return true;
+        }
+
+        return false;
     }
 }
