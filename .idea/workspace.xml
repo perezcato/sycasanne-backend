@@ -218,6 +218,8 @@
       <workItem from="1602793668348" duration="4336000" />
       <workItem from="1602911585109" duration="10865000" />
       <workItem from="1602941126957" duration="12121000" />
+      <workItem from="1602975124113" duration="734000" />
+      <workItem from="1603001816621" duration="447000" />
     </task>
     <task id="LOCAL-00001" summary="Fixed the authentication issues">
       <created>1602939772685</created>
@@ -261,7 +263,14 @@
       <option name="project" value="LOCAL" />
       <updated>1602953387273</updated>
     </task>
-    <option name="localTasksCounter" value="7" />
+    <task id="LOCAL-00007" summary="added the mail credentials from sendgrid">
+      <created>1602976132272</created>
+      <option name="number" value="00007" />
+      <option name="presentableId" value="LOCAL-00007" />
+      <option name="project" value="LOCAL" />
+      <updated>1602976132272</updated>
+    </task>
+    <option name="localTasksCounter" value="8" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -285,7 +294,8 @@
     <MESSAGE value="Done with the authentication of a device" />
     <MESSAGE value="did the correction for verification token flow" />
     <MESSAGE value="refactored the LoginController.php" />
-    <option name="LAST_COMMIT_MESSAGE" value="refactored the LoginController.php" />
+    <MESSAGE value="added the mail credentials from sendgrid" />
+    <option name="LAST_COMMIT_MESSAGE" value="added the mail credentials from sendgrid" />
   </component>
   <component name="WindowStateProjectService">
     <state x="311" y="88" width="940" height="744" key="#com.intellij.execution.impl.EditConfigurationsDialog" timestamp="1602938826490">
