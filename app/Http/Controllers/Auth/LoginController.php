@@ -66,7 +66,4 @@ class LoginController extends Controller
             response()->json(['message' => 'Invalid Code'],Response::HTTP_NOT_FOUND);
     }
 
-
-
-
 }

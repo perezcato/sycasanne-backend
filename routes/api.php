@@ -23,5 +23,6 @@ Route::middleware(['db'])->group(function(){
     Route::middleware('auth:sanctum')->group(function(){
         Route::post('/loans',[LoanController::class, 'index']);
         Route::post('/loans/repayment',[LoanRepaymentController::class, 'index']);
+        Route::get('/loans/area',[LoanController::class, 'getLoansForAnArea']);
     });
 });

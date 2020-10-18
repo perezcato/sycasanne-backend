@@ -29,11 +29,20 @@ class DbConfigMiddleware
 
     private function connectToDatabaseFromRequest(Request $request)
     {
-        $dbHost = $request->input('database.host');
-        $dbPort = $request->input('database.port');
-        $dbUsername = $request->input('database.username');
-        $dbPassword = $request->input('database.password');
-        $dbName = $request->input('database.name');
+        if($request->method() === 'POST'){
+            $dbHost = $request->get('database.host');
+            $dbPort = $request->get('database.port');
+            $dbUsername = $request->get('database.username');
+            $dbPassword = $request->get('database.password');
+            $dbName = $request->get('database.name');
+        }else{
+            $dbHost = $request->get('host');
+            $dbPort = $request->get('port');
+            $dbUsername = $request->get('username');
+            $dbPassword = $request->get('password');
+            $dbName = $request->get('name');
+        }
+
 
         if($dbHost && $dbPort && $dbUsername && $dbPassword && $dbName){
             config([
