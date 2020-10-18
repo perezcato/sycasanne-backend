@@ -39,8 +39,8 @@ return [
             'host' => env('MAIL_HOST', 'smtp.sendgrid.net'),
             'port' => env('MAIL_PORT', 587),
             'encryption' => env('MAIL_ENCRYPTION', 'tls'),
-            'username' => env('apikey'),
-            'password' => env('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'),
+            'username' => env('perez2000'),
+            'password' => env('qwerty@1234'),
             'timeout' => null,
             'auth_mode' => null,
         ],
@@ -84,8 +84,8 @@ return [
     */
 
     'from' => [
-        'address' => env('MAIL_FROM_ADDRESS', 'hello@example.com'),
-        'name' => env('MAIL_FROM_NAME', 'Example'),
+        'address' => env('MAIL_FROM_ADDRESS', 'perezcatoc@gmail.com'),
+        'name' => env('MAIL_FROM_NAME', 'Sycasane'),
     ],
 
     /*
