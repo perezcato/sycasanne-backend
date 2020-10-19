@@ -3,8 +3,10 @@
 namespace App\Http\Controllers\MobileBanker;
 
 use App\Http\Controllers\Controller;
+use App\Http\Requests\Loan\GetLoansRequest;
 use App\Http\Resources\MobileBanker\LoanResource;
 use App\Models\MobileBanker\Loan;
+use Illuminate\Http\JsonResponse;
 use Illuminate\Http\Request;
 
 class LoanController extends Controller
@@ -19,5 +21,11 @@ class LoanController extends Controller
                 ->where('ClientName','LIKE','%'.$loan.'%')->paginate(15);
 
         return LoanResource::collection($loan);
+    }
+
+    public function getLoansForAnArea(GetLoansRequest $request):JsonResponse
+    {
+        $loans = Loan::getLoansFromRequest($request);
+        return  response()->json($loans);
     }
 }

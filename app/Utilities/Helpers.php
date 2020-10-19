@@ -13,16 +13,16 @@ use Illuminate\Support\Facades\Schema;
 
         if($dbHost && $dbPort && $dbUsername && $dbPassword && $dbName){
             config([
-                'database.connections.company_database.host' => $dbHost,
-                'database.connections.company_database.port' => $dbPort,
-                'database.connections.company_database.database' => $dbName,
-                'database.connections.company_database.username' => $dbUsername,
-                'database.connections.company_database.password' => $dbPassword,
+                'database.connections.mysql.host' => $dbHost,
+                'database.connections.mysql.port' => $dbPort,
+                'database.connections.mysql.database' => $dbName,
+                'database.connections.mysql.username' => $dbUsername,
+                'database.connections.mysql.password' => $dbPassword,
             ]);
 
-            DB::purge('company_database');
-            DB::reconnect('company_database');
-            Schema::connection('company_database')->getConnection()->reconnect();
+            DB::purge('mysql');
+            DB::reconnect('mysql');
+            Schema::connection('mysql')->getConnection()->reconnect();
             return true;
         }
         return false;

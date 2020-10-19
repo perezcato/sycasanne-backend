@@ -4,25 +4,20 @@ namespace App\Http\Controllers\Auth;
 
 use App\Http\Controllers\Controller;
 use App\Http\Requests\Auth\LoginRequest;
-use App\Mail\SendVerificationMail;
+use App\Http\Requests\Auth\RegisterDeviceRequest;
+use App\Http\Requests\Auth\TokenRequest;
+use App\Http\Requests\Auth\VerifyTokenRequest;
+use App\Libraries\SMS;
+use App\Models\Auth\Device;
 use App\Models\Auth\User;
-use Carbon\Carbon;
-use Illuminate\Http\Request;
+use Illuminate\Http\JsonResponse;
 use Illuminate\Http\Response;
-use Illuminate\Support\Facades\DB;
-use Illuminate\Support\Facades\Mail;
-use Illuminate\Support\Str;
-use Illuminate\Validation\ValidationException;
 
 class LoginController extends Controller
 {
     public function login(LoginRequest $request)
     {
-        $password = md5($request->input('data.password'));
-
-        $user = User::where('UserName', $request->input('data.username'))
-            ->where('Userpass',$password)
-            ->first();
+        $user = User::validateUserFromRequest($request);
 
        if(!$user){
            return response()->json([
@@ -30,7 +25,8 @@ class LoginController extends Controller
            ], Response::HTTP_NOT_FOUND);
        }
 
-       $userToken = Str::uuid();
+       $userToken = $user->createToken($user->getAttribute('UserName'))
+           ->plainTextToken;
 
         return response()->json([
             'id' => $user->getAttribute('MyIndex'),
@@ -40,76 +36,34 @@ class LoginController extends Controller
         ]);
     }
 
-    public function requestToken(Request $request)
+    public function requestToken(TokenRequest $request, SMS $sms):JsonResponse
     {
-        $this->validate($request,[
-           'data.contact' => ['required'],
-            'data.device_uuid'=>['required']
-        ]);
+        $token = Device::generateToken($request->input('data.deviceUUID'));
 
-        $verificationToken = Str::random(6);
-        $expiryTime = (new Carbon())->addHours(2)->toDateTimeString();
+        $sms->setUp([
+            'action' => 'send-sms',
+            'api_key' => 'OjRzOE83VHI2SjNpenlTQjA=',
+            'to' => $request->input('data.contact'),
+            'sms' => "Your activation code is {$token}",
+            'from' => 'Sycasane'
+        ])->send();
 
-        Mail::to($request->input('data.contact'))
-            ->send(new SendVerificationMail('perezcatoc@gmail.com',
-                $verificationToken));
-
-        DB::connection('company_database')
-            ->table('appdevices')->where('DeviceUUID',
-                $request->input('data.device_uuid'))->insert([
-                'DeviceToken' => $verificationToken,
-                'DeviceTokenExpiry' => $expiryTime,
-                'DeviceStatus' => 'unverified'
-            ]);
-
-        return response()->json([
-            'message' => 'token sent'
-        ]);
+        return response()->json(['message' => 'Activation code sent']);
     }
 
-    public function verifyToken(Request $request)
+    public function registerDevice(RegisterDeviceRequest $request):JsonResponse
     {
-        $this->validate($request, [
-           'data.verification_token' => ['required']
-        ]);
+        Device::register($request->input('data.deviceUUID'));
 
-        $token = DB::connection('company_database')
-            ->table('appdevices')->where('DeviceToken',
-                $request->input('data.verification_token'))->get();
-
-        if($token->isEmpty()){
-            return response()->json([
-                'message' => 'Invalid token'
-            ], Response::HTTP_NOT_FOUND);
-        }
-
-
-        DB::connection('company_database')
-            ->table('appdevices')->where('DeviceToken',
-                $request->input('data.verification_token'))
-            ->update([
-                'DeviceStatus' => 'verified',
-                'DeviceTokenExpiry' => null
-            ]);
-
-        return response()->json([
-            'message' => 'device verified'
-        ], Response::HTTP_OK);
+        return response()->json(['message'=>'Device Registered'], Response::HTTP_OK);
     }
 
-    public function registerDevice(Request $request)
+    public function verifyToken(VerifyTokenRequest $request):JsonResponse
     {
-        $this->validate($request,[
-           'data.deviceUUID' => ['required']
-        ]);
+        $verify = Device::verifyToken($request->input('data.verification_token'));
 
-        DB::connection('company_database')
-            ->table('appdevices')->insert([
-                'DeviceUUID' => $request->input('data.deviceUUID')
-            ]);
-
-        return response()->json([
-            'message' => 'device registered'
-        ], Response::HTTP_OK);
+        return $verify ? response()->json(['message' => 'Device Verified'],Response::HTTP_OK) :
+            response()->json(['message' => 'Invalid Code'],Response::HTTP_NOT_FOUND);
     }
+
 }

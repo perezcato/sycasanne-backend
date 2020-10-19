@@ -2,14 +2,16 @@
 
 namespace App\Http\Resources\Config;
 
+use Illuminate\Http\Request;
 use Illuminate\Http\Resources\Json\JsonResource;
 use Illuminate\Support\Facades\Storage;
 
 class ConfigResource extends JsonResource
 {
+
     private string $deviceUUID;
 
-    public function __construct($resource, $deviceUUID)
+    public function __construct($resource,$deviceUUID)
     {
         parent::__construct($resource);
         $this->deviceUUID = $deviceUUID;
@@ -18,7 +20,7 @@ class ConfigResource extends JsonResource
     /**
      * Transform the resource into an array.
      *
-     * @param  \Illuminate\Http\Request  $request
+     * @param  Request  $request
      * @return array
      */
     public function toArray($request): array
@@ -29,7 +31,7 @@ class ConfigResource extends JsonResource
             'company_details' => [
                 'name' => $this->CompanyName,
                 'logo_url' => secure_asset('/company_logos/'.$this->LogoURL),
-                'deviceUUID' => $this->deviceUUID,
+                'deviceUUID' => $this->deviceUUID
             ],
             'database' => [
                 'host' => $this->dbHost,

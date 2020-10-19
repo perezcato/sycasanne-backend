@@ -2,15 +2,30 @@
 
 namespace App\Models\Auth;
 
+use App\Http\Requests\Auth\LoginRequest;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
-use Illuminate\Database\Eloquent\Model;
+use Illuminate\Foundation\Auth\User as Authenticatable;
 use Illuminate\Notifications\Notifiable;
 use Laravel\Sanctum\HasApiTokens;
 
-class User extends Model
+class User extends Authenticatable
 {
-    use HasApiTokens, HasFactory, Notifiable;
+    use HasFactory, Notifiable, HasApiTokens;
 
+    protected $connection = 'mysql';
     protected $table = 'users';
-    protected $connection = 'company_database';
+    protected $primaryKey = 'MyIndex';
+
+    protected $accessToken;
+
+
+    public static function validateUserFromRequest(LoginRequest $request):User
+    {
+        $password = md5($request->input('data.password'));
+
+        return User::where('UserName', $request->input('data.username'))
+            ->where('Userpass',$password)
+            ->first();
+    }
+
 }
