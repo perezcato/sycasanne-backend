@@ -39,7 +39,6 @@ class Device extends Model
                 'DeviceTokenExpiry' => (new Carbon())->addHours(2)->toDateTime(),
                 'DaviceTokenStatus' => 'valid'
             ]);
-
         return $activationToken;
     }
 

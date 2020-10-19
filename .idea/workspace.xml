@@ -21,9 +21,8 @@
   <component name="ChangeListManager">
     <list default="true" id="c9df5a71-8ba1-4d96-8e7f-f05450f24239" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/MobileBanker/LoanController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/MobileBanker/LoanController.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Models/MobileBanker/Loan.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Models/MobileBanker/Loan.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/routes/api.php" beforeDir="false" afterPath="$PROJECT_DIR$/routes/api.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/Auth/LoginController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/Auth/LoginController.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Models/Auth/Device.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Models/Auth/Device.php" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -178,13 +177,14 @@
     <property name="vue.rearranger.settings.migration" value="true" />
   </component>
   <component name="RecentsManager">
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\xampp\htdocs\sycasanne\app\Models\Auth" />
+      <recent name="$PROJECT_DIR$/app/Models/Auth" />
+    </key>
     <key name="CopyFile.RECENT_KEYS">
       <recent name="$PROJECT_DIR$/app/Models" />
       <recent name="$PROJECT_DIR$" />
       <recent name="C:\xampp\htdocs\sycasanne\storage\app\public\company_logos" />
-    </key>
-    <key name="MoveFile.RECENT_KEYS">
-      <recent name="$PROJECT_DIR$/app/Models/Auth" />
     </key>
   </component>
   <component name="RunManager" selected="JavaScript Debug.LoginController.php">
@@ -321,7 +321,14 @@
       <option name="project" value="LOCAL" />
       <updated>1603108422256</updated>
     </task>
-    <option name="localTasksCounter" value="14" />
+    <task id="LOCAL-00014" summary="added endpoints for getting all loans and users from the database">
+      <created>1603110516563</created>
+      <option name="number" value="00014" />
+      <option name="presentableId" value="LOCAL-00014" />
+      <option name="project" value="LOCAL" />
+      <updated>1603110516563</updated>
+    </task>
+    <option name="localTasksCounter" value="15" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -352,7 +359,8 @@
     <MESSAGE value="Modified the verification token" />
     <MESSAGE value="added the method for getting all loans from a specific region" />
     <MESSAGE value="removed the user reference" />
-    <option name="LAST_COMMIT_MESSAGE" value="removed the user reference" />
+    <MESSAGE value="added endpoints for getting all loans and users from the database" />
+    <option name="LAST_COMMIT_MESSAGE" value="added endpoints for getting all loans and users from the database" />
   </component>
   <component name="WindowStateProjectService">
     <state x="311" y="88" width="940" height="744" key="#com.intellij.execution.impl.EditConfigurationsDialog" timestamp="1602938826490">

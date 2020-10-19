@@ -9,6 +9,7 @@ use App\Http\Requests\Auth\TokenRequest;
 use App\Http\Requests\Auth\VerifyTokenRequest;
 use App\Libraries\SMS;
 use App\Models\Auth\Device;
+use App\Models\Auth\Staff;
 use App\Models\Auth\User;
 use Illuminate\Http\JsonResponse;
 use Illuminate\Http\Response;
@@ -38,17 +39,19 @@ class LoginController extends Controller
 
     public function requestToken(TokenRequest $request, SMS $sms):JsonResponse
     {
-        $token = Device::generateToken($request->input('data.deviceUUID'));
-
-        $sms->setUp([
-            'action' => 'send-sms',
-            'api_key' => 'OjRzOE83VHI2SjNpenlTQjA=',
-            'to' => $request->input('data.contact'),
-            'sms' => "Your activation code is {$token}",
-            'from' => 'Sycasane'
-        ])->send();
-
-        return response()->json(['message' => 'Activation code sent']);
+        $staff = Staff::where('TelMobile',$request->input('data.contact'))->first();
+        if($staff){
+            $token = Device::generateToken($request->input('data.deviceUUID'));
+            $sms->setUp([
+                'action' => 'send-sms',
+                'api_key' => 'OjRzOE83VHI2SjNpenlTQjA=',
+                'to' => $request->input('data.contact'),
+                'sms' => "Your activation code is {$token}",
+                'from' => 'Sycasane'
+            ])->send();
+            return response()->json(['message' => 'Activation code sent']);
+        }
+        return response()->json(['message'=>'Invalid Number provided'],Response::HTTP_NOT_FOUND);
     }
 
     public function registerDevice(RegisterDeviceRequest $request):JsonResponse
