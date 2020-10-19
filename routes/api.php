@@ -21,10 +21,11 @@ Route::middleware(['db'])->group(function(){
     Route::post('/request-token', [LoginController::class, 'requestToken']);
     Route::post('/verify-token', [LoginController::class, 'verifyToken']);
 
+    Route::get('/loans',[LoanController::class, 'index']);
+    Route::get('/users', [UserController::class,'index']);
+
     Route::middleware('auth:sanctum')->group(function(){
         Route::post('/loans/search',[LoanController::class, 'search']);
         Route::post('/loans/repayment',[LoanRepaymentController::class, 'index']);
-        Route::get('/loans',[LoanController::class, 'index']);
-        Route::get('/users', [UserController::class,'index']);
     });
 });
