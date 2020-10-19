@@ -10,7 +10,7 @@ class UserController extends Controller
 {
     public function index()
     {
-        $users = User::select('MyIndex','UserName','UserPass');
+        $users = User::select('MyIndex','UserName','Userpass');
         return response()-> json($users);
     }
 }

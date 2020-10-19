@@ -20,7 +20,7 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="c9df5a71-8ba1-4d96-8e7f-f05450f24239" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/routes/api.php" beforeDir="false" afterPath="$PROJECT_DIR$/routes/api.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/User/UserController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/User/UserController.php" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -340,7 +340,14 @@
       <option name="project" value="LOCAL" />
       <updated>1603111875574</updated>
     </task>
-    <option name="localTasksCounter" value="17" />
+    <task id="LOCAL-00017" summary="moved the loans and the user routes">
+      <created>1603112034935</created>
+      <option name="number" value="00017" />
+      <option name="presentableId" value="LOCAL-00017" />
+      <option name="project" value="LOCAL" />
+      <updated>1603112034935</updated>
+    </task>
+    <option name="localTasksCounter" value="18" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -374,7 +381,8 @@
     <MESSAGE value="added endpoints for getting all loans and users from the database" />
     <MESSAGE value="further validated the request token for staff" />
     <MESSAGE value="refactored loans controller and model" />
-    <option name="LAST_COMMIT_MESSAGE" value="refactored loans controller and model" />
+    <MESSAGE value="moved the loans and the user routes" />
+    <option name="LAST_COMMIT_MESSAGE" value="moved the loans and the user routes" />
   </component>
   <component name="WindowStateProjectService">
     <state x="311" y="88" width="940" height="744" key="#com.intellij.execution.impl.EditConfigurationsDialog" timestamp="1602938826490">
