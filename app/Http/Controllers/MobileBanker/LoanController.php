@@ -23,9 +23,9 @@ class LoanController extends Controller
         return LoanResource::collection($loan);
     }
 
-    public function getLoansForAnArea(GetLoansRequest $request):JsonResponse
+    public function getLoans():JsonResponse
     {
-        $loans = Loan::getLoansFromRequest($request);
+        $loans = Loan::getLoansFromRequest();
         return  response()->json($loans);
     }
 }

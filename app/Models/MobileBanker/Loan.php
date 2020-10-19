@@ -13,8 +13,8 @@ class Loan extends Model
     protected $connection = 'mysql';
     protected $table='loans';
 
-    public static function getLoansFromRequest(GetLoansRequest $request)
+    public static function getLoansFromRequest()
     {
-        return Loan::where('ClientName','LIKE',"%{$request->input('area')}%")->get();
+        return Loan::where('LStateRef','4')->get();
     }
 }

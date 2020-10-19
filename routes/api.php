@@ -3,6 +3,7 @@
 use App\Http\Controllers\Configuration\ESchoolResourceController;
 use App\Http\Controllers\MobileBanker\LoanController;
 use App\Http\Controllers\MobileBanker\LoanRepaymentController;
+use App\Http\Controllers\User\UserController;
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\Auth\LoginController;
 
@@ -23,6 +24,7 @@ Route::middleware(['db'])->group(function(){
     Route::middleware('auth:sanctum')->group(function(){
         Route::post('/loans',[LoanController::class, 'index']);
         Route::post('/loans/repayment',[LoanRepaymentController::class, 'index']);
-        Route::get('/loans/area',[LoanController::class, 'getLoansForAnArea']);
+        Route::get('/loans/area',[LoanController::class, 'getLoans']);
+        Route::get('/users', [UserController::class,'index']);
     });
 });
