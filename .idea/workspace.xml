@@ -21,8 +21,9 @@
   <component name="ChangeListManager">
     <list default="true" id="c9df5a71-8ba1-4d96-8e7f-f05450f24239" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/Auth/LoginController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/Auth/LoginController.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Models/Auth/Device.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Models/Auth/Device.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/MobileBanker/LoanController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/MobileBanker/LoanController.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Models/MobileBanker/Loan.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Models/MobileBanker/Loan.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/routes/api.php" beforeDir="false" afterPath="$PROJECT_DIR$/routes/api.php" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -328,7 +329,14 @@
       <option name="project" value="LOCAL" />
       <updated>1603110516563</updated>
     </task>
-    <option name="localTasksCounter" value="15" />
+    <task id="LOCAL-00015" summary="further validated the request token for staff">
+      <created>1603110961531</created>
+      <option name="number" value="00015" />
+      <option name="presentableId" value="LOCAL-00015" />
+      <option name="project" value="LOCAL" />
+      <updated>1603110961531</updated>
+    </task>
+    <option name="localTasksCounter" value="16" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -360,7 +368,8 @@
     <MESSAGE value="added the method for getting all loans from a specific region" />
     <MESSAGE value="removed the user reference" />
     <MESSAGE value="added endpoints for getting all loans and users from the database" />
-    <option name="LAST_COMMIT_MESSAGE" value="added endpoints for getting all loans and users from the database" />
+    <MESSAGE value="further validated the request token for staff" />
+    <option name="LAST_COMMIT_MESSAGE" value="further validated the request token for staff" />
   </component>
   <component name="WindowStateProjectService">
     <state x="311" y="88" width="940" height="744" key="#com.intellij.execution.impl.EditConfigurationsDialog" timestamp="1602938826490">
@@ -419,10 +428,10 @@
       <screen x="0" y="88" width="1920" height="1080" />
     </state>
     <state x="763" y="563" width="384" height="130" key="NewPhpFileDialog/1920.0.1366.768/0.88.1920.1080@0.88.1920.1080" timestamp="1603007639085" />
-    <state x="466" y="226" width="499" height="277" key="Vcs.Push.Dialog.v2" timestamp="1603108448198">
+    <state x="466" y="226" width="499" height="277" key="Vcs.Push.Dialog.v2" timestamp="1603110973517">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state x="466" y="226" width="499" height="277" key="Vcs.Push.Dialog.v2/0.0.1366.728@0.0.1366.728" timestamp="1603108448198" />
+    <state x="466" y="226" width="499" height="277" key="Vcs.Push.Dialog.v2/0.0.1366.728@0.0.1366.728" timestamp="1603110973517" />
     <state x="655" y="423" width="600" height="410" key="Vcs.Push.Dialog.v2/1920.0.1366.768/0.88.1920.1080@0.88.1920.1080" timestamp="1603047884748" />
     <state x="550" y="99" width="522" height="618" key="com.intellij.database.view.ui.AbstractDbRefactoringDialog" timestamp="1601827673013">
       <screen x="0" y="24" width="1366" height="744" />

@@ -22,9 +22,9 @@ Route::middleware(['db'])->group(function(){
     Route::post('/verify-token', [LoginController::class, 'verifyToken']);
 
     Route::middleware('auth:sanctum')->group(function(){
-        Route::post('/loans',[LoanController::class, 'index']);
+        Route::post('/loans/search',[LoanController::class, 'search']);
         Route::post('/loans/repayment',[LoanRepaymentController::class, 'index']);
-        Route::get('/loans/area',[LoanController::class, 'getLoans']);
+        Route::get('/loans',[LoanController::class, 'index']);
         Route::get('/users', [UserController::class,'index']);
     });
 });
