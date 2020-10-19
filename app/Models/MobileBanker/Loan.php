@@ -13,7 +13,7 @@ class Loan extends Model
     protected $connection = 'mysql';
     protected $table='loans';
 
-    public static function getLoansFromRequest()
+    public static function getLoans()
     {
         return Loan::select('LApplicIndex','ClientName','ClientRef',
             'Amt','ActualDisbursalDate','Tenor')

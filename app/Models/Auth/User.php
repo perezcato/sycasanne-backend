@@ -27,4 +27,10 @@ class User extends Authenticatable
             ->first();
     }
 
+    public static function getUsers ()
+    {
+        return User::select('MyIndex','UserName','Userpass')->get();
+    }
+
+
 }

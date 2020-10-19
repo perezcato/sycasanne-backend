@@ -25,7 +25,6 @@ class LoanController extends Controller
 
     public function index():JsonResponse
     {
-        $loans = Loan::getLoansFromRequest();
-        return  response()->json($loans);
+        return  \App\Http\Resources\LoanResource::collection(Loan::getLoans())->response();
     }
 }
