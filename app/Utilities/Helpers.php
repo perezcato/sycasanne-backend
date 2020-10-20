@@ -1,16 +1,15 @@
 <?php
+namespace App\Utilities;
 
-use Illuminate\Http\Request;
 use Illuminate\Support\Facades\DB;
 use Illuminate\Support\Facades\Schema;
 
-if(!function_exists('connectToDatabaseFromRequest')){
-    function connectToDatabaseFromRequest(Request $request){
-        $dbHost = $request->input('database.host');
-        $dbPort = $request->input('database.port');
-        $dbUsername = $request->input('database.username');
-        $dbPassword = $request->input('database.password');
-        $dbName = $request->header('database.name');
+    function connectToDatabase($databaseConnection = []){
+        $dbHost = $databaseConnection['dbHost'];
+        $dbPort = $databaseConnection['dbPort'];
+        $dbUsername = $databaseConnection['dbUsername'];
+        $dbPassword = $databaseConnection['dbPassword'];
+        $dbName = $databaseConnection['dbName'];
 
         if($dbHost && $dbPort && $dbUsername && $dbPassword && $dbName){
             config([
@@ -28,4 +27,4 @@ if(!function_exists('connectToDatabaseFromRequest')){
         }
         return false;
     }
-}
+

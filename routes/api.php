@@ -3,6 +3,7 @@
 use App\Http\Controllers\Configuration\ESchoolResourceController;
 use App\Http\Controllers\MobileBanker\LoanController;
 use App\Http\Controllers\MobileBanker\LoanRepaymentController;
+use App\Http\Controllers\User\UserController;
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\Auth\LoginController;
 
@@ -20,9 +21,11 @@ Route::middleware(['db'])->group(function(){
     Route::post('/request-token', [LoginController::class, 'requestToken']);
     Route::post('/verify-token', [LoginController::class, 'verifyToken']);
 
+    Route::get('/loans',[LoanController::class, 'index']);
+    Route::get('/users', [UserController::class,'index']);
+
     Route::middleware('auth:sanctum')->group(function(){
-        Route::post('/loans',[LoanController::class, 'index']);
+        Route::post('/loans/search',[LoanController::class, 'search']);
         Route::post('/loans/repayment',[LoanRepaymentController::class, 'index']);
-        Route::get('/loans/area',[LoanController::class, 'getLoansForAnArea']);
     });
 });

@@ -19,13 +19,18 @@ class User extends Authenticatable
     protected $accessToken;
 
 
-    public static function validateUserFromRequest(LoginRequest $request):User
+    public static function validateUserFromRequest(LoginRequest $request)
     {
         $password = md5($request->input('data.password'));
-
         return User::where('UserName', $request->input('data.username'))
             ->where('Userpass',$password)
             ->first();
     }
+
+    public static function getUsers ()
+    {
+        return User::select('MyIndex','UserName','Userpass')->get();
+    }
+
 
 }

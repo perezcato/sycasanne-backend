@@ -11,7 +11,7 @@ use Illuminate\Http\Request;
 
 class LoanController extends Controller
 {
-    public function index(Request $request)
+    public function search(Request $request)
     {
         $loan = $request->input('data.loan_query');
 
@@ -23,9 +23,8 @@ class LoanController extends Controller
         return LoanResource::collection($loan);
     }
 
-    public function getLoansForAnArea(GetLoansRequest $request):JsonResponse
+    public function index():JsonResponse
     {
-        $loans = Loan::getLoansFromRequest($request);
-        return  response()->json($loans);
+        return  \App\Http\Resources\LoanResource::collection(Loan::getLoans())->response();
     }
 }
