@@ -21,7 +21,6 @@
   <component name="ChangeListManager">
     <list default="true" id="1f9f6e39-96c3-4389-9742-6e0c5aa9f17b" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Http/Middleware/Configuration/DbConfigMiddleware.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Middleware/Configuration/DbConfigMiddleware.php" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -226,7 +225,8 @@
       <workItem from="1603043705374" duration="176000" />
       <workItem from="1603046700575" duration="1296000" />
       <workItem from="1603052978555" duration="3517000" />
-      <workItem from="1603088772108" duration="260000" />
+      <workItem from="1603088772108" duration="342000" />
+      <workItem from="1603089339363" duration="80000" />
     </task>
     <task id="LOCAL-00001" summary="Fixed the authentication issues">
       <created>1602939772685</created>
@@ -312,7 +312,14 @@
       <option name="project" value="LOCAL" />
       <updated>1603056768298</updated>
     </task>
-    <option name="localTasksCounter" value="13" />
+    <task id="LOCAL-00013" summary="Fixed the middleware to accept database credentials from the backend">
+      <created>1603089079417</created>
+      <option name="number" value="00013" />
+      <option name="presentableId" value="LOCAL-00013" />
+      <option name="project" value="LOCAL" />
+      <updated>1603089079417</updated>
+    </task>
+    <option name="localTasksCounter" value="14" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -342,7 +349,8 @@
     <MESSAGE value="added sms support to the app" />
     <MESSAGE value="Modified the verification token" />
     <MESSAGE value="added the method for getting all loans from a specific region" />
-    <option name="LAST_COMMIT_MESSAGE" value="added the method for getting all loans from a specific region" />
+    <MESSAGE value="Fixed the middleware to accept database credentials from the backend" />
+    <option name="LAST_COMMIT_MESSAGE" value="Fixed the middleware to accept database credentials from the backend" />
   </component>
   <component name="WindowStateProjectService">
     <state x="311" y="88" width="940" height="744" key="#com.intellij.execution.impl.EditConfigurationsDialog" timestamp="1602938826490">
