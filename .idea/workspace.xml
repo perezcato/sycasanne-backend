@@ -20,12 +20,10 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="c9df5a71-8ba1-4d96-8e7f-f05450f24239" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/app/Http/Resources/UserResource.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/MobileBanker/LoanController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/MobileBanker/LoanController.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/Http/Controllers/User/UserController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/User/UserController.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Models/Auth/User.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Models/Auth/User.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Models/MobileBanker/Loan.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Models/MobileBanker/Loan.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Models/MobileBanker/LoanRepayment.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Models/MobileBanker/LoanRepayment.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/routes/api.php" beforeDir="false" afterPath="$PROJECT_DIR$/routes/api.php" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -207,7 +205,7 @@
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="TaskManager">
     <task active="true" id="Default" summary="Default task">
-      <changelist id="1f9f6e39-96c3-4389-9742-6e0c5aa9f17b" name="Default Changelist" comment="" />
+      <changelist id="c9df5a71-8ba1-4d96-8e7f-f05450f24239" name="Default Changelist" comment="" />
       <created>1601564027034</created>
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
@@ -232,6 +230,8 @@
       <workItem from="1603046700575" duration="1296000" />
       <workItem from="1603052978555" duration="3517000" />
       <workItem from="1603088772108" duration="260000" />
+      <workItem from="1603201471589" duration="315000" />
+      <workItem from="1603267463474" duration="2861000" />
     </task>
     <task id="LOCAL-00001" summary="Fixed the authentication issues">
       <created>1602939772685</created>

@@ -23,9 +23,6 @@ Route::middleware(['db'])->group(function(){
 
     Route::get('/loans',[LoanController::class, 'index']);
     Route::get('/users', [UserController::class,'index']);
-
-    Route::middleware('auth:sanctum')->group(function(){
-        Route::post('/loans/search',[LoanController::class, 'search']);
-        Route::post('/loans/repayment',[LoanRepaymentController::class, 'index']);
-    });
+    Route::post('/loans/repayment',[LoanRepaymentController::class, 'index']);
+    Route::post('/loans/search',[LoanController::class, 'search']);
 });
