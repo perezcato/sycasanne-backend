@@ -23,6 +23,7 @@ Route::middleware(['db'])->group(function(){
 
     Route::get('/loans',[LoanController::class, 'index']);
     Route::get('/users', [UserController::class,'index']);
-    Route::post('/loans/repayment',[LoanRepaymentController::class, 'index']);
+    Route::post('/loans/repayment',[LoanRepaymentController::class, 'store']);
+    Route::post('/loans/check-repayment',[LoanRepaymentController::class, 'checkLoanPayment']);
     Route::post('/loans/search',[LoanController::class, 'search']);
 });

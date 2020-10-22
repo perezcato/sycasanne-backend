@@ -11,4 +11,6 @@ class Staff extends Model
 
     protected $table = 'Staff';
     protected $primaryKey = 'MyIndex';
+
+    public $timestamps = false;
 }
