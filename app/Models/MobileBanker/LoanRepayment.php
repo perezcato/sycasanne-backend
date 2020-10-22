@@ -12,7 +12,7 @@ class LoanRepayment extends Model
     use HasFactory;
 
     protected $connection = 'mysql';
-    protected $table = 'loanrepyment';
+    protected $table = 'loanrepymts';
     public $timestamps = false;
     protected $fillable = [
         'LoanRef','ClientRef','TheRpAmt','MyKyCd',
@@ -28,7 +28,7 @@ class LoanRepayment extends Model
             'TheRPAmt' => $request->input('data.loan_amount'),
             'MyKyCd' => Str::uuid(),
             'RPDescp' => $request->input('data.loan_description'),
-            'TheRPDate' => date("Y-m-d H:i:s")
+            'TheRPDate' => date("Y-m-d H:i:s"),
         ]);
     }
 }
