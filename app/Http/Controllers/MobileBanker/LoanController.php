@@ -4,6 +4,7 @@ namespace App\Http\Controllers\MobileBanker;
 
 use App\Http\Controllers\Controller;
 use App\Http\Requests\Loan\GetLoansRequest;
+use App\Http\Resources\LoanResource as Loans;
 use App\Http\Resources\MobileBanker\LoanResource;
 use App\Models\MobileBanker\Loan;
 use Illuminate\Http\JsonResponse;
@@ -25,6 +26,6 @@ class LoanController extends Controller
 
     public function index():JsonResponse
     {
-        return  \App\Http\Resources\LoanResource::collection(Loan::getLoans())->response();
+        return  Loans::collection(Loan::getLoans())->response();
     }
 }

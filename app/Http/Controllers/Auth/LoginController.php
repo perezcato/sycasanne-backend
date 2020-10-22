@@ -7,6 +7,7 @@ use App\Http\Requests\Auth\LoginRequest;
 use App\Http\Requests\Auth\RegisterDeviceRequest;
 use App\Http\Requests\Auth\TokenRequest;
 use App\Http\Requests\Auth\VerifyTokenRequest;
+use App\Http\Resources\Auth\UserResource;
 use App\Libraries\SMS;
 use App\Models\Auth\Device;
 use App\Models\Auth\Staff;
@@ -29,12 +30,7 @@ class LoginController extends Controller
        $userToken = $user->createToken($user->getAttribute('UserName'))
            ->plainTextToken;
 
-        return response()->json([
-            'id' => $user->getAttribute('MyIndex'),
-            'username' => $user->getAttribute('UserName'),
-            'full_name' => $user->getAttribute('RealName'),
-            'user_token' => $userToken
-        ]);
+        return (new UserResource($user,$userToken))->response();
     }
 
     public function requestToken(TokenRequest $request, SMS $sms):JsonResponse
