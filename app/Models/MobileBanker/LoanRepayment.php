@@ -30,7 +30,7 @@ class LoanRepayment extends Model
             'RPDescp' => $request->input('data.loan_description'),
             'TheRPDate' => date("Y-m-d H:i:s"),
             'TransRefNo' => $request->input('data.transfer_reference'),
-            'TheStatus' => $request->input('data.status')
+            'TheStatus' => $request->input('data.status'),
         ]);
     }
 

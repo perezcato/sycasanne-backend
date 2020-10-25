@@ -6,7 +6,6 @@ use App\Http\Controllers\Controller;
 use App\Http\Requests\MobileBanker\LoanRepaymentRequest;
 use App\Models\MobileBanker\LoanRepayment;
 use Illuminate\Http\JsonResponse;
-use Illuminate\Http\Request;
 use Illuminate\Http\Response;
 
 class LoanRepaymentController extends Controller
