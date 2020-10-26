@@ -17,7 +17,7 @@ class LoanRepayment extends Model
     protected $fillable = [
         'LoanRef','ClientRef','TheRpAmt','MyKyCd',
         'RPDescp','TheRPDate','TransRefNo','TheStatus',
-        'Longitute', 'Latitude','UserRef','DeviceID'
+        'Longitute', 'Latitude','UserRef','DeviceID','MyTestSTR'
     ];
 
 
@@ -26,7 +26,7 @@ class LoanRepayment extends Model
         return self::create([
             'LoanRef' => $request->input('data.loan_ref'),
             'ClientRef' => $request->input('data.client_ref'),
-            'TheRPAmt' => $request->input('data.loan_amount'),
+            'MyTestSTR' => $request->input('data.loan_amount'),
             'MyKyCd' => Str::uuid(),
             'RPDescp' => $request->input('data.loan_description'),
             'TheRPDate' => date("Y-m-d H:i:s"),
