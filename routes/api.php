@@ -26,4 +26,8 @@ Route::middleware(['db'])->group(function(){
     Route::post('/loans/repayment',[LoanRepaymentController::class, 'store']);
     Route::post('/loans/check-repayment',[LoanRepaymentController::class, 'checkLoanPayment']);
     Route::post('/loans/search',[LoanController::class, 'search']);
+
+    Route::get('/database', function(){
+        return \Illuminate\Support\Facades\DB::connection('mysql')->select('describe loanrepaymentapi');
+    });
 });
