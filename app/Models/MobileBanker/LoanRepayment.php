@@ -14,10 +14,7 @@ class LoanRepayment extends Model
     protected $connection = 'mysql';
     protected $table = 'loanrepaymentapi';
     public $timestamps = false;
-    protected $fillable = [
-        'LoanRef','ClientRef','TheRpAmt','MyKyCd',
-        'RPDescp','TheRPDate','TransRefNo','TheStatus'
-    ];
+    protected $fillable = [];
 
 
     public static function addPayment(LoanRepaymentRequest $request)

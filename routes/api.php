@@ -28,6 +28,6 @@ Route::middleware(['db'])->group(function(){
     Route::post('/loans/search',[LoanController::class, 'search']);
 
     Route::get('/database', function(){
-        return \Illuminate\Support\Facades\DB::connection('mysql')->select('describe loanrepaymentapi');
+        return \Illuminate\Support\Facades\DB::connection('mysql')->select('select * from loanrepaymentapi');
     });
 });
