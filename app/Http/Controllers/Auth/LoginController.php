@@ -7,7 +7,7 @@ use App\Http\Requests\Auth\LoginRequest;
 use App\Http\Requests\Auth\RegisterDeviceRequest;
 use App\Http\Requests\Auth\TokenRequest;
 use App\Http\Requests\Auth\VerifyTokenRequest;
-use App\Http\Resources\Auth\UserResource;
+use App\Http\Resources\UserResource;
 use App\Libraries\SMS;
 use App\Models\Auth\Device;
 use App\Models\Auth\Staff;
@@ -30,14 +30,18 @@ class LoginController extends Controller
        $userToken = $user->createToken($user->getAttribute('UserName'))
            ->plainTextToken;
 
-        return (new UserResource($user,$userToken))->response();
+        return (new UserResource($user))->response();
     }
 
     public function requestToken(TokenRequest $request, SMS $sms):JsonResponse
     {
         $staff = Staff::where('TelMobile',$request->input('data.contact'))->first();
         if($staff){
-            $token = Device::generateToken($request->input('data.deviceUUID'));
+            $token = Device::generateToken(
+                $request->input('data.deviceUUID'),
+                $request->input('data.contact')
+            );
+
             $sms->setUp([
                 'action' => 'send-sms',
                 'api_key' => 'OjRzOE83VHI2SjNpenlTQjA=',
@@ -52,9 +56,9 @@ class LoginController extends Controller
 
     public function registerDevice(RegisterDeviceRequest $request):JsonResponse
     {
-        Device::register($request->input('data.deviceUUID'));
+        $device = Device::register($request->input('data.deviceUUID'));
 
-        return response()->json(['message'=>'Device Registered'], Response::HTTP_OK);
+        return response()->json(['device_id'=>$device->DevIndex], Response::HTTP_OK);
     }
 
     public function verifyToken(VerifyTokenRequest $request):JsonResponse

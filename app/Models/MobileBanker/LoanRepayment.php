@@ -33,6 +33,8 @@ class LoanRepayment extends Model
             'TheStatus' => $request->input('data.status'),
             'Longitute' => $request->input('data.longitude'),
             'Latitude' => $request->input('data.latitude'),
+            'UserRef' => $request->input('data.user_ref'),
+            'DeviceID' => $request->input('data.device_unique_id')
         ]);
     }
 
