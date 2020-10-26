@@ -30,14 +30,15 @@ class Device extends Model
         return Device::create(['DeviceUUID' => $deviceUUID]);
     }
 
-    public static function generateToken(string $deviceUUID):string
+    public static function generateToken(string $deviceUUID, string $contact):string
     {
         $activationToken = Str::random(6);
         Device::where('DeviceUUID',$deviceUUID)
             ->update([
                 'DeviceToken'=> $activationToken,
                 'DeviceTokenExpiry' => (new Carbon())->addHours(2)->toDateTime(),
-                'DaviceTokenStatus' => 'valid'
+                'DaviceTokenStatus' => 'valid',
+                'AuthTelNumber' => $contact
             ]);
         return $activationToken;
     }
