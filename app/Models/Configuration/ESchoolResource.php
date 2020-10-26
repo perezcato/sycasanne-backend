@@ -5,7 +5,6 @@ namespace App\Models\Configuration;
 use App\Http\Requests\Configuration\ESchoolResourceRequest;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
-use Illuminate\Support\Arr;
 
 class ESchoolResource extends Model
 {
