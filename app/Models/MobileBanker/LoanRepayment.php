@@ -29,7 +29,7 @@ class LoanRepayment extends Model
             'MyTestSTR' => $request->input('data.loan_amount'),
             'MyKyCd' => Str::uuid(),
             'RPDescp' => $request->input('data.loan_description'),
-            'TheRPDate' => date("Y-m-d H:i:s"),
+            'TheRPDate' => $request->input('data.date'),
             'TransRefNo' => $request->input('data.transfer_reference'),
             'TheStatus' => $request->input('data.status'),
             'Longitute' => $request->input('data.longitude'),
