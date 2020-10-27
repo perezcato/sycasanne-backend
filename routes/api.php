@@ -1,6 +1,7 @@
 <?php
 
 use App\Http\Controllers\Configuration\ESchoolResourceController;
+use App\Http\Controllers\Location\LocationController;
 use App\Http\Controllers\MobileBanker\LoanController;
 use App\Http\Controllers\MobileBanker\LoanRepaymentController;
 use App\Http\Controllers\User\UserController;
@@ -26,8 +27,5 @@ Route::middleware(['db'])->group(function(){
     Route::post('/loans/repayment',[LoanRepaymentController::class, 'store']);
     Route::post('/loans/check-repayment',[LoanRepaymentController::class, 'checkLoanPayment']);
     Route::post('/loans/search',[LoanController::class, 'search']);
-
-    Route::get('/database', function(){
-        return \Illuminate\Support\Facades\DB::connection('mysql')->select('select * from loanrepaymentapi');
-    });
+    Route::post('/location',[LocationController::class,'store']);
 });
