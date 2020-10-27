@@ -20,7 +20,7 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="c9df5a71-8ba1-4d96-8e7f-f05450f24239" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/app/Models/MobileBanker/LoanRepayment.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Models/MobileBanker/LoanRepayment.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -400,7 +400,14 @@
       <option name="project" value="LOCAL" />
       <updated>1603732987781</updated>
     </task>
-    <option name="localTasksCounter" value="25" />
+    <task id="LOCAL-00025" summary="Changed the repayment column">
+      <created>1603733172171</created>
+      <option name="number" value="00025" />
+      <option name="presentableId" value="LOCAL-00025" />
+      <option name="project" value="LOCAL" />
+      <updated>1603733172171</updated>
+    </task>
+    <option name="localTasksCounter" value="26" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -441,7 +448,8 @@
     <MESSAGE value="Added locations and device id to it" />
     <MESSAGE value="fixed the fillable column" />
     <MESSAGE value="Added the needed fillable columns" />
-    <option name="LAST_COMMIT_MESSAGE" value="Added the needed fillable columns" />
+    <MESSAGE value="Changed the repayment column" />
+    <option name="LAST_COMMIT_MESSAGE" value="Changed the repayment column" />
   </component>
   <component name="WindowStateProjectService">
     <state x="311" y="88" width="940" height="744" key="#com.intellij.execution.impl.EditConfigurationsDialog" timestamp="1602938826490">
