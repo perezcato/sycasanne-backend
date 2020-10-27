@@ -27,7 +27,8 @@ class LocationRequest extends FormRequest
             'data.user_id' => ['required'],
             'data.longitude' => ['required'],
             'data.latitude' => ['required'],
-            'data.date_time' => ['required']
+            'data.date_time' => ['required'],
+            'data.device_unique_id' => ['required']
         ];
     }
 }
