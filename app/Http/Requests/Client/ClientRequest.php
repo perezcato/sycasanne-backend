@@ -1,13 +1,11 @@
 <?php
 
-namespace App\Http\Requests\Location;
+namespace App\Http\Requests\Client;
 
 use Illuminate\Foundation\Http\FormRequest;
 
-class LocationRequest extends FormRequest
+class ClientRequest extends FormRequest
 {
-
-
     /**
      * Determine if the user is authorized to make this request.
      *
@@ -26,11 +24,12 @@ class LocationRequest extends FormRequest
     public function rules()
     {
         return [
-            'data.user_id' => ['required'],
-            'data.longitude' => ['required'],
-            'data.latitude' => ['required'],
-            'data.date_time' => ['required'],
-            'data.device_unique_id' => ['required']
+            'name' => ['required'],
+            'contact' => ['required'],
+            'type' => ['required'],
+            'date_created' => ['required'],
+            'user_ref' => ['required'],
+            'device_id' => ['required'],
         ];
     }
 }

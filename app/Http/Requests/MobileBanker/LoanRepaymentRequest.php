@@ -27,7 +27,7 @@ class LoanRepaymentRequest extends FormRequest
             'data.loan_amount' => ['required'],
             'data.loan_ref' => ['required'],
             'data.client_ref' => ['required'],
-            'data.loan_description' => ['required']
+            'data.loan_description' => ['required'],
         ];
     }
 }
