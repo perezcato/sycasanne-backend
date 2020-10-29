@@ -7,6 +7,7 @@ use Illuminate\Http\Request;
 use Illuminate\Http\Response;
 use Illuminate\Support\Facades\DB;
 use Illuminate\Support\Facades\Schema;
+use Illuminate\Support\Str;
 
 class DbConfigMiddleware
 {
@@ -30,11 +31,19 @@ class DbConfigMiddleware
     private function connectToDatabaseFromRequest(Request $request)
     {
         if($request->method() === 'POST'){
-            $dbHost = $request->input('database.host');
-            $dbPort = $request->input('database.port');
-            $dbUsername = $request->input('database.username');
-            $dbPassword = $request->input('database.password');
-            $dbName = $request->input('database.name');
+            if(Str::contains($request->header('Content-type'),'multipart/form-data')){
+                $dbHost = $request->input('host');
+                $dbPort = $request->input('port');
+                $dbUsername = $request->input('username');
+                $dbPassword = $request->input('password');
+                $dbName = $request->input('database_name');
+            }else{
+                $dbHost = $request->input('database.host');
+                $dbPort = $request->input('database.port');
+                $dbUsername = $request->input('database.username');
+                $dbPassword = $request->input('database.password');
+                $dbName = $request->input('database.name');
+            }
         }else{
             $dbHost = $request->get('host');
             $dbPort = $request->get('port');

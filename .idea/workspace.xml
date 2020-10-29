@@ -20,9 +20,12 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="c9df5a71-8ba1-4d96-8e7f-f05450f24239" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/app/Http/Controllers/Client/ClientController.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/Http/Requests/Client/ClientRequest.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/Models/Client/Client.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Http/Requests/MobileBanker/LoanRepaymentRequest.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Requests/MobileBanker/LoanRepaymentRequest.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Models/MobileBanker/LoanRepayment.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Models/MobileBanker/LoanRepayment.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Http/Middleware/Configuration/DbConfigMiddleware.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Middleware/Configuration/DbConfigMiddleware.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/routes/api.php" beforeDir="false" afterPath="$PROJECT_DIR$/routes/api.php" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -234,6 +237,7 @@
       <workItem from="1603267463474" duration="3589000" />
       <workItem from="1603429657764" duration="25000" />
       <workItem from="1603606345235" duration="4102000" />
+      <workItem from="1603956169540" duration="6400000" />
     </task>
     <task id="LOCAL-00001" summary="Fixed the authentication issues">
       <created>1602939772685</created>
@@ -424,7 +428,14 @@
       <option name="project" value="LOCAL" />
       <updated>1603814055798</updated>
     </task>
-    <option name="localTasksCounter" value="28" />
+    <task id="LOCAL-00028" summary="added date to the repayment">
+      <created>1603822269739</created>
+      <option name="number" value="00028" />
+      <option name="presentableId" value="LOCAL-00028" />
+      <option name="project" value="LOCAL" />
+      <updated>1603822269740</updated>
+    </task>
+    <option name="localTasksCounter" value="29" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -443,7 +454,6 @@
     <option name="oldMeFiltersMigrated" value="true" />
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="Fixed the authentication issues" />
     <MESSAGE value="reconfigured the database connections for the application" />
     <MESSAGE value="Done with the authentication of a device" />
     <MESSAGE value="did the correction for verification token flow" />
@@ -468,7 +478,8 @@
     <MESSAGE value="remote commit" />
     <MESSAGE value="Added location to the service" />
     <MESSAGE value="fixed the latitude problem" />
-    <option name="LAST_COMMIT_MESSAGE" value="fixed the latitude problem" />
+    <MESSAGE value="added date to the repayment" />
+    <option name="LAST_COMMIT_MESSAGE" value="added date to the repayment" />
   </component>
   <component name="WindowStateProjectService">
     <state x="311" y="88" width="940" height="744" key="#com.intellij.execution.impl.EditConfigurationsDialog" timestamp="1602938826490">
