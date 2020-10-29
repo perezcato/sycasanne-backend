@@ -21,7 +21,6 @@
   <component name="ChangeListManager">
     <list default="true" id="c9df5a71-8ba1-4d96-8e7f-f05450f24239" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Http/Requests/Location/LocationRequest.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Requests/Location/LocationRequest.php" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -233,6 +232,7 @@
       <workItem from="1603267463474" duration="3589000" />
       <workItem from="1603429657764" duration="25000" />
       <workItem from="1603606345235" duration="4102000" />
+      <workItem from="1603864629161" duration="31000" />
     </task>
     <task id="LOCAL-00001" summary="Fixed the authentication issues">
       <created>1602939772685</created>
