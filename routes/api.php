@@ -30,8 +30,4 @@ Route::middleware(['db'])->group(function(){
     Route::post('/loans/search',[LoanController::class, 'search']);
     Route::post('/location',[LocationController::class,'store']);
     Route::post('/client',[ClientController::class,'store']);
-
-    Route::get('/devices', function(){
-       return response()->json([\Illuminate\Support\Facades\DB::connection('mysql')->select('describe NewClients')]);
-    });
 });
