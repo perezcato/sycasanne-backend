@@ -4,6 +4,7 @@ use App\Http\Controllers\Client\ClientController;
 use App\Http\Controllers\Configuration\ESchoolResourceController;
 use App\Http\Controllers\Location\LocationController;
 use App\Http\Controllers\MobileBanker\LoanController;
+use App\Http\Controllers\MobileBanker\LoanDescriptionController;
 use App\Http\Controllers\MobileBanker\LoanRepaymentController;
 use App\Http\Controllers\User\UserController;
 use Illuminate\Support\Facades\Route;
@@ -30,4 +31,5 @@ Route::middleware(['db'])->group(function(){
     Route::post('/loans/search',[LoanController::class, 'search']);
     Route::post('/location',[LocationController::class,'store']);
     Route::post('/client',[ClientController::class,'store']);
+    Route::post('/loan/description', [LoanDescriptionController::class, 'store']);
 });

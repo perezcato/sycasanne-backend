@@ -11,7 +11,7 @@ class Loan extends Model
     use HasFactory;
 
     protected $connection = 'mysql';
-    protected $table='loans';
+    protected $table = 'loans';
 
     public static function getLoans()
     {

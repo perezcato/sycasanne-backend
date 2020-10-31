@@ -44,6 +44,4 @@ class Client extends Model
         Storage::disk('public')->put($imageName,base64_decode($base64image));
         return $imageName;
     }
-
-
 }

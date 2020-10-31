@@ -21,9 +21,9 @@
   <component name="ChangeListManager">
     <list default="true" id="c9df5a71-8ba1-4d96-8e7f-f05450f24239" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/Client/ClientController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/Client/ClientController.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Http/Requests/Client/ClientRequest.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Requests/Client/ClientRequest.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/Models/Client/Client.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Models/Client/Client.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Models/MobileBanker/Loan.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Models/MobileBanker/Loan.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Models/MobileBanking/Loan.php" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/routes/api.php" beforeDir="false" afterPath="$PROJECT_DIR$/routes/api.php" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -239,7 +239,7 @@
       <workItem from="1603956169540" duration="6400000" />
       <workItem from="1604035546439" duration="8000" />
       <workItem from="1604042277577" duration="1434000" />
-      <workItem from="1604088691489" duration="7258000" />
+      <workItem from="1604088691489" duration="9935000" />
     </task>
     <task id="LOCAL-00001" summary="Fixed the authentication issues">
       <created>1602939772685</created>
