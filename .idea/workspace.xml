@@ -20,7 +20,14 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="c9df5a71-8ba1-4d96-8e7f-f05450f24239" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/resources/views/pdfs/client-statement.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/php.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/php.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/sycasanne-backend.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/sycasanne-backend.iml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/composer.json" beforeDir="false" afterPath="$PROJECT_DIR$/composer.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/composer.lock" beforeDir="false" afterPath="$PROJECT_DIR$/composer.lock" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/config/app.php" beforeDir="false" afterPath="$PROJECT_DIR$/config/app.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/routes/api.php" beforeDir="false" afterPath="$PROJECT_DIR$/routes/api.php" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -152,6 +159,11 @@
       <path value="$PROJECT_DIR$/vendor/symfony/process" />
       <path value="$PROJECT_DIR$/vendor/symfony/event-dispatcher-contracts" />
       <path value="$PROJECT_DIR$/vendor/laravel/sanctum" />
+      <path value="$PROJECT_DIR$/vendor/phenx/php-svg-lib" />
+      <path value="$PROJECT_DIR$/vendor/phenx/php-font-lib" />
+      <path value="$PROJECT_DIR$/vendor/sabberworm/php-css-parser" />
+      <path value="$PROJECT_DIR$/vendor/dompdf/dompdf" />
+      <path value="$PROJECT_DIR$/vendor/barryvdh/laravel-dompdf" />
     </include_path>
   </component>
   <component name="ProjectId" id="1iHUSABPzRB7nN7xiWAZSFzy5hQ" />
@@ -175,15 +187,16 @@
     <property name="vue.rearranger.settings.migration" value="true" />
   </component>
   <component name="RecentsManager">
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/app/Http/Controllers/Client" />
+      <recent name="$PROJECT_DIR$/app/Http/Controllers/location" />
+      <recent name="C:\xampp\htdocs\sycasanne\app\Models\Auth" />
+      <recent name="$PROJECT_DIR$/app/Models/Auth" />
+    </key>
     <key name="CopyFile.RECENT_KEYS">
       <recent name="$PROJECT_DIR$/app/Models" />
       <recent name="$PROJECT_DIR$" />
       <recent name="C:\xampp\htdocs\sycasanne\storage\app\public\company_logos" />
-    </key>
-    <key name="MoveFile.RECENT_KEYS">
-      <recent name="$PROJECT_DIR$/app/Http/Controllers/location" />
-      <recent name="C:\xampp\htdocs\sycasanne\app\Models\Auth" />
-      <recent name="$PROJECT_DIR$/app/Models/Auth" />
     </key>
   </component>
   <component name="RunManager" selected="JavaScript Debug.LoginController.php">
@@ -237,6 +250,7 @@
       <workItem from="1604042277577" duration="1434000" />
       <workItem from="1604088691489" duration="10030000" />
       <workItem from="1604166828236" duration="434000" />
+      <workItem from="1604779047103" duration="3532000" />
     </task>
     <task id="LOCAL-00001" summary="Fixed the authentication issues">
       <created>1602939772685</created>
@@ -434,7 +448,14 @@
       <option name="project" value="LOCAL" />
       <updated>1603822269740</updated>
     </task>
-    <option name="localTasksCounter" value="29" />
+    <task id="LOCAL-00029" summary="work space">
+      <created>1604779097868</created>
+      <option name="number" value="00029" />
+      <option name="presentableId" value="LOCAL-00029" />
+      <option name="project" value="LOCAL" />
+      <updated>1604779097868</updated>
+    </task>
+    <option name="localTasksCounter" value="30" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -453,7 +474,6 @@
     <option name="oldMeFiltersMigrated" value="true" />
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="reconfigured the database connections for the application" />
     <MESSAGE value="Done with the authentication of a device" />
     <MESSAGE value="did the correction for verification token flow" />
     <MESSAGE value="refactored the LoginController.php" />
@@ -478,7 +498,8 @@
     <MESSAGE value="Added location to the service" />
     <MESSAGE value="fixed the latitude problem" />
     <MESSAGE value="added date to the repayment" />
-    <option name="LAST_COMMIT_MESSAGE" value="added date to the repayment" />
+    <MESSAGE value="work space" />
+    <option name="LAST_COMMIT_MESSAGE" value="work space" />
   </component>
   <component name="WindowStateProjectService">
     <state x="311" y="88" width="940" height="744" key="#com.intellij.execution.impl.EditConfigurationsDialog" timestamp="1602938826490">
@@ -536,9 +557,10 @@
       <screen x="0" y="88" width="1920" height="1080" />
     </state>
     <state x="624" y="373" width="661" height="509" key="NewPhpClassDialog/1920.0.1366.768/0.88.1920.1080@0.88.1920.1080" timestamp="1603007668227" />
-    <state x="763" y="563" width="384" height="130" key="NewPhpFileDialog" timestamp="1603007639085">
-      <screen x="0" y="88" width="1920" height="1080" />
+    <state x="572" y="427" width="278" height="130" key="NewPhpFileDialog" timestamp="1604780615240">
+      <screen x="0" y="55" width="1440" height="845" />
     </state>
+    <state x="572" y="427" width="278" height="130" key="NewPhpFileDialog/1440.31.1366.768/0.55.1440.845@0.55.1440.845" timestamp="1604780615240" />
     <state x="763" y="563" width="384" height="130" key="NewPhpFileDialog/1920.0.1366.768/0.88.1920.1080@0.88.1920.1080" timestamp="1603007639085" />
     <state x="466" y="226" width="499" height="277" key="Vcs.Push.Dialog.v2" timestamp="1603111889394">
       <screen x="0" y="0" width="1366" height="728" />
