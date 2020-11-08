@@ -11,12 +11,7 @@ use App\Http\Controllers\User\UserController;
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\Auth\LoginController;
 
-Route::post('/config',[ESchoolResourceController::class,'index'])
-    ->name('config.index');
-
-Route::get('/test', function (){
-    return 'done';
-});
+Route::post('/config',[ESchoolResourceController::class,'index']);
 
 Route::middleware(['db'])->group(function(){
     Route::post('/login',[LoginController::class,'login']);
@@ -33,5 +28,5 @@ Route::middleware(['db'])->group(function(){
     Route::post('/location',[LocationController::class,'store']);
     Route::post('/client',[ClientController::class,'store']);
     Route::post('/loan/description', [LoanDescriptionController::class, 'store']);
-    Route::get('/loan/client-statement', [ClientStatementController::class, 'index']);
+    Route::post('/loan/client-statement', [ClientStatementController::class, 'index']);
 });
