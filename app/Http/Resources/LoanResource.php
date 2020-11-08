@@ -2,6 +2,7 @@
 
 namespace App\Http\Resources;
 
+use Illuminate\Http\Request;
 use Illuminate\Http\Resources\Json\JsonResource;
 
 class LoanResource extends JsonResource
@@ -9,7 +10,7 @@ class LoanResource extends JsonResource
     /**
      * Transform the resource into an array.
      *
-     * @param  \Illuminate\Http\Request  $request
+     * @param  Request  $request
      * @return array
      */
     public function toArray($request)
@@ -20,7 +21,9 @@ class LoanResource extends JsonResource
             'client_reference' => $this->ClientRef,
             'amount' => $this->Amt,
             'disbursement_date' => $this->ActualDisbursalDate,
-            'tenor' => $this->Tenor
+            'tenor' => $this->Tenor,
+            'loan_image' => $this->LoanImage ?: '',
+            'mime' => $this->Mime?:''
         ];
     }
 }

@@ -29,4 +29,5 @@ Route::middleware(['db'])->group(function(){
     Route::post('/client',[ClientController::class,'store']);
     Route::post('/loan/description', [LoanDescriptionController::class, 'store']);
     Route::post('/loan/client-statement', [ClientStatementController::class, 'index']);
+    Route::post('/loan/update-image', [LoanController::class, 'updateImage']);
 });
