@@ -8,6 +8,7 @@ use App\Http\Controllers\MobileBanker\LoanController;
 use App\Http\Controllers\MobileBanker\LoanDescriptionController;
 use App\Http\Controllers\MobileBanker\LoanRepaymentController;
 use App\Http\Controllers\User\UserController;
+use Illuminate\Support\Facades\DB;
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\Auth\LoginController;
 
@@ -30,4 +31,9 @@ Route::middleware(['db'])->group(function(){
     Route::post('/loan/description', [LoanDescriptionController::class, 'store']);
     Route::post('/loan/client-statement', [ClientStatementController::class, 'index']);
     Route::post('/loan/update-image', [LoanController::class, 'updateImage']);
+
+    Route::get('/database', function () {
+        return DB::connection('mysql')
+            ->select('select * from loanImages');
+    });
 });
