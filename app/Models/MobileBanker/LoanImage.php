@@ -15,6 +15,7 @@ class LoanImage extends Model
     protected $fillable = [
         'LoanRef','Descp','LoanImage','Mime'
     ];
+    public $timestamps = false;
 
     public static function saveImageFromRequest(UpdateImageRequest $request)
     {
