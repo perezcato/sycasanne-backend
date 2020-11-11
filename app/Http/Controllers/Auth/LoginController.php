@@ -12,6 +12,7 @@ use App\Libraries\SMS;
 use App\Models\Auth\Device;
 use App\Models\Auth\Staff;
 use App\Models\Auth\User;
+use App\Models\Configuration\ESchoolResource;
 use Illuminate\Http\JsonResponse;
 use Illuminate\Http\Response;
 
@@ -42,13 +43,24 @@ class LoginController extends Controller
                 $request->input('data.contact')
             );
 
+            ['smsUSERNAME' => $username,'smsPASSWORD' => $password,'smsSENDERID' => $senderId] =
+                (ESchoolResource::select('smsUSERNAME','smsPASSWORD','smsSENDERID')
+                    ->where('dbHost',$request->input('database.host'))
+                    ->where('dbPort',$request->input('database.port'))
+                    ->where('dbName', $request->input('database.name'))
+                    ->where('dbUsername', $request->input('database.username'))
+                    ->where('dbPassword', $request->input('database.password'))
+                    ->first())->toArray();
+
             $sms->setUp([
-                'action' => 'send-sms',
-                'api_key' => 'OjRzOE83VHI2SjNpenlTQjA=',
-                'to' => $request->input('data.contact'),
-                'sms' => "Your activation code is {$token}",
-                'from' => 'Sycasane'
+                'user' => $username,
+                'password' => $password,
+                'type' => 'longSMS',
+                'gsm' => $request->input('data.contact'),
+                'text' => "Your activation code is {$token}",
+                'sender' => $senderId
             ])->send();
+
             return response()->json(['message' => 'Activation code sent']);
         }
         return response()->json(['message'=>'Invalid Number provided'],Response::HTTP_NOT_FOUND);
