@@ -24,12 +24,12 @@ class ClientRequest extends FormRequest
     public function rules()
     {
         return [
-            'name' => ['required'],
-            'contact' => ['required'],
-            'type' => ['required'],
-            'date_created' => ['required'],
-            'user_ref' => ['required'],
-            'device_id' => ['required'],
+            'data.name' => ['required'],
+            'data.contact' => ['required'],
+            'data.type' => ['required'],
+            'data.date_created' => ['required'],
+            'data.user_ref' => ['required'],
+            'data.device_id' => ['required'],
         ];
     }
 }

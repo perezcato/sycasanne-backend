@@ -5,6 +5,7 @@ namespace App\Http\Resources\Config;
 use Illuminate\Http\Request;
 use Illuminate\Http\Resources\Json\JsonResource;
 use Illuminate\Support\Facades\Storage;
+use Illuminate\Support\Str;
 
 class ConfigResource extends JsonResource
 {
@@ -23,6 +24,7 @@ class ConfigResource extends JsonResource
      * @param  Request  $request
      * @return array
      */
+
     public function toArray($request): array
     {
         return [
@@ -30,8 +32,9 @@ class ConfigResource extends JsonResource
             'code' => $this->TheCode,
             'company_details' => [
                 'name' => $this->CompanyName,
-                'logo_url' => secure_asset('/company_logos/'.$this->LogoURL),
-                'deviceUUID' => $this->deviceUUID
+                'logo_url' => $this->LogoURL,
+                'deviceUUID' => $this->deviceUUID,
+                'logo' => base64_encode($this->CompanyLogo)
             ],
             'database' => [
                 'host' => $this->dbHost,

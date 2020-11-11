@@ -1,20 +1,17 @@
 <?php
 
 use App\Http\Controllers\Client\ClientController;
+use App\Http\Controllers\Client\ClientStatementController;
 use App\Http\Controllers\Configuration\ESchoolResourceController;
 use App\Http\Controllers\Location\LocationController;
 use App\Http\Controllers\MobileBanker\LoanController;
+use App\Http\Controllers\MobileBanker\LoanDescriptionController;
 use App\Http\Controllers\MobileBanker\LoanRepaymentController;
 use App\Http\Controllers\User\UserController;
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\Auth\LoginController;
 
-Route::post('/config',[ESchoolResourceController::class,'index'])
-    ->name('config.index');
-
-Route::get('/test', function (){
-    return 'done';
-});
+Route::post('/config',[ESchoolResourceController::class,'index']);
 
 Route::middleware(['db'])->group(function(){
     Route::post('/login',[LoginController::class,'login']);
@@ -30,8 +27,7 @@ Route::middleware(['db'])->group(function(){
     Route::post('/loans/search',[LoanController::class, 'search']);
     Route::post('/location',[LocationController::class,'store']);
     Route::post('/client',[ClientController::class,'store']);
-
-    Route::get('/devices', function(){
-       return response()->json([\Illuminate\Support\Facades\DB::connection('mysql')->select('select * from appdevices')]);
-    });
+    Route::post('/loan/description', [LoanDescriptionController::class, 'store']);
+    Route::post('/loan/client-statement', [ClientStatementController::class, 'index']);
+    Route::post('/loan/update-image', [LoanController::class, 'updateImage']);
 });

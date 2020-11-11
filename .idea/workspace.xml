@@ -20,8 +20,12 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="c9df5a71-8ba1-4d96-8e7f-f05450f24239" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/dataSources/feaf73e2-6ebb-4add-96d8-dc5f673f2337.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources/feaf73e2-6ebb-4add-96d8-dc5f673f2337.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/Auth/LoginController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/Auth/LoginController.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/MobileBanker/LoanController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/MobileBanker/LoanController.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Http/Resources/Config/ConfigResource.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Resources/Config/ConfigResource.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Http/Resources/LoanResource.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Resources/LoanResource.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Models/MobileBanker/Loan.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Models/MobileBanker/Loan.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/routes/api.php" beforeDir="false" afterPath="$PROJECT_DIR$/routes/api.php" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -154,6 +158,11 @@
       <path value="$PROJECT_DIR$/vendor/symfony/process" />
       <path value="$PROJECT_DIR$/vendor/symfony/event-dispatcher-contracts" />
       <path value="$PROJECT_DIR$/vendor/laravel/sanctum" />
+      <path value="$PROJECT_DIR$/vendor/phenx/php-svg-lib" />
+      <path value="$PROJECT_DIR$/vendor/phenx/php-font-lib" />
+      <path value="$PROJECT_DIR$/vendor/sabberworm/php-css-parser" />
+      <path value="$PROJECT_DIR$/vendor/dompdf/dompdf" />
+      <path value="$PROJECT_DIR$/vendor/barryvdh/laravel-dompdf" />
     </include_path>
   </component>
   <component name="ProjectId" id="1iHUSABPzRB7nN7xiWAZSFzy5hQ" />
@@ -177,15 +186,16 @@
     <property name="vue.rearranger.settings.migration" value="true" />
   </component>
   <component name="RecentsManager">
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/app/Http/Controllers/Client" />
+      <recent name="$PROJECT_DIR$/app/Http/Controllers/location" />
+      <recent name="C:\xampp\htdocs\sycasanne\app\Models\Auth" />
+      <recent name="$PROJECT_DIR$/app/Models/Auth" />
+    </key>
     <key name="CopyFile.RECENT_KEYS">
       <recent name="$PROJECT_DIR$/app/Models" />
       <recent name="$PROJECT_DIR$" />
       <recent name="C:\xampp\htdocs\sycasanne\storage\app\public\company_logos" />
-    </key>
-    <key name="MoveFile.RECENT_KEYS">
-      <recent name="$PROJECT_DIR$/app/Http/Controllers/location" />
-      <recent name="C:\xampp\htdocs\sycasanne\app\Models\Auth" />
-      <recent name="$PROJECT_DIR$/app/Models/Auth" />
     </key>
   </component>
   <component name="RunManager" selected="JavaScript Debug.LoginController.php">
@@ -234,10 +244,13 @@
       <workItem from="1603267463474" duration="3589000" />
       <workItem from="1603429657764" duration="25000" />
       <workItem from="1603606345235" duration="4102000" />
-      <workItem from="1603956169540" duration="8577000" />
-      <workItem from="1604312022601" duration="354000" />
-      <workItem from="1604578221051" duration="126000" />
-      <workItem from="1605096178279" duration="1478000" />
+      <workItem from="1603956169540" duration="6400000" />
+      <workItem from="1604035546439" duration="8000" />
+      <workItem from="1604042277577" duration="1434000" />
+      <workItem from="1604088691489" duration="10030000" />
+      <workItem from="1604166828236" duration="434000" />
+      <workItem from="1604779047103" duration="5081000" />
+      <workItem from="1604847198410" duration="16761000" />
     </task>
     <task id="LOCAL-00001" summary="Fixed the authentication issues">
       <created>1602939772685</created>
@@ -435,12 +448,12 @@
       <option name="project" value="LOCAL" />
       <updated>1603822269740</updated>
     </task>
-    <task id="LOCAL-00029" summary="workspace">
-      <created>1604312297378</created>
+    <task id="LOCAL-00029" summary="work space">
+      <created>1604779097868</created>
       <option name="number" value="00029" />
       <option name="presentableId" value="LOCAL-00029" />
       <option name="project" value="LOCAL" />
-      <updated>1604312297378</updated>
+      <updated>1604779097868</updated>
     </task>
     <option name="localTasksCounter" value="30" />
     <servers />
@@ -485,8 +498,8 @@
     <MESSAGE value="Added location to the service" />
     <MESSAGE value="fixed the latitude problem" />
     <MESSAGE value="added date to the repayment" />
-    <MESSAGE value="workspace" />
-    <option name="LAST_COMMIT_MESSAGE" value="workspace" />
+    <MESSAGE value="work space" />
+    <option name="LAST_COMMIT_MESSAGE" value="work space" />
   </component>
   <component name="WindowStateProjectService">
     <state x="311" y="88" width="940" height="744" key="#com.intellij.execution.impl.EditConfigurationsDialog" timestamp="1602938826490">
@@ -496,15 +509,18 @@
     <state x="275" y="46" width="800" height="665" key="#com.intellij.execution.impl.EditConfigurationsDialog/0.24.1366.744@0.24.1366.744" timestamp="1601827623917" />
     <state x="311" y="88" key="#com.intellij.execution.impl.EditConfigurationsDialog/0.24.3286.1144@0.24.3286.1144" timestamp="1602938826490" />
     <state x="426" y="24" width="940" height="744" key="#com.intellij.execution.impl.EditConfigurationsDialog/1920.0.1366.768/0.88.1920.1080@0.88.1920.1080" timestamp="1602801425268" />
-    <state x="682" y="432" width="545" height="391" key="#com.intellij.fileTypes.FileTypeChooser" timestamp="1602925210390">
-      <screen x="0" y="24" width="3286" height="1144" />
+    <state x="2204" y="274" width="621" height="263" key="#com.intellij.fileTypes.FileTypeChooser" timestamp="1604096146428">
+      <screen x="1920" y="0" width="1366" height="768" />
     </state>
     <state x="682" y="432" width="545" height="391" key="#com.intellij.fileTypes.FileTypeChooser/0.24.3286.1144@0.24.3286.1144" timestamp="1602925210390" />
-    <state x="974" y="312" width="393" height="370" key="#com.jetbrains.php.actions.copyPaste.importReferences.PhpImportReferencesDialog" timestamp="1602935555664">
-      <screen x="0" y="24" width="3286" height="1144" />
+    <state x="2204" y="274" width="621" height="263" key="#com.intellij.fileTypes.FileTypeChooser/1920.0.1366.768/0.88.1920.1080@1920.0.1366.768" timestamp="1604096146428" />
+    <state x="427" y="267" width="393" height="370" key="#com.jetbrains.php.actions.copyPaste.importReferences.PhpImportReferencesDialog" timestamp="1604873717044">
+      <screen x="0" y="55" width="1440" height="845" />
     </state>
     <state x="481" y="211" width="393" height="370" key="#com.jetbrains.php.actions.copyPaste.importReferences.PhpImportReferencesDialog/0.24.1366.744@0.24.1366.744" timestamp="1601802095523" />
     <state x="974" y="312" key="#com.jetbrains.php.actions.copyPaste.importReferences.PhpImportReferencesDialog/0.24.3286.1144@0.24.3286.1144" timestamp="1602935555664" />
+    <state x="427" y="267" width="393" height="370" key="#com.jetbrains.php.actions.copyPaste.importReferences.PhpImportReferencesDialog/1440.31.1366.768/0.55.1440.845@0.55.1440.845" timestamp="1604873717044" />
+    <state x="2325" y="193" width="393" height="370" key="#com.jetbrains.php.actions.copyPaste.importReferences.PhpImportReferencesDialog/1920.0.1366.768/0.88.1920.1080@1920.0.1366.768" timestamp="1604094789785" />
     <state x="651" y="518" width="418" height="121" key="#com.jetbrains.php.lang.intentions.PhpImportClassDialog#" timestamp="1603345229789">
       <screen x="0" y="88" width="1920" height="1080" />
     </state>
@@ -542,9 +558,10 @@
       <screen x="0" y="88" width="1920" height="1080" />
     </state>
     <state x="624" y="373" width="661" height="509" key="NewPhpClassDialog/1920.0.1366.768/0.88.1920.1080@0.88.1920.1080" timestamp="1603007668227" />
-    <state x="763" y="563" width="384" height="130" key="NewPhpFileDialog" timestamp="1603007639085">
-      <screen x="0" y="88" width="1920" height="1080" />
+    <state x="572" y="427" width="278" height="130" key="NewPhpFileDialog" timestamp="1604780615240">
+      <screen x="0" y="55" width="1440" height="845" />
     </state>
+    <state x="572" y="427" width="278" height="130" key="NewPhpFileDialog/1440.31.1366.768/0.55.1440.845@0.55.1440.845" timestamp="1604780615240" />
     <state x="763" y="563" width="384" height="130" key="NewPhpFileDialog/1920.0.1366.768/0.88.1920.1080@0.88.1920.1080" timestamp="1603007639085" />
     <state x="466" y="226" width="499" height="277" key="Vcs.Push.Dialog.v2" timestamp="1603111889394">
       <screen x="0" y="0" width="1366" height="728" />
@@ -559,10 +576,10 @@
       <screen x="0" y="88" width="1920" height="1080" />
     </state>
     <state x="663" y="229" width="593" height="798" key="find.popup/1920.0.1366.768/0.88.1920.1080@0.88.1920.1080" timestamp="1602941607553" />
-    <state x="418" y="159" width="672" height="391" key="search.everywhere.popup" timestamp="1605097519605">
-      <screen x="0" y="0" width="1366" height="728" />
+    <state x="441" y="239" width="557" height="454" key="search.everywhere.popup" timestamp="1604847550223">
+      <screen x="0" y="55" width="1440" height="845" />
     </state>
-    <state x="418" y="159" width="672" height="391" key="search.everywhere.popup/0.0.1366.728@0.0.1366.728" timestamp="1605097519605" />
     <state x="418" y="186" width="528" height="399" key="search.everywhere.popup/0.24.1366.744@0.24.1366.744" timestamp="1601801853220" />
+    <state x="441" y="239" width="557" height="454" key="search.everywhere.popup/1440.31.1366.768/0.55.1440.845@0.55.1440.845" timestamp="1604847550223" />
   </component>
 </project>
