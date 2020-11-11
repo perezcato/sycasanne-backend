@@ -21,6 +21,8 @@
   <component name="ChangeListManager">
     <list default="true" id="c9df5a71-8ba1-4d96-8e7f-f05450f24239" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/Auth/LoginController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/Auth/LoginController.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/routes/api.php" beforeDir="false" afterPath="$PROJECT_DIR$/routes/api.php" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -233,6 +235,9 @@
       <workItem from="1603429657764" duration="25000" />
       <workItem from="1603606345235" duration="4102000" />
       <workItem from="1603956169540" duration="8577000" />
+      <workItem from="1604312022601" duration="354000" />
+      <workItem from="1604578221051" duration="126000" />
+      <workItem from="1605096178279" duration="1478000" />
     </task>
     <task id="LOCAL-00001" summary="Fixed the authentication issues">
       <created>1602939772685</created>
@@ -430,7 +435,14 @@
       <option name="project" value="LOCAL" />
       <updated>1603822269740</updated>
     </task>
-    <option name="localTasksCounter" value="29" />
+    <task id="LOCAL-00029" summary="workspace">
+      <created>1604312297378</created>
+      <option name="number" value="00029" />
+      <option name="presentableId" value="LOCAL-00029" />
+      <option name="project" value="LOCAL" />
+      <updated>1604312297378</updated>
+    </task>
+    <option name="localTasksCounter" value="30" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -449,7 +461,6 @@
     <option name="oldMeFiltersMigrated" value="true" />
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="reconfigured the database connections for the application" />
     <MESSAGE value="Done with the authentication of a device" />
     <MESSAGE value="did the correction for verification token flow" />
     <MESSAGE value="refactored the LoginController.php" />
@@ -474,7 +485,8 @@
     <MESSAGE value="Added location to the service" />
     <MESSAGE value="fixed the latitude problem" />
     <MESSAGE value="added date to the repayment" />
-    <option name="LAST_COMMIT_MESSAGE" value="added date to the repayment" />
+    <MESSAGE value="workspace" />
+    <option name="LAST_COMMIT_MESSAGE" value="workspace" />
   </component>
   <component name="WindowStateProjectService">
     <state x="311" y="88" width="940" height="744" key="#com.intellij.execution.impl.EditConfigurationsDialog" timestamp="1602938826490">
@@ -547,9 +559,10 @@
       <screen x="0" y="88" width="1920" height="1080" />
     </state>
     <state x="663" y="229" width="593" height="798" key="find.popup/1920.0.1366.768/0.88.1920.1080@0.88.1920.1080" timestamp="1602941607553" />
-    <state x="418" y="186" width="528" height="399" key="search.everywhere.popup" timestamp="1601801853220">
-      <screen x="0" y="24" width="1366" height="744" />
+    <state x="418" y="159" width="672" height="391" key="search.everywhere.popup" timestamp="1605097519605">
+      <screen x="0" y="0" width="1366" height="728" />
     </state>
+    <state x="418" y="159" width="672" height="391" key="search.everywhere.popup/0.0.1366.728@0.0.1366.728" timestamp="1605097519605" />
     <state x="418" y="186" width="528" height="399" key="search.everywhere.popup/0.24.1366.744@0.24.1366.744" timestamp="1601801853220" />
   </component>
 </project>
