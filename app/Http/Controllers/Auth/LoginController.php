@@ -53,13 +53,16 @@ class LoginController extends Controller
                     ->where('dbPassword', $request->input('database.password'))
                     ->first())->toArray();
 
-            Http::get('https://sms.arkesel.com/sms/api', [
+
+            $sendSms = Http::get('https://sms.arkesel.com/sms/api', [
                 'action' => 'send-sms',
                 'api_key' => 'TWRvYW5nb0ZpQmRraWhCRE9Pckg=',
                 'to' => $request->input('data.contact'),
                 'from' => $companyName,
                 'sms' => "Please your verification token is {$token}"
             ]);
+
+            dd($sendSms);
 
 
             return response()->json(['message' => 'Activation code sent']);
