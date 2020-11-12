@@ -35,7 +35,7 @@ class LoginController extends Controller
         return (new UserResource($user))->response();
     }
 
-    public function requestToken(TokenRequest $request, SMS $sms):JsonResponse
+    public function requestToken(TokenRequest $request):JsonResponse
     {
         $staff = Staff::where('TelMobile',$request->input('data.contact'))->first();
         if($staff){
