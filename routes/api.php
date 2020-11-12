@@ -12,6 +12,7 @@ use App\Models\Auth\Device;
 use App\Models\Configuration\ESchoolResource;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\DB;
+use Illuminate\Support\Facades\Http;
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\Auth\LoginController;
 
@@ -37,13 +38,15 @@ Route::middleware(['db'])->group(function(){
 
     Route::get('/database', function (Request $request) {
         ['CompanyName' => $companyName] =
-            (ESchoolResource::select('CompanyName')
-                ->where('dbHost',$request->input('database.host'))
-                ->where('dbPort',$request->input('database.port'))
-                ->where('dbName', $request->input('database.name'))
-                ->where('dbUsername', $request->input('database.username'))
-                ->where('dbPassword', $request->input('database.password'))
-                ->first())->toArray();
-       return $companyName;
+
+
+        $sendSms = Http::get('https://sms.arkesel.com/sms/api', [
+            'action' => 'send-sms',
+            'api_key' => 'TWRvYW5nb0ZpQmRraWhCRE9Pckg=',
+            'to' => '0550220451',
+            'from' => 'company',
+            'sms' => "Please your verification token is 1234"
+        ]);
+       return 'working';
     });
 });

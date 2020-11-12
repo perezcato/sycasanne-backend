@@ -44,26 +44,13 @@ class LoginController extends Controller
                 $request->input('data.contact')
             );
 
-            ['CompanyName' => $companyName] =
-                (ESchoolResource::select('CompanyName')
-                    ->where('dbHost',$request->input('database.host'))
-                    ->where('dbPort',$request->input('database.port'))
-                    ->where('dbName', $request->input('database.name'))
-                    ->where('dbUsername', $request->input('database.username'))
-                    ->where('dbPassword', $request->input('database.password'))
-                    ->first())->toArray();
-
-
             $sendSms = Http::get('https://sms.arkesel.com/sms/api', [
                 'action' => 'send-sms',
                 'api_key' => 'TWRvYW5nb0ZpQmRraWhCRE9Pckg=',
                 'to' => $request->input('data.contact'),
-                'from' => $companyName,
+                'from' => 'Sycasanne',
                 'sms' => "Please your verification token is {$token}"
             ]);
-
-            dd($sendSms);
-
 
             return response()->json(['message' => 'Activation code sent']);
         }
