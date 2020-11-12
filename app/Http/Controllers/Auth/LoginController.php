@@ -15,6 +15,7 @@ use App\Models\Auth\User;
 use App\Models\Configuration\ESchoolResource;
 use Illuminate\Http\JsonResponse;
 use Illuminate\Http\Response;
+use Illuminate\Support\Facades\Http;
 
 class LoginController extends Controller
 {
@@ -43,8 +44,8 @@ class LoginController extends Controller
                 $request->input('data.contact')
             );
 
-            ['smsUSERNAME' => $username,'smsPASSWORD' => $password,'smsSENDERID' => $senderId] =
-                (ESchoolResource::select('smsUSERNAME','smsPASSWORD','smsSENDERID')
+            ['CompanyName' => $companyName] =
+                (ESchoolResource::select('CompanyName')
                     ->where('dbHost',$request->input('database.host'))
                     ->where('dbPort',$request->input('database.port'))
                     ->where('dbName', $request->input('database.name'))
@@ -52,14 +53,14 @@ class LoginController extends Controller
                     ->where('dbPassword', $request->input('database.password'))
                     ->first())->toArray();
 
-            $sms->setUp([
-                'user' => $username,
-                'password' => $password,
-                'type' => 'longSMS',
-                'gsm' => $request->input('data.contact'),
-                'text' => "Your activation code is {$token}",
-                'sender' => $senderId
-            ])->send();
+            Http::get('https://sms.arkesel.com/sms/api', [
+                'action' => 'send-sms',
+                'api_key' => 'TWRvYW5nb0ZpQmRraWhCRE9Pckg=',
+                'to' => $request->input('data.contact'),
+                'from' => $companyName,
+                'sms' => "Please your verification token is {$token}"
+            ]);
+
 
             return response()->json(['message' => 'Activation code sent']);
         }

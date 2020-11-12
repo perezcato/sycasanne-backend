@@ -36,6 +36,14 @@ Route::middleware(['db'])->group(function(){
     Route::post('/loan/update-image', [LoanController::class, 'updateImage']);
 
     Route::get('/database', function (Request $request) {
-       return DB::connection('mysql')->select('select * from appdevices');
+        ['CompanyName' => $companyName] =
+            (ESchoolResource::select('CompanyName')
+                ->where('dbHost',$request->input('database.host'))
+                ->where('dbPort',$request->input('database.port'))
+                ->where('dbName', $request->input('database.name'))
+                ->where('dbUsername', $request->input('database.username'))
+                ->where('dbPassword', $request->input('database.password'))
+                ->first())->toArray();
+       return $companyName;
     });
 });
