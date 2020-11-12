@@ -68,7 +68,7 @@ class LoginController extends Controller
 
     public function registerDevice(RegisterDeviceRequest $request):JsonResponse
     {
-        $device = Device::register($request->inapiput('data.deviceUUID'));
+        $device = Device::register($request->input('data.deviceUUID'));
 
         return response()->json(['device_id'=>$device->DevIndex], Response::HTTP_OK);
     }
