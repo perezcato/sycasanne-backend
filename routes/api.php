@@ -8,6 +8,7 @@ use App\Http\Controllers\MobileBanker\LoanController;
 use App\Http\Controllers\MobileBanker\LoanDescriptionController;
 use App\Http\Controllers\MobileBanker\LoanRepaymentController;
 use App\Http\Controllers\User\UserController;
+use App\Models\Auth\Device;
 use App\Models\Configuration\ESchoolResource;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\DB;
@@ -35,18 +36,6 @@ Route::middleware(['db'])->group(function(){
     Route::post('/loan/update-image', [LoanController::class, 'updateImage']);
 
     Route::get('/database', function (Request $request) {
-
-        ['smsUSERNAME' => $username,'smsPASSWORD' => $password,'smsSENDERID' => $senderId] =
-            (ESchoolResource::select('smsUSERNAME','smsPASSWORD','smsSENDERID')
-                ->where('dbHost',$request->input('database.host'))
-                ->where('dbPort',$request->input('database.port'))
-                ->where('dbName', $request->input('database.name'))
-                ->where('dbUsername', $request->input('database.username'))
-                ->where('dbPassword', $request->input('database.password'))
-                ->first())->toArray();
-
-
-
-        dd($username);
+       return DB::connection('mysql')->select('select * from appdevices');
     });
 });
