@@ -34,7 +34,7 @@ class LoginController extends Controller
         return (new UserResource($user))->response();
     }
 
-    public function requestToken(TokenRequest $request):JsonResponse
+    public function requestToken(TokenRequest $request, SMS $sms):JsonResponse
     {
         $staff = Staff::where('TelMobile',$request->input('data.contact'))->first();
         if($staff){
@@ -43,23 +43,23 @@ class LoginController extends Controller
                 $request->input('data.contact')
             );
 
-//            ['smsUSERNAME' => $username,'smsPASSWORD' => $password,'smsSENDERID' => $senderId] =
-//                (ESchoolResource::select('smsUSERNAME','smsPASSWORD','smsSENDERID')
-//                    ->where('dbHost',$request->input('database.host'))
-//                    ->where('dbPort',$request->input('database.port'))
-//                    ->where('dbName', $request->input('database.name'))
-//                    ->where('dbUsername', $request->input('database.username'))
-//                    ->where('dbPassword', $request->input('database.password'))
-//                    ->first())->toArray();
-//
-//            $sms->setUp([
-//                'user' => $username,
-//                'password' => $password,
-//                'type' => 'longSMS',
-//                'gsm' => $request->input('data.contact'),
-//                'text' => "Your activation code is {$token}",
-//                'sender' => $senderId
-//            ])->send();
+            ['smsUSERNAME' => $username,'smsPASSWORD' => $password,'smsSENDERID' => $senderId] =
+                (ESchoolResource::select('smsUSERNAME','smsPASSWORD','smsSENDERID')
+                    ->where('dbHost',$request->input('database.host'))
+                    ->where('dbPort',$request->input('database.port'))
+                    ->where('dbName', $request->input('database.name'))
+                    ->where('dbUsername', $request->input('database.username'))
+                    ->where('dbPassword', $request->input('database.password'))
+                    ->first())->toArray();
+
+            $sms->setUp([
+                'user' => $username,
+                'password' => $password,
+                'type' => 'longSMS',
+                'gsm' => $request->input('data.contact'),
+                'text' => "Your activation code is {$token}",
+                'sender' => $senderId
+            ])->send();
 
             return response()->json(['message' => 'Activation code sent']);
         }
