@@ -18,7 +18,7 @@ class Client extends Model
     protected $fillable = [
         'ClientType', 'Surname', 'Firstname',
         'Telephone', 'DateCreated', 'UserREF',
-        'DeviceREF', 'picture'
+        'DeviceREF', 'PicturePath'
     ];
 
     public static function addClient(ClientRequest $clientRequest,string $picture)
@@ -31,7 +31,7 @@ class Client extends Model
             'DateCreated' => $clientRequest->input('data.date_created'),
             'UserREF' => $clientRequest->input('data.user_ref'),
             'DeviceREF' => $clientRequest->input('data.device_id'),
-            'picture' => $picture
+            'PicturePath' => $picture
         ]);
     }
 

@@ -10,10 +10,10 @@ class LoanDescription extends Model
 {
     use HasFactory;
 
-    protected $table = 'LoanDescription';
+    protected $table = 'loancomments';
     protected $primaryKey = 'MyIndex';
     public $timestamps = false;
-    protected $fillable = ['LoanID','description','CreatedAt','userRef','deviceRef'];
+    protected $fillable = ['LoanID','description','CreatedAt','UserRef','deviceRef'];
 
 
     public static function addLoanDescription(LoanDescriptionRequest $request)
