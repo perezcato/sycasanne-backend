@@ -16,7 +16,7 @@ class Loan extends Model
     public static function getLoans()
     {
         return Loan::select('LApplicIndex','ClientName','ClientRef',
-            'Amt','ActualDisbursalDate','Tenor','Mime')
+            'Amt','ActualDisbursalDate','Tenor')
             ->where('LStateRef','4')
             ->get();
     }
