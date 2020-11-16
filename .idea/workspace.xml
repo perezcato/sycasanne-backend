@@ -19,7 +19,10 @@
     <select />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="c9df5a71-8ba1-4d96-8e7f-f05450f24239" name="Default Changelist" comment="" />
+    <list default="true" id="c9df5a71-8ba1-4d96-8e7f-f05450f24239" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Models/MobileBanker/Loan.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Models/MobileBanker/Loan.php" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -244,7 +247,7 @@
       <workItem from="1604779047103" duration="5081000" />
       <workItem from="1604847198410" duration="16761000" />
       <workItem from="1605178555701" duration="4222000" />
-      <workItem from="1605516789881" duration="394000" />
+      <workItem from="1605516789881" duration="748000" />
     </task>
     <task id="LOCAL-00001" summary="Fixed the authentication issues">
       <created>1602939772685</created>
@@ -519,7 +522,14 @@
       <option name="project" value="LOCAL" />
       <updated>1605516875423</updated>
     </task>
-    <option name="localTasksCounter" value="40" />
+    <task id="LOCAL-00040" summary="Removed the loan image field from the field">
+      <created>1605517290223</created>
+      <option name="number" value="00040" />
+      <option name="presentableId" value="LOCAL-00040" />
+      <option name="project" value="LOCAL" />
+      <updated>1605517290223</updated>
+    </task>
+    <option name="localTasksCounter" value="41" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -628,18 +638,19 @@
     </state>
     <state x="572" y="427" width="278" height="130" key="NewPhpFileDialog/1440.31.1366.768/0.55.1440.845@0.55.1440.845" timestamp="1604780615240" />
     <state x="763" y="563" width="384" height="130" key="NewPhpFileDialog/1920.0.1366.768/0.88.1920.1080@0.88.1920.1080" timestamp="1603007639085" />
-    <state x="466" y="226" width="499" height="277" key="Vcs.Push.Dialog.v2" timestamp="1605183500751">
+    <state x="466" y="226" width="499" height="277" key="Vcs.Push.Dialog.v2" timestamp="1605517299820">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state x="466" y="226" width="499" height="277" key="Vcs.Push.Dialog.v2/0.0.1366.728@0.0.1366.728" timestamp="1605183500751" />
+    <state x="466" y="226" width="499" height="277" key="Vcs.Push.Dialog.v2/0.0.1366.728@0.0.1366.728" timestamp="1605517299820" />
     <state x="655" y="423" width="600" height="410" key="Vcs.Push.Dialog.v2/1920.0.1366.768/0.88.1920.1080@0.88.1920.1080" timestamp="1603047884748" />
     <state x="550" y="99" width="522" height="618" key="com.intellij.database.view.ui.AbstractDbRefactoringDialog" timestamp="1601827673013">
       <screen x="0" y="24" width="1366" height="744" />
     </state>
     <state x="550" y="99" width="522" height="618" key="com.intellij.database.view.ui.AbstractDbRefactoringDialog/0.24.1366.744@0.24.1366.744" timestamp="1601827673013" />
-    <state x="663" y="229" width="593" height="798" key="find.popup" timestamp="1602941607553">
-      <screen x="0" y="88" width="1920" height="1080" />
+    <state x="472" y="95" width="555" height="538" key="find.popup" timestamp="1605517219048">
+      <screen x="0" y="0" width="1366" height="728" />
     </state>
+    <state x="472" y="95" width="555" height="538" key="find.popup/0.0.1366.728@0.0.1366.728" timestamp="1605517219048" />
     <state x="663" y="229" width="593" height="798" key="find.popup/1920.0.1366.768/0.88.1920.1080@0.88.1920.1080" timestamp="1602941607553" />
     <state x="441" y="239" width="557" height="454" key="search.everywhere.popup" timestamp="1604847550223">
       <screen x="0" y="55" width="1440" height="845" />
