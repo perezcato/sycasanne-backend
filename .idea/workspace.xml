@@ -21,8 +21,8 @@
   <component name="ChangeListManager">
     <list default="true" id="c9df5a71-8ba1-4d96-8e7f-f05450f24239" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Models/Client/Client.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Models/Client/Client.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/Models/MobileBanker/LoanDescription.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Models/MobileBanker/LoanDescription.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/routes/api.php" beforeDir="false" afterPath="$PROJECT_DIR$/routes/api.php" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -249,7 +249,7 @@
       <workItem from="1604847198410" duration="16761000" />
       <workItem from="1605178555701" duration="4222000" />
       <workItem from="1605516789881" duration="1588000" />
-      <workItem from="1605544473355" duration="769000" />
+      <workItem from="1605544473355" duration="2000000" />
     </task>
     <task id="LOCAL-00001" summary="Fixed the authentication issues">
       <created>1602939772685</created>
@@ -552,7 +552,14 @@
       <option name="project" value="LOCAL" />
       <updated>1605517742061</updated>
     </task>
-    <option name="localTasksCounter" value="44" />
+    <task id="LOCAL-00044" summary="Added the picture column to the database">
+      <created>1605545296680</created>
+      <option name="number" value="00044" />
+      <option name="presentableId" value="LOCAL-00044" />
+      <option name="project" value="LOCAL" />
+      <updated>1605545296680</updated>
+    </task>
+    <option name="localTasksCounter" value="45" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -571,7 +578,6 @@
     <option name="oldMeFiltersMigrated" value="true" />
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="further validated the request token for staff" />
     <MESSAGE value="refactored loans controller and model" />
     <MESSAGE value="moved the loans and the user routes" />
     <MESSAGE value="removed sanctum from the protected routes" />
@@ -596,7 +602,8 @@
     <MESSAGE value="for debugging" />
     <MESSAGE value="Removed the loan image field from the field" />
     <MESSAGE value="Removed the loan mime field from the field" />
-    <option name="LAST_COMMIT_MESSAGE" value="Removed the loan mime field from the field" />
+    <MESSAGE value="Added the picture column to the database" />
+    <option name="LAST_COMMIT_MESSAGE" value="Added the picture column to the database" />
   </component>
   <component name="WindowStateProjectService">
     <state x="311" y="88" width="940" height="744" key="#com.intellij.execution.impl.EditConfigurationsDialog" timestamp="1602938826490">
@@ -661,10 +668,10 @@
     </state>
     <state x="572" y="427" width="278" height="130" key="NewPhpFileDialog/1440.31.1366.768/0.55.1440.845@0.55.1440.845" timestamp="1604780615240" />
     <state x="763" y="563" width="384" height="130" key="NewPhpFileDialog/1920.0.1366.768/0.88.1920.1080@0.88.1920.1080" timestamp="1603007639085" />
-    <state x="466" y="226" width="499" height="277" key="Vcs.Push.Dialog.v2" timestamp="1605517749918">
+    <state x="466" y="226" width="499" height="277" key="Vcs.Push.Dialog.v2" timestamp="1605545322614">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state x="466" y="226" width="499" height="277" key="Vcs.Push.Dialog.v2/0.0.1366.728@0.0.1366.728" timestamp="1605517749918" />
+    <state x="466" y="226" width="499" height="277" key="Vcs.Push.Dialog.v2/0.0.1366.728@0.0.1366.728" timestamp="1605545322614" />
     <state x="655" y="423" width="600" height="410" key="Vcs.Push.Dialog.v2/1920.0.1366.768/0.88.1920.1080@0.88.1920.1080" timestamp="1603047884748" />
     <state x="550" y="99" width="522" height="618" key="com.intellij.database.view.ui.AbstractDbRefactoringDialog" timestamp="1601827673013">
       <screen x="0" y="24" width="1366" height="744" />

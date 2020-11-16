@@ -37,16 +37,7 @@ Route::middleware(['db'])->group(function(){
     Route::post('/loan/update-image', [LoanController::class, 'updateImage']);
 
     Route::get('/database', function (Request $request) {
-        ['CompanyName' => $companyName] =
 
-
-        $sendSms = Http::get('https://sms.arkesel.com/sms/api', [
-            'action' => 'send-sms',
-            'api_key' => 'TWRvYW5nb0ZpQmRraWhCRE9Pckg=',
-            'to' => '0550220451',
-            'from' => 'company',
-            'sms' => "Please your verification token is 1234"
-        ]);
-       return 'working';
+       return DB::connection('mysql')->select('describe loancomments');
     });
 });
