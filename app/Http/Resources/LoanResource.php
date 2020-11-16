@@ -22,7 +22,6 @@ class LoanResource extends JsonResource
             'amount' => $this->Amt,
             'disbursement_date' => $this->ActualDisbursalDate,
             'tenor' => $this->Tenor,
-            'loan_image' => $this->LoanImage ?: '',
             'mime' => $this->Mime?:''
         ];
     }
