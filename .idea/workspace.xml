@@ -19,9 +19,7 @@
     <select />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="c9df5a71-8ba1-4d96-8e7f-f05450f24239" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/app/Http/Resources/LoanResource.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Resources/LoanResource.php" afterDir="false" />
-    </list>
+    <list default="true" id="c9df5a71-8ba1-4d96-8e7f-f05450f24239" name="Default Changelist" comment="" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -246,7 +244,7 @@
       <workItem from="1604779047103" duration="5081000" />
       <workItem from="1604847198410" duration="16761000" />
       <workItem from="1605178555701" duration="4222000" />
-      <workItem from="1605516789881" duration="45000" />
+      <workItem from="1605516789881" duration="394000" />
     </task>
     <task id="LOCAL-00001" summary="Fixed the authentication issues">
       <created>1602939772685</created>
@@ -514,7 +512,14 @@
       <option name="project" value="LOCAL" />
       <updated>1605183490004</updated>
     </task>
-    <option name="localTasksCounter" value="39" />
+    <task id="LOCAL-00039" summary="Removed the loan image field from the field">
+      <created>1605516875423</created>
+      <option name="number" value="00039" />
+      <option name="presentableId" value="LOCAL-00039" />
+      <option name="project" value="LOCAL" />
+      <updated>1605516875423</updated>
+    </task>
+    <option name="localTasksCounter" value="40" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -533,7 +538,6 @@
     <option name="oldMeFiltersMigrated" value="true" />
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="removed the user reference" />
     <MESSAGE value="added endpoints for getting all loans and users from the database" />
     <MESSAGE value="further validated the request token for staff" />
     <MESSAGE value="refactored loans controller and model" />
@@ -558,7 +562,8 @@
     <MESSAGE value="Added the sms to it" />
     <MESSAGE value="removed the sms" />
     <MESSAGE value="for debugging" />
-    <option name="LAST_COMMIT_MESSAGE" value="for debugging" />
+    <MESSAGE value="Removed the loan image field from the field" />
+    <option name="LAST_COMMIT_MESSAGE" value="Removed the loan image field from the field" />
   </component>
   <component name="WindowStateProjectService">
     <state x="311" y="88" width="940" height="744" key="#com.intellij.execution.impl.EditConfigurationsDialog" timestamp="1602938826490">
