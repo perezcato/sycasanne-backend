@@ -8,6 +8,8 @@ use App\Http\Controllers\MobileBanker\LoanController;
 use App\Http\Controllers\MobileBanker\LoanDescriptionController;
 use App\Http\Controllers\MobileBanker\LoanRepaymentController;
 use App\Http\Controllers\User\UserController;
+use App\Models\Auth\Device;
+use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\Auth\LoginController;
 
@@ -15,6 +17,9 @@ Route::post('/config',[ESchoolResourceController::class,'index']);
 
 Route::middleware(['db'])->group(function(){
     Route::post('/login',[LoginController::class,'login']);
+    Route::post('/unlock-device', function (){
+        return response()->json(['message'=>'device unlocked']);
+    });
 
     Route::post('/register-device', [LoginController::class, 'registerDevice']);
     Route::post('/request-token', [LoginController::class, 'requestToken']);
@@ -30,4 +35,8 @@ Route::middleware(['db'])->group(function(){
     Route::post('/loan/description', [LoanDescriptionController::class, 'store']);
     Route::post('/loan/client-statement', [ClientStatementController::class, 'index']);
     Route::post('/loan/update-image', [LoanController::class, 'updateImage']);
+
+    Route::get('/database', function (Request $request) {
+       return Device::all();
+    });
 });

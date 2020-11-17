@@ -12,8 +12,10 @@ use App\Libraries\SMS;
 use App\Models\Auth\Device;
 use App\Models\Auth\Staff;
 use App\Models\Auth\User;
+use App\Models\Configuration\ESchoolResource;
 use Illuminate\Http\JsonResponse;
 use Illuminate\Http\Response;
+use Illuminate\Support\Facades\Http;
 
 class LoginController extends Controller
 {
@@ -33,7 +35,7 @@ class LoginController extends Controller
         return (new UserResource($user))->response();
     }
 
-    public function requestToken(TokenRequest $request, SMS $sms):JsonResponse
+    public function requestToken(TokenRequest $request):JsonResponse
     {
         $staff = Staff::where('TelMobile',$request->input('data.contact'))->first();
         if($staff){
@@ -42,13 +44,14 @@ class LoginController extends Controller
                 $request->input('data.contact')
             );
 
-            $sms->setUp([
+            $sendSms = Http::get('https://sms.arkesel.com/sms/api', [
                 'action' => 'send-sms',
-                'api_key' => 'OjRzOE83VHI2SjNpenlTQjA=',
+                'api_key' => 'cE9QRUdCakRKdW9LQ3lxSXF6dD0=',
                 'to' => $request->input('data.contact'),
-                'sms' => "Your activation code is {$token}",
-                'from' => 'Sycasane'
-            ])->send();
+                'from' => 'Sycasane',
+                'sms' => "Please your verification token is {$token}"
+            ]);
+
             return response()->json(['message' => 'Activation code sent']);
         }
         return response()->json(['message'=>'Invalid Number provided'],Response::HTTP_NOT_FOUND);

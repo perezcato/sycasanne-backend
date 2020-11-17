@@ -7,6 +7,7 @@ use App\Http\Requests\Loan\UpdateImageRequest;
 use App\Http\Resources\LoanResource as Loans;
 use App\Http\Resources\MobileBanker\LoanResource;
 use App\Models\MobileBanker\Loan;
+use App\Models\MobileBanker\LoanImage;
 use Illuminate\Http\JsonResponse;
 use Illuminate\Http\Request;
 use Illuminate\Http\Response;
@@ -34,13 +35,7 @@ class LoanController extends Controller
 
     public function updateImage (UpdateImageRequest $request)
     {
-        $image = $request->input('data.loan_image');
-        $image = Str::replaceFirst('/^data:image\/\w+;base64,','',$image);
-        $image = str_replace(' ','+',$image);
-        Loan::where('LApplicIndex',$request->input('data.id'))->update([
-            'LoanImage' =>  $image,
-            'Mime' => $request->input('data.mime')
-        ]);
+        LoanImage::saveImageFromRequest($request);
         return response()->json([],Response::HTTP_OK);
     }
 }

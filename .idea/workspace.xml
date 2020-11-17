@@ -21,6 +21,8 @@
   <component name="ChangeListManager">
     <list default="true" id="c9df5a71-8ba1-4d96-8e7f-f05450f24239" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/Auth/LoginController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/Auth/LoginController.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/routes/api.php" beforeDir="false" afterPath="$PROJECT_DIR$/routes/api.php" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -244,8 +246,15 @@
       <workItem from="1604088691489" duration="10030000" />
       <workItem from="1604166828236" duration="434000" />
       <workItem from="1604779047103" duration="5081000" />
-      <workItem from="1604847198410" duration="17437000" />
-      <workItem from="1605537147975" duration="603000" />
+      <workItem from="1604847198410" duration="16761000" />
+      <workItem from="1605178555701" duration="4222000" />
+      <workItem from="1605516789881" duration="1588000" />
+      <workItem from="1605544473355" duration="2000000" />
+      <workItem from="1605602503513" duration="1209000" />
+      <workItem from="1605607465908" duration="6476000" />
+      <workItem from="1605699374640" duration="2136000" />
+      <workItem from="1605780954965" duration="7279000" />
+      <workItem from="1605883003077" duration="169000" />
     </task>
     <task id="LOCAL-00001" summary="Fixed the authentication issues">
       <created>1602939772685</created>
@@ -450,14 +459,140 @@
       <option name="project" value="LOCAL" />
       <updated>1604779097868</updated>
     </task>
-    <task id="LOCAL-00030" summary="Done adding an image to the database">
-      <created>1604874814685</created>
+    <task id="LOCAL-00030" summary="added">
+      <created>1605099238072</created>
       <option name="number" value="00030" />
       <option name="presentableId" value="LOCAL-00030" />
       <option name="project" value="LOCAL" />
-      <updated>1604874814685</updated>
+      <updated>1605099238072</updated>
     </task>
-    <option name="localTasksCounter" value="31" />
+    <task id="LOCAL-00031" summary="added image upload model">
+      <created>1605104741405</created>
+      <option name="number" value="00031" />
+      <option name="presentableId" value="LOCAL-00031" />
+      <option name="project" value="LOCAL" />
+      <updated>1605104741405</updated>
+    </task>
+    <task id="LOCAL-00032" summary="disabled the timestamps for loan image model">
+      <created>1605105088502</created>
+      <option name="number" value="00032" />
+      <option name="presentableId" value="LOCAL-00032" />
+      <option name="project" value="LOCAL" />
+      <updated>1605105088502</updated>
+    </task>
+    <task id="LOCAL-00033" summary="removed the sms feature from the site">
+      <created>1605179433324</created>
+      <option name="number" value="00033" />
+      <option name="presentableId" value="LOCAL-00033" />
+      <option name="project" value="LOCAL" />
+      <updated>1605179433324</updated>
+    </task>
+    <task id="LOCAL-00034" summary="fixed the register device issue">
+      <created>1605179790052</created>
+      <option name="number" value="00034" />
+      <option name="presentableId" value="LOCAL-00034" />
+      <option name="project" value="LOCAL" />
+      <updated>1605179790052</updated>
+    </task>
+    <task id="LOCAL-00035" summary="re-added the sms feature">
+      <created>1605180064251</created>
+      <option name="number" value="00035" />
+      <option name="presentableId" value="LOCAL-00035" />
+      <option name="project" value="LOCAL" />
+      <updated>1605180064251</updated>
+    </task>
+    <task id="LOCAL-00036" summary="Added the sms to it">
+      <created>1605182850249</created>
+      <option name="number" value="00036" />
+      <option name="presentableId" value="LOCAL-00036" />
+      <option name="project" value="LOCAL" />
+      <updated>1605182850249</updated>
+    </task>
+    <task id="LOCAL-00037" summary="removed the sms">
+      <created>1605182881128</created>
+      <option name="number" value="00037" />
+      <option name="presentableId" value="LOCAL-00037" />
+      <option name="project" value="LOCAL" />
+      <updated>1605182881128</updated>
+    </task>
+    <task id="LOCAL-00038" summary="for debugging">
+      <created>1605183490004</created>
+      <option name="number" value="00038" />
+      <option name="presentableId" value="LOCAL-00038" />
+      <option name="project" value="LOCAL" />
+      <updated>1605183490004</updated>
+    </task>
+    <task id="LOCAL-00039" summary="Removed the loan image field from the field">
+      <created>1605516875423</created>
+      <option name="number" value="00039" />
+      <option name="presentableId" value="LOCAL-00039" />
+      <option name="project" value="LOCAL" />
+      <updated>1605516875423</updated>
+    </task>
+    <task id="LOCAL-00040" summary="Removed the loan image field from the field">
+      <created>1605517290223</created>
+      <option name="number" value="00040" />
+      <option name="presentableId" value="LOCAL-00040" />
+      <option name="project" value="LOCAL" />
+      <updated>1605517290223</updated>
+    </task>
+    <task id="LOCAL-00041" summary="Removed the loan image field from the field">
+      <created>1605517566939</created>
+      <option name="number" value="00041" />
+      <option name="presentableId" value="LOCAL-00041" />
+      <option name="project" value="LOCAL" />
+      <updated>1605517566939</updated>
+    </task>
+    <task id="LOCAL-00042" summary="Removed the loan mime field from the field">
+      <created>1605517687754</created>
+      <option name="number" value="00042" />
+      <option name="presentableId" value="LOCAL-00042" />
+      <option name="project" value="LOCAL" />
+      <updated>1605517687754</updated>
+    </task>
+    <task id="LOCAL-00043" summary="Removed the loan mime field from the field">
+      <created>1605517742061</created>
+      <option name="number" value="00043" />
+      <option name="presentableId" value="LOCAL-00043" />
+      <option name="project" value="LOCAL" />
+      <updated>1605517742061</updated>
+    </task>
+    <task id="LOCAL-00044" summary="Added the picture column to the database">
+      <created>1605545296680</created>
+      <option name="number" value="00044" />
+      <option name="presentableId" value="LOCAL-00044" />
+      <option name="project" value="LOCAL" />
+      <updated>1605545296680</updated>
+    </task>
+    <task id="LOCAL-00045" summary="Updated the client loan repayment api">
+      <created>1605712442103</created>
+      <option name="number" value="00045" />
+      <option name="presentableId" value="LOCAL-00045" />
+      <option name="project" value="LOCAL" />
+      <updated>1605712442103</updated>
+    </task>
+    <task id="LOCAL-00046" summary="Updated the client loan repayment api">
+      <created>1605712457359</created>
+      <option name="number" value="00046" />
+      <option name="presentableId" value="LOCAL-00046" />
+      <option name="project" value="LOCAL" />
+      <updated>1605712457359</updated>
+    </task>
+    <task id="LOCAL-00047" summary="Added the user locked feature">
+      <created>1605789761017</created>
+      <option name="number" value="00047" />
+      <option name="presentableId" value="LOCAL-00047" />
+      <option name="project" value="LOCAL" />
+      <updated>1605789761017</updated>
+    </task>
+    <task id="LOCAL-00048" summary="removed the lock from the app">
+      <created>1605796966163</created>
+      <option name="number" value="00048" />
+      <option name="presentableId" value="LOCAL-00048" />
+      <option name="project" value="LOCAL" />
+      <updated>1605796966163</updated>
+    </task>
+    <option name="localTasksCounter" value="49" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -476,20 +611,6 @@
     <option name="oldMeFiltersMigrated" value="true" />
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="did the correction for verification token flow" />
-    <MESSAGE value="refactored the LoginController.php" />
-    <MESSAGE value="added the mail credentials from sendgrid" />
-    <MESSAGE value="added the http library for mails" />
-    <MESSAGE value="updated the mail settings" />
-    <MESSAGE value="added sms support to the app" />
-    <MESSAGE value="Modified the verification token" />
-    <MESSAGE value="added the method for getting all loans from a specific region" />
-    <MESSAGE value="removed the user reference" />
-    <MESSAGE value="added endpoints for getting all loans and users from the database" />
-    <MESSAGE value="further validated the request token for staff" />
-    <MESSAGE value="refactored loans controller and model" />
-    <MESSAGE value="moved the loans and the user routes" />
-    <MESSAGE value="removed sanctum from the protected routes" />
     <MESSAGE value="added the changes from the server" />
     <MESSAGE value="added the sanctum to the api" />
     <MESSAGE value="Added locations and device id to it" />
@@ -500,14 +621,28 @@
     <MESSAGE value="fixed the latitude problem" />
     <MESSAGE value="added date to the repayment" />
     <MESSAGE value="work space" />
-    <MESSAGE value="Done adding an image to the database" />
-    <option name="LAST_COMMIT_MESSAGE" value="Done adding an image to the database" />
+    <MESSAGE value="added" />
+    <MESSAGE value="added image upload model" />
+    <MESSAGE value="disabled the timestamps for loan image model" />
+    <MESSAGE value="removed the sms feature from the site" />
+    <MESSAGE value="fixed the register device issue" />
+    <MESSAGE value="re-added the sms feature" />
+    <MESSAGE value="Added the sms to it" />
+    <MESSAGE value="removed the sms" />
+    <MESSAGE value="for debugging" />
+    <MESSAGE value="Removed the loan image field from the field" />
+    <MESSAGE value="Removed the loan mime field from the field" />
+    <MESSAGE value="Added the picture column to the database" />
+    <MESSAGE value="Updated the client loan repayment api" />
+    <MESSAGE value="Added the user locked feature" />
+    <MESSAGE value="removed the lock from the app" />
+    <option name="LAST_COMMIT_MESSAGE" value="removed the lock from the app" />
   </component>
   <component name="WindowStateProjectService">
-    <state x="311" y="88" width="940" height="744" key="#com.intellij.execution.impl.EditConfigurationsDialog" timestamp="1602938826490">
-      <screen x="0" y="24" width="3286" height="1144" />
+    <state x="257" y="15" width="940" height="744" key="#com.intellij.execution.impl.EditConfigurationsDialog" timestamp="1605715037099">
+      <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state x="275" y="22" key="#com.intellij.execution.impl.EditConfigurationsDialog/0.0.1366.728@0.0.1366.728" timestamp="1602583866401" />
+    <state x="257" y="15" key="#com.intellij.execution.impl.EditConfigurationsDialog/0.0.1366.728@0.0.1366.728" timestamp="1605715037087" />
     <state x="275" y="46" width="800" height="665" key="#com.intellij.execution.impl.EditConfigurationsDialog/0.24.1366.744@0.24.1366.744" timestamp="1601827623917" />
     <state x="311" y="88" key="#com.intellij.execution.impl.EditConfigurationsDialog/0.24.3286.1144@0.24.3286.1144" timestamp="1602938826490" />
     <state x="426" y="24" width="940" height="744" key="#com.intellij.execution.impl.EditConfigurationsDialog/1920.0.1366.768/0.88.1920.1080@0.88.1920.1080" timestamp="1602801425268" />
@@ -516,9 +651,10 @@
     </state>
     <state x="682" y="432" width="545" height="391" key="#com.intellij.fileTypes.FileTypeChooser/0.24.3286.1144@0.24.3286.1144" timestamp="1602925210390" />
     <state x="2204" y="274" width="621" height="263" key="#com.intellij.fileTypes.FileTypeChooser/1920.0.1366.768/0.88.1920.1080@1920.0.1366.768" timestamp="1604096146428" />
-    <state x="427" y="267" width="393" height="370" key="#com.jetbrains.php.actions.copyPaste.importReferences.PhpImportReferencesDialog" timestamp="1604873717044">
-      <screen x="0" y="55" width="1440" height="845" />
+    <state x="405" y="183" width="393" height="370" key="#com.jetbrains.php.actions.copyPaste.importReferences.PhpImportReferencesDialog" timestamp="1605632041048">
+      <screen x="0" y="0" width="1366" height="728" />
     </state>
+    <state x="405" y="183" key="#com.jetbrains.php.actions.copyPaste.importReferences.PhpImportReferencesDialog/0.0.1366.728@0.0.1366.728" timestamp="1605632041048" />
     <state x="481" y="211" width="393" height="370" key="#com.jetbrains.php.actions.copyPaste.importReferences.PhpImportReferencesDialog/0.24.1366.744@0.24.1366.744" timestamp="1601802095523" />
     <state x="974" y="312" key="#com.jetbrains.php.actions.copyPaste.importReferences.PhpImportReferencesDialog/0.24.3286.1144@0.24.3286.1144" timestamp="1602935555664" />
     <state x="427" y="267" width="393" height="370" key="#com.jetbrains.php.actions.copyPaste.importReferences.PhpImportReferencesDialog/1440.31.1366.768/0.55.1440.845@0.55.1440.845" timestamp="1604873717044" />
@@ -565,19 +701,19 @@
     </state>
     <state x="572" y="427" width="278" height="130" key="NewPhpFileDialog/1440.31.1366.768/0.55.1440.845@0.55.1440.845" timestamp="1604780615240" />
     <state x="763" y="563" width="384" height="130" key="NewPhpFileDialog/1920.0.1366.768/0.88.1920.1080@0.88.1920.1080" timestamp="1603007639085" />
-    <state x="491" y="317" width="499" height="277" key="Vcs.Push.Dialog.v2" timestamp="1604874829182">
-      <screen x="0" y="55" width="1440" height="845" />
+    <state x="466" y="226" width="499" height="277" key="Vcs.Push.Dialog.v2" timestamp="1605796975521">
+      <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state x="466" y="226" width="499" height="277" key="Vcs.Push.Dialog.v2/0.0.1366.728@0.0.1366.728" timestamp="1603111889394" />
-    <state x="491" y="317" key="Vcs.Push.Dialog.v2/1440.31.1366.768/0.55.1440.845@0.55.1440.845" timestamp="1604874829182" />
+    <state x="466" y="226" width="499" height="277" key="Vcs.Push.Dialog.v2/0.0.1366.728@0.0.1366.728" timestamp="1605796975521" />
     <state x="655" y="423" width="600" height="410" key="Vcs.Push.Dialog.v2/1920.0.1366.768/0.88.1920.1080@0.88.1920.1080" timestamp="1603047884748" />
     <state x="550" y="99" width="522" height="618" key="com.intellij.database.view.ui.AbstractDbRefactoringDialog" timestamp="1601827673013">
       <screen x="0" y="24" width="1366" height="744" />
     </state>
     <state x="550" y="99" width="522" height="618" key="com.intellij.database.view.ui.AbstractDbRefactoringDialog/0.24.1366.744@0.24.1366.744" timestamp="1601827673013" />
-    <state x="663" y="229" width="593" height="798" key="find.popup" timestamp="1602941607553">
-      <screen x="0" y="88" width="1920" height="1080" />
+    <state x="472" y="95" width="555" height="538" key="find.popup" timestamp="1605517219048">
+      <screen x="0" y="0" width="1366" height="728" />
     </state>
+    <state x="472" y="95" width="555" height="538" key="find.popup/0.0.1366.728@0.0.1366.728" timestamp="1605517219048" />
     <state x="663" y="229" width="593" height="798" key="find.popup/1920.0.1366.768/0.88.1920.1080@0.88.1920.1080" timestamp="1602941607553" />
     <state x="441" y="239" width="557" height="454" key="search.everywhere.popup" timestamp="1604847550223">
       <screen x="0" y="55" width="1440" height="845" />

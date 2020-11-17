@@ -28,7 +28,7 @@ class SMS
     public function send():void
     {
         Http::withHeaders($this->headers)
-            ->get($this->url,$this->smsBody);
+            ->post($this->url,$this->smsBody);
     }
 
 }
