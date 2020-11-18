@@ -27,6 +27,7 @@ class LoanRepayment extends Model
             'LoanRef' => $request->input('data.loan_ref'),
             'ClientRef' => $request->input('data.client_ref'),
             'MyTestSTR' => $request->input('data.loan_amount'),
+            'TheRpAmt' => $request->input('data.loan_amount'),
             'MyKyCd' => Str::uuid(),
             'RPDescp' => $request->input('data.loan_description'),
             'TheRPDate' => $request->input('data.date'),
