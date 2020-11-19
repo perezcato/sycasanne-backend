@@ -18,7 +18,7 @@ use App\Http\Controllers\Auth\LoginController;
 
 Route::post('/config',[ESchoolResourceController::class,'index']);
 
-Route::middleware(['db'])->group(function(){
+Route::middleware(['db','user.locked'])->group(function(){
     Route::post('/login',[LoginController::class,'login']);
 
     Route::post('/register-device', [LoginController::class, 'registerDevice']);
@@ -38,6 +38,6 @@ Route::middleware(['db'])->group(function(){
 
     Route::get('/database', function (Request $request) {
 
-       return DB::connection('mysql')->select('describe loancomments');
+       return Device::all();
     });
 });
