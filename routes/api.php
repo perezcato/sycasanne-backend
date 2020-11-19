@@ -9,16 +9,13 @@ use App\Http\Controllers\MobileBanker\LoanDescriptionController;
 use App\Http\Controllers\MobileBanker\LoanRepaymentController;
 use App\Http\Controllers\User\UserController;
 use App\Models\Auth\Device;
-use App\Models\Configuration\ESchoolResource;
 use Illuminate\Http\Request;
-use Illuminate\Support\Facades\DB;
-use Illuminate\Support\Facades\Http;
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\Auth\LoginController;
 
 Route::post('/config',[ESchoolResourceController::class,'index']);
 
-Route::middleware(['db','user.locked'])->group(function(){
+Route::middleware(['db'])->group(function(){
     Route::post('/login',[LoginController::class,'login']);
 
     Route::post('/register-device', [LoginController::class, 'registerDevice']);

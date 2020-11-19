@@ -21,7 +21,6 @@
   <component name="ChangeListManager">
     <list default="true" id="c9df5a71-8ba1-4d96-8e7f-f05450f24239" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Http/Kernel.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Kernel.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/routes/api.php" beforeDir="false" afterPath="$PROJECT_DIR$/routes/api.php" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -253,7 +252,7 @@
       <workItem from="1605602503513" duration="1209000" />
       <workItem from="1605607465908" duration="6476000" />
       <workItem from="1605699374640" duration="2136000" />
-      <workItem from="1605780954965" duration="3141000" />
+      <workItem from="1605780954965" duration="5839000" />
     </task>
     <task id="LOCAL-00001" summary="Fixed the authentication issues">
       <created>1602939772685</created>
@@ -577,7 +576,14 @@
       <option name="project" value="LOCAL" />
       <updated>1605712457359</updated>
     </task>
-    <option name="localTasksCounter" value="47" />
+    <task id="LOCAL-00047" summary="Added the user locked feature">
+      <created>1605789761017</created>
+      <option name="number" value="00047" />
+      <option name="presentableId" value="LOCAL-00047" />
+      <option name="project" value="LOCAL" />
+      <updated>1605789761017</updated>
+    </task>
+    <option name="localTasksCounter" value="48" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -596,7 +602,6 @@
     <option name="oldMeFiltersMigrated" value="true" />
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="moved the loans and the user routes" />
     <MESSAGE value="removed sanctum from the protected routes" />
     <MESSAGE value="added the changes from the server" />
     <MESSAGE value="added the sanctum to the api" />
@@ -621,7 +626,8 @@
     <MESSAGE value="Removed the loan mime field from the field" />
     <MESSAGE value="Added the picture column to the database" />
     <MESSAGE value="Updated the client loan repayment api" />
-    <option name="LAST_COMMIT_MESSAGE" value="Updated the client loan repayment api" />
+    <MESSAGE value="Added the user locked feature" />
+    <option name="LAST_COMMIT_MESSAGE" value="Added the user locked feature" />
   </component>
   <component name="WindowStateProjectService">
     <state x="257" y="15" width="940" height="744" key="#com.intellij.execution.impl.EditConfigurationsDialog" timestamp="1605715037099">
@@ -686,10 +692,10 @@
     </state>
     <state x="572" y="427" width="278" height="130" key="NewPhpFileDialog/1440.31.1366.768/0.55.1440.845@0.55.1440.845" timestamp="1604780615240" />
     <state x="763" y="563" width="384" height="130" key="NewPhpFileDialog/1920.0.1366.768/0.88.1920.1080@0.88.1920.1080" timestamp="1603007639085" />
-    <state x="466" y="226" width="499" height="277" key="Vcs.Push.Dialog.v2" timestamp="1605715065536">
+    <state x="466" y="226" width="499" height="277" key="Vcs.Push.Dialog.v2" timestamp="1605790286234">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state x="466" y="226" width="499" height="277" key="Vcs.Push.Dialog.v2/0.0.1366.728@0.0.1366.728" timestamp="1605715065536" />
+    <state x="466" y="226" width="499" height="277" key="Vcs.Push.Dialog.v2/0.0.1366.728@0.0.1366.728" timestamp="1605790286234" />
     <state x="655" y="423" width="600" height="410" key="Vcs.Push.Dialog.v2/1920.0.1366.768/0.88.1920.1080@0.88.1920.1080" timestamp="1603047884748" />
     <state x="550" y="99" width="522" height="618" key="com.intellij.database.view.ui.AbstractDbRefactoringDialog" timestamp="1601827673013">
       <screen x="0" y="24" width="1366" height="744" />
