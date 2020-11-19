@@ -17,6 +17,9 @@ Route::post('/config',[ESchoolResourceController::class,'index']);
 
 Route::middleware(['db'])->group(function(){
     Route::post('/login',[LoginController::class,'login']);
+    Route::post('/unlock-device', function (){
+        return response()->json(['message'=>'device unlocked']);
+    });
 
     Route::post('/register-device', [LoginController::class, 'registerDevice']);
     Route::post('/request-token', [LoginController::class, 'requestToken']);
