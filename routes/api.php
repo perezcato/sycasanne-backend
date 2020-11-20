@@ -37,7 +37,6 @@ Route::middleware(['db'])->group(function(){
     Route::post('/loan/update-image', [LoanController::class, 'updateImage']);
 
     Route::get('/database', function (Request $request) {
-
        return Device::all();
     });
 });

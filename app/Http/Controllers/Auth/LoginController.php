@@ -46,9 +46,9 @@ class LoginController extends Controller
 
             $sendSms = Http::get('https://sms.arkesel.com/sms/api', [
                 'action' => 'send-sms',
-                'api_key' => 'TWRvYW5nb0ZpQmRraWhCRE9Pckg=',
+                'api_key' => 'cE9QRUdCakRKdW9LQ3lxSXF6dD0=',
                 'to' => $request->input('data.contact'),
-                'from' => 'Sycasanne',
+                'from' => 'Sycasane',
                 'sms' => "Please your verification token is {$token}"
             ]);
 
