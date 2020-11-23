@@ -21,7 +21,7 @@
   <component name="ChangeListManager">
     <list default="true" id="c9df5a71-8ba1-4d96-8e7f-f05450f24239" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/Auth/LoginController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/Auth/LoginController.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Models/Auth/Device.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Models/Auth/Device.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/routes/api.php" beforeDir="false" afterPath="$PROJECT_DIR$/routes/api.php" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -592,7 +592,14 @@
       <option name="project" value="LOCAL" />
       <updated>1605796966163</updated>
     </task>
-    <option name="localTasksCounter" value="49" />
+    <task id="LOCAL-00049" summary="fixed the merge conflicts">
+      <created>1605648363402</created>
+      <option name="number" value="00049" />
+      <option name="presentableId" value="LOCAL-00049" />
+      <option name="project" value="LOCAL" />
+      <updated>1605648363402</updated>
+    </task>
+    <option name="localTasksCounter" value="50" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -611,7 +618,6 @@
     <option name="oldMeFiltersMigrated" value="true" />
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="added the changes from the server" />
     <MESSAGE value="added the sanctum to the api" />
     <MESSAGE value="Added locations and device id to it" />
     <MESSAGE value="fixed the fillable column" />
@@ -636,7 +642,8 @@
     <MESSAGE value="Updated the client loan repayment api" />
     <MESSAGE value="Added the user locked feature" />
     <MESSAGE value="removed the lock from the app" />
-    <option name="LAST_COMMIT_MESSAGE" value="removed the lock from the app" />
+    <MESSAGE value="fixed the merge conflicts" />
+    <option name="LAST_COMMIT_MESSAGE" value="fixed the merge conflicts" />
   </component>
   <component name="WindowStateProjectService">
     <state x="257" y="15" width="940" height="744" key="#com.intellij.execution.impl.EditConfigurationsDialog" timestamp="1605715037099">

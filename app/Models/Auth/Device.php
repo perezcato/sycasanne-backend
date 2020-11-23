@@ -27,13 +27,16 @@ class Device extends Model
 
     public static function register(string $deviceUUID):Device
     {
-        return Device::create(['DeviceUUID' => $deviceUUID]);
+        return self::create([
+            'DeviceUUID' => $deviceUUID,
+            'DeviceStatus' => '1'
+        ]);
     }
 
     public static function generateToken(string $deviceUUID, string $contact):string
     {
         $activationToken = Str::random(6);
-        Device::where('DeviceUUID',$deviceUUID)
+        self::where('DeviceUUID',$deviceUUID)
             ->update([
                 'DeviceToken'=> $activationToken,
                 'DeviceTokenExpiry' => (new Carbon())->addHours(2)->toDateTime(),
@@ -45,7 +48,7 @@ class Device extends Model
 
     public static function verifyToken($activationToken):bool
     {
-        $device = Device::where('DeviceToken',$activationToken)->first();
+        $device = self::where('DeviceToken',$activationToken)->first();
         $currentDate = Carbon::now();
 
         if($device && $device->getAttribute('DeviceTokenExpiry') > $currentDate){

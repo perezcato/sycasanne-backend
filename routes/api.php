@@ -25,16 +25,21 @@ Route::middleware(['db'])->group(function(){
     Route::post('/request-token', [LoginController::class, 'requestToken']);
     Route::post('/verify-token', [LoginController::class, 'verifyToken']);
 
-    Route::get('/loans',[LoanController::class, 'index']);
-    Route::get('/users', [UserController::class,'index']);
-    Route::post('/loans/repayment',[LoanRepaymentController::class, 'store']);
-    Route::post('/loans/check-repayment',[LoanRepaymentController::class, 'checkLoanPayment']);
-    Route::post('/loans/search',[LoanController::class, 'search']);
-    Route::post('/location',[LocationController::class,'store']);
-    Route::post('/client',[ClientController::class,'store']);
-    Route::post('/loan/description', [LoanDescriptionController::class, 'store']);
-    Route::post('/loan/client-statement', [ClientStatementController::class, 'index']);
-    Route::post('/loan/update-image', [LoanController::class, 'updateImage']);
+    Route::middleware(['user.locked'])->group(static function (){
+        Route::get('/loans',[LoanController::class, 'index']);
+        Route::get('/users', [UserController::class,'index']);
+        Route::post('/loans/repayment',[LoanRepaymentController::class, 'store']);
+        Route::post('/loans/check-repayment',[LoanRepaymentController::class, 'checkLoanPayment']);
+        Route::post('/loans/search',[LoanController::class, 'search']);
+        Route::post('/location',[LocationController::class,'store']);
+        Route::post('/client',[ClientController::class,'store']);
+        Route::post('/loan/description', [LoanDescriptionController::class, 'store']);
+        Route::post('/loan/client-statement', [ClientStatementController::class, 'index']);
+        Route::post('/loan/update-image', [LoanController::class, 'updateImage']);
+    });
+
+
+
 
     Route::get('/database', function (Request $request) {
        return Device::all();
