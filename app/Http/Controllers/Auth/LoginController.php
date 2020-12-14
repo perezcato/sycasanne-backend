@@ -22,16 +22,11 @@ class LoginController extends Controller
     public function login(LoginRequest $request)
     {
         $user = User::validateUserFromRequest($request);
-
        if(!$user){
            return response()->json([
                'message' => 'Invalid username/password'
            ], Response::HTTP_NOT_FOUND);
        }
-
-       $userToken = $user->createToken($user->getAttribute('UserName'))
-           ->plainTextToken;
-
         return (new UserResource($user))->response();
     }
 
@@ -44,7 +39,7 @@ class LoginController extends Controller
                 $request->input('data.contact')
             );
 
-            $sendSms = Http::get('https://sms.arkesel.com/sms/api', [
+            Http::get('https://sms.arkesel.com/sms/api', [
                 'action' => 'send-sms',
                 'api_key' => 'cE9QRUdCakRKdW9LQ3lxSXF6dD0=',
                 'to' => $request->input('data.contact'),
@@ -60,14 +55,12 @@ class LoginController extends Controller
     public function registerDevice(RegisterDeviceRequest $request):JsonResponse
     {
         $device = Device::register($request->input('data.deviceUUID'));
-
         return response()->json(['device_id'=>$device->DevIndex], Response::HTTP_OK);
     }
 
     public function verifyToken(VerifyTokenRequest $request):JsonResponse
     {
         $verify = Device::verifyToken($request->input('data.verification_token'));
-
         return $verify ? response()->json(['message' => 'Device Verified'],Response::HTTP_OK) :
             response()->json(['message' => 'Invalid Code'],Response::HTTP_NOT_FOUND);
     }

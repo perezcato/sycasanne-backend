@@ -95,6 +95,8 @@ return [
             'prefix_indexes' => true,
             'schema' => 'public',
             'sslmode' => 'prefer',
+
+
         ],
 
         'sqlsrv' => [

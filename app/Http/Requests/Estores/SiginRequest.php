@@ -1,10 +1,10 @@
 <?php
 
-namespace App\Http\Requests\Configuration;
+namespace App\Http\Requests\Estores;
 
 use Illuminate\Foundation\Http\FormRequest;
 
-class ESchoolResourceRequest extends FormRequest
+class SiginRequest extends FormRequest
 {
     /**
      * Determine if the user is authorized to make this request.
@@ -24,7 +24,8 @@ class ESchoolResourceRequest extends FormRequest
     public function rules()
     {
         return [
-            'code' => ['required','string']
+            'user.username' => 'required|string',
+            'user.password' => 'required|string'
         ];
     }
 }
