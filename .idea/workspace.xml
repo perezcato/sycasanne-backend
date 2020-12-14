@@ -21,7 +21,7 @@
   <component name="ChangeListManager">
     <list default="true" id="a027f104-e129-4af1-bcd3-af03cbbf5d46" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Models/Estores/Users/Users.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Models/Estores/Users/Users.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Models/Estores/Auth.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Models/Estores/Auth.php" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -180,7 +180,7 @@
       <option name="presentableId" value="Default" />
       <updated>1607504353300</updated>
       <workItem from="1607504361369" duration="1237000" />
-      <workItem from="1607941569765" duration="7685000" />
+      <workItem from="1607941569765" duration="7877000" />
     </task>
     <task id="LOCAL-00001" summary="Added the functionality for signing in a user">
       <created>1607957753607</created>
@@ -210,7 +210,14 @@
       <option name="project" value="LOCAL" />
       <updated>1607958571263</updated>
     </task>
-    <option name="localTasksCounter" value="5" />
+    <task id="LOCAL-00005" summary="Solved the table issues">
+      <created>1607959597423</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1607959597423</updated>
+    </task>
+    <option name="localTasksCounter" value="6" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -233,17 +240,18 @@
     <MESSAGE value="Added a prefix to the routes" />
     <MESSAGE value="Added the validating when signing in to usersauth controller" />
     <MESSAGE value="changed the table name to upper" />
-    <option name="LAST_COMMIT_MESSAGE" value="changed the table name to upper" />
+    <MESSAGE value="Solved the table issues" />
+    <option name="LAST_COMMIT_MESSAGE" value="Solved the table issues" />
   </component>
   <component name="WindowStateProjectService">
     <state x="413" y="119" key="#com.jetbrains.php.actions.copyPaste.importReferences.PhpImportReferencesDialog" timestamp="1607956920874">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
     <state x="413" y="119" key="#com.jetbrains.php.actions.copyPaste.importReferences.PhpImportReferencesDialog/0.0.1366.728@0.0.1366.728" timestamp="1607956920874" />
-    <state x="275" y="97" key="Vcs.Push.Dialog.v2" timestamp="1607958580879">
+    <state x="275" y="97" key="Vcs.Push.Dialog.v2" timestamp="1607959619455">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state x="275" y="97" key="Vcs.Push.Dialog.v2/0.0.1366.728@0.0.1366.728" timestamp="1607958580879" />
+    <state x="275" y="97" key="Vcs.Push.Dialog.v2/0.0.1366.728@0.0.1366.728" timestamp="1607959619455" />
     <state x="375" y="27" width="682" height="639" key="com.intellij.database.view.ui.AbstractDbRefactoringDialog" timestamp="1607957430575">
       <screen x="0" y="0" width="1366" height="728" />
     </state>

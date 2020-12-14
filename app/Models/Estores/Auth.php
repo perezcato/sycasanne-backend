@@ -11,8 +11,12 @@ class Auth extends Model
 {
     use HasFactory;
     protected $table = 'EstoresAuth';
+    protected $connection = 'setting_database';
     protected $primaryKey = 'id';
     public $timestamps = false;
+    protected $fillable = ['token', 'loginTime', 'companyCode', 'user'];
+
+
 
     public static function signIn($companyCode, $username)
     {
