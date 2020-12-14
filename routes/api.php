@@ -3,6 +3,7 @@
 use App\Http\Controllers\Client\ClientController;
 use App\Http\Controllers\Client\ClientStatementController;
 use App\Http\Controllers\Configuration\ESchoolResourceController;
+use App\Http\Controllers\Estores\Auth\AuthController;
 use App\Http\Controllers\Location\LocationController;
 use App\Http\Controllers\MobileBanker\LoanController;
 use App\Http\Controllers\MobileBanker\LoanDescriptionController;
@@ -38,10 +39,11 @@ Route::middleware(['db'])->group(function(){
         Route::post('/loan/update-image', [LoanController::class, 'updateImage']);
     });
 
-
-
-
     Route::get('/database', function (Request $request) {
        return Device::all();
     });
+});
+
+Route::middleware(['estores.locked'])->group(function(){
+    Route::post('/signin',[AuthController::class, 'signIn']);
 });
