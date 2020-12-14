@@ -4,6 +4,7 @@ use App\Http\Controllers\Client\ClientController;
 use App\Http\Controllers\Client\ClientStatementController;
 use App\Http\Controllers\Configuration\ESchoolResourceController;
 use App\Http\Controllers\Estores\Auth\AuthController;
+use App\Http\Controllers\Estores\Branches\BranchesController;
 use App\Http\Controllers\Estores\Products\ProductsController;
 use App\Http\Controllers\Location\LocationController;
 use App\Http\Controllers\MobileBanker\LoanController;
@@ -50,6 +51,7 @@ Route::middleware(['estores.locked'])->prefix('estores')->group(function(){
     Route::middleware(['estores.auth'])->group(function(){
         Route::post('/adduser',[AuthController::class,'addUser']);
         Route::get('/products/search',[ProductsController::class,'searchProduct']);
+        Route::get('/branches',[BranchesController::class,'index']);
     });
 
 });
