@@ -7,6 +7,7 @@ use App\Models\Configuration\ESchoolResource;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
 use Illuminate\Support\Facades\DB;
+use Illuminate\Support\Str;
 
 class Users extends Model
 {
@@ -15,7 +16,7 @@ class Users extends Model
     public static function getUser(SiginRequest $request)
     {
         $company = ESchoolResource::userTableName($request->input('company.code'));
-        return DB::table($company)
+        return DB::table(Str::upper($company))
             ->where('UserName', $request->input('user.username'))
             ->where('UserPass', $request->input('user.password'))
             ->first();
