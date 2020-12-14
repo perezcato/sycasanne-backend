@@ -16,15 +16,16 @@ class Auth extends Model
     public $timestamps = false;
     protected $fillable = ['token', 'loginTime', 'companyCode', 'user'];
 
-
+    protected $casts = [
+      'loginTime' => 'datetime'
+    ];
 
     public static function signIn($companyCode, $username)
     {
         $token = Str::random(42);
-        $time = Carbon::now()->toString();
         self::create([
            'token' => $token,
-           'loginTime' => $time,
+           'loginTime' => Carbon::now(),
             'companyCode' => $companyCode,
             'user' => $username
         ]);
