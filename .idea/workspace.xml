@@ -21,8 +21,6 @@
   <component name="ChangeListManager">
     <list default="true" id="c9df5a71-8ba1-4d96-8e7f-f05450f24239" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Models/Auth/Device.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Models/Auth/Device.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/routes/api.php" beforeDir="false" afterPath="$PROJECT_DIR$/routes/api.php" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -255,13 +253,7 @@
       <workItem from="1605699374640" duration="2136000" />
       <workItem from="1605780954965" duration="7279000" />
       <workItem from="1605883003077" duration="169000" />
-    </task>
-    <task id="LOCAL-00001" summary="Fixed the authentication issues">
-      <created>1602939772685</created>
-      <option name="number" value="00001" />
-      <option name="presentableId" value="LOCAL-00001" />
-      <option name="project" value="LOCAL" />
-      <updated>1602939772685</updated>
+      <workItem from="1606111717092" duration="26000" />
     </task>
     <task id="LOCAL-00002" summary="reconfigured the database connections for the application">
       <created>1602941807108</created>
@@ -599,7 +591,14 @@
       <option name="project" value="LOCAL" />
       <updated>1605648363402</updated>
     </task>
-    <option name="localTasksCounter" value="50" />
+    <task id="LOCAL-00050" summary="1. Added the device status on device registration&#10;2. Added the user.locked middleware to the routes">
+      <created>1606100825251</created>
+      <option name="number" value="00050" />
+      <option name="presentableId" value="LOCAL-00050" />
+      <option name="project" value="LOCAL" />
+      <updated>1606100825252</updated>
+    </task>
+    <option name="localTasksCounter" value="51" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -618,7 +617,6 @@
     <option name="oldMeFiltersMigrated" value="true" />
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="added the sanctum to the api" />
     <MESSAGE value="Added locations and device id to it" />
     <MESSAGE value="fixed the fillable column" />
     <MESSAGE value="Added the needed fillable columns" />
@@ -643,7 +641,8 @@
     <MESSAGE value="Added the user locked feature" />
     <MESSAGE value="removed the lock from the app" />
     <MESSAGE value="fixed the merge conflicts" />
-    <option name="LAST_COMMIT_MESSAGE" value="fixed the merge conflicts" />
+    <MESSAGE value="1. Added the device status on device registration&#10;2. Added the user.locked middleware to the routes" />
+    <option name="LAST_COMMIT_MESSAGE" value="1. Added the device status on device registration&#10;2. Added the user.locked middleware to the routes" />
   </component>
   <component name="WindowStateProjectService">
     <state x="257" y="15" width="940" height="744" key="#com.intellij.execution.impl.EditConfigurationsDialog" timestamp="1605715037099">
@@ -708,10 +707,11 @@
     </state>
     <state x="572" y="427" width="278" height="130" key="NewPhpFileDialog/1440.31.1366.768/0.55.1440.845@0.55.1440.845" timestamp="1604780615240" />
     <state x="763" y="563" width="384" height="130" key="NewPhpFileDialog/1920.0.1366.768/0.88.1920.1080@0.88.1920.1080" timestamp="1603007639085" />
-    <state x="466" y="226" width="499" height="277" key="Vcs.Push.Dialog.v2" timestamp="1605796975521">
-      <screen x="0" y="0" width="1366" height="728" />
+    <state x="466" y="255" width="499" height="277" key="Vcs.Push.Dialog.v2" timestamp="1606100894934">
+      <screen x="0" y="24" width="1366" height="744" />
     </state>
     <state x="466" y="226" width="499" height="277" key="Vcs.Push.Dialog.v2/0.0.1366.728@0.0.1366.728" timestamp="1605796975521" />
+    <state x="466" y="255" key="Vcs.Push.Dialog.v2/0.24.1366.744@0.24.1366.744" timestamp="1606100894934" />
     <state x="655" y="423" width="600" height="410" key="Vcs.Push.Dialog.v2/1920.0.1366.768/0.88.1920.1080@0.88.1920.1080" timestamp="1603047884748" />
     <state x="550" y="99" width="522" height="618" key="com.intellij.database.view.ui.AbstractDbRefactoringDialog" timestamp="1601827673013">
       <screen x="0" y="24" width="1366" height="744" />
