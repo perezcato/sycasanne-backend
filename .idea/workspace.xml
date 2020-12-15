@@ -19,10 +19,8 @@
     <select />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="a027f104-e129-4af1-bcd3-af03cbbf5d46" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/dataSources/feaf73e2-6ebb-4add-96d8-dc5f673f2337.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources/feaf73e2-6ebb-4add-96d8-dc5f673f2337.xml" afterDir="false" />
+    <list default="true" id="a027f104-e129-4af1-bcd3-af03cbbf5d46" name="Default Changelist" comment="Added functionality for search for products">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Http/Middleware/Estores/CompanyMiddleware.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Middleware/Estores/CompanyMiddleware.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/routes/api.php" beforeDir="false" afterPath="$PROJECT_DIR$/routes/api.php" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -183,7 +181,7 @@
       <updated>1607504353300</updated>
       <workItem from="1607504361369" duration="1237000" />
       <workItem from="1607941569765" duration="11827000" />
-      <workItem from="1608029998914" duration="8403000" />
+      <workItem from="1608029998914" duration="8723000" />
     </task>
     <task id="LOCAL-00001" summary="Added the functionality for signing in a user">
       <created>1607957753607</created>
@@ -255,7 +253,14 @@
       <option name="project" value="LOCAL" />
       <updated>1608031670072</updated>
     </task>
-    <option name="localTasksCounter" value="11" />
+    <task id="LOCAL-00011" summary="Added functionality for search for products">
+      <created>1608047838167</created>
+      <option name="number" value="00011" />
+      <option name="presentableId" value="LOCAL-00011" />
+      <option name="project" value="LOCAL" />
+      <updated>1608047838167</updated>
+    </task>
+    <option name="localTasksCounter" value="12" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -284,17 +289,18 @@
     <MESSAGE value="Add the rest of user properties" />
     <MESSAGE value="Added the add user functionality" />
     <MESSAGE value="added the response code" />
-    <option name="LAST_COMMIT_MESSAGE" value="added the response code" />
+    <MESSAGE value="Added functionality for search for products" />
+    <option name="LAST_COMMIT_MESSAGE" value="Added functionality for search for products" />
   </component>
   <component name="WindowStateProjectService">
     <state x="413" y="119" key="#com.jetbrains.php.actions.copyPaste.importReferences.PhpImportReferencesDialog" timestamp="1607956920874">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
     <state x="413" y="119" key="#com.jetbrains.php.actions.copyPaste.importReferences.PhpImportReferencesDialog/0.0.1366.728@0.0.1366.728" timestamp="1607956920874" />
-    <state x="275" y="97" key="Vcs.Push.Dialog.v2" timestamp="1608031677752">
+    <state x="275" y="97" key="Vcs.Push.Dialog.v2" timestamp="1608047843746">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state x="275" y="97" key="Vcs.Push.Dialog.v2/0.0.1366.728@0.0.1366.728" timestamp="1608031677752" />
+    <state x="275" y="97" key="Vcs.Push.Dialog.v2/0.0.1366.728@0.0.1366.728" timestamp="1608047843746" />
     <state x="375" y="27" width="682" height="639" key="com.intellij.database.view.ui.AbstractDbRefactoringDialog" timestamp="1608044478107">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
