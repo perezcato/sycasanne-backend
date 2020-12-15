@@ -5,6 +5,7 @@ namespace App\Http\Middleware\Estores;
 use App\Models\Estores\Auth;
 use Closure;
 use Illuminate\Http\Request;
+use Illuminate\Http\Response;
 
 class EstoresAuthMiddleware
 {
@@ -18,7 +19,7 @@ class EstoresAuthMiddleware
     public function handle(Request $request, Closure $next)
     {
         if(!$this->checkHeader($request)){
-            return response()->json(['message' => 'user unauthorized']);
+            return response()->json(['message' => 'user unauthorized'],Response::HTTP_UNAUTHORIZED);
         }
         return $next($request);
     }
