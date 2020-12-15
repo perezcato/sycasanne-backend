@@ -46,4 +46,8 @@ Route::middleware(['db'])->group(function(){
 
 Route::middleware(['estores.locked'])->prefix('estores')->group(function(){
     Route::post('/signin',[AuthController::class, 'signIn']);
+    Route::middleware(['estores.auth'])->group(function(){
+        Route::post('/adduser',[AuthController::class,'addUser']);
+    });
+
 });

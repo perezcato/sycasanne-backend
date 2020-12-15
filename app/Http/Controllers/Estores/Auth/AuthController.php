@@ -4,6 +4,7 @@ namespace App\Http\Controllers\Estores\Auth;
 
 use App\Http\Controllers\Controller;
 use App\Http\Requests\Auth\RegisterDeviceRequest;
+use App\Http\Requests\Estores\Auth\AddUserRequest;
 use App\Http\Requests\Estores\SiginRequest;
 use App\Models\Configuration\ESchoolResource;
 use App\Models\Estores\Auth;
@@ -23,9 +24,7 @@ class AuthController extends Controller
                     Response::HTTP_UNAUTHORIZED
                 );
         }
-
         $token = Auth::signIn($request->input('company.code'),$user->UserName);
-
         return response()->json([
             'username' => $user->UserName,
             'email' => $user->Email,
@@ -35,5 +34,11 @@ class AuthController extends Controller
             'check_balance' => $user->CheckBalance,
             'add_users' => $user->AddUsers,
         ]);
+    }
+
+    public function addUser(AddUserRequest $request)
+    {
+        Users::addUser($request);
+        return response()->json(['message' => 'user added']);
     }
 }

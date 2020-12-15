@@ -22,6 +22,9 @@
     <list default="true" id="a027f104-e129-4af1-bcd3-af03cbbf5d46" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/Http/Controllers/Estores/Auth/AuthController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/Estores/Auth/AuthController.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Http/Kernel.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Kernel.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Models/Estores/Users/Users.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Models/Estores/Users/Users.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/routes/api.php" beforeDir="false" afterPath="$PROJECT_DIR$/routes/api.php" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -180,7 +183,8 @@
       <option name="presentableId" value="Default" />
       <updated>1607504353300</updated>
       <workItem from="1607504361369" duration="1237000" />
-      <workItem from="1607941569765" duration="10691000" />
+      <workItem from="1607941569765" duration="11827000" />
+      <workItem from="1608029998914" duration="1468000" />
     </task>
     <task id="LOCAL-00001" summary="Added the functionality for signing in a user">
       <created>1607957753607</created>
@@ -231,7 +235,14 @@
       <option name="project" value="LOCAL" />
       <updated>1607960114757</updated>
     </task>
-    <option name="localTasksCounter" value="8" />
+    <task id="LOCAL-00008" summary="Add the rest of user properties">
+      <created>1607972052859</created>
+      <option name="number" value="00008" />
+      <option name="presentableId" value="LOCAL-00008" />
+      <option name="project" value="LOCAL" />
+      <updated>1607972052859</updated>
+    </task>
+    <option name="localTasksCounter" value="9" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -257,17 +268,18 @@
     <MESSAGE value="Solved the table issues" />
     <MESSAGE value="Added fillable property field to the auth user" />
     <MESSAGE value="Added the login casts to the Auth table" />
-    <option name="LAST_COMMIT_MESSAGE" value="Added the login casts to the Auth table" />
+    <MESSAGE value="Add the rest of user properties" />
+    <option name="LAST_COMMIT_MESSAGE" value="Add the rest of user properties" />
   </component>
   <component name="WindowStateProjectService">
     <state x="413" y="119" key="#com.jetbrains.php.actions.copyPaste.importReferences.PhpImportReferencesDialog" timestamp="1607956920874">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
     <state x="413" y="119" key="#com.jetbrains.php.actions.copyPaste.importReferences.PhpImportReferencesDialog/0.0.1366.728@0.0.1366.728" timestamp="1607956920874" />
-    <state x="275" y="97" key="Vcs.Push.Dialog.v2" timestamp="1607960121717">
+    <state x="275" y="97" key="Vcs.Push.Dialog.v2" timestamp="1607972068088">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state x="275" y="97" key="Vcs.Push.Dialog.v2/0.0.1366.728@0.0.1366.728" timestamp="1607960121717" />
+    <state x="275" y="97" key="Vcs.Push.Dialog.v2/0.0.1366.728@0.0.1366.728" timestamp="1607972068088" />
     <state x="375" y="27" width="682" height="639" key="com.intellij.database.view.ui.AbstractDbRefactoringDialog" timestamp="1607957430575">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
