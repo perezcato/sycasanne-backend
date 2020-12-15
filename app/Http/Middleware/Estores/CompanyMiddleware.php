@@ -29,7 +29,10 @@ class CompanyMiddleware
 
     private function checkCompany(Request $request):bool
     {
-        $code = $request->input('company.code');
+        $code = $request->method() === 'POST' ?
+            $request->input('company.code') :
+            $request->get('company_code');
+
         return $code?true:false;
     }
 }
