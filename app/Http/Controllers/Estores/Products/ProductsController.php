@@ -11,6 +11,6 @@ class ProductsController extends Controller
     public function searchProduct(Request $request)
     {
         $products = Product::getProduct($request);
-        return response()->json([$products]);
+        return response()->json($products);
     }
 }
