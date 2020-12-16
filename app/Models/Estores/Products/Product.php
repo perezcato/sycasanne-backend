@@ -21,4 +21,12 @@ class Product extends Model
             ->select()
             ->get();
     }
+
+    public static function updateProduct(Request $request,$id)
+    {
+        return DB::connection('setting_database')
+            ->table(ESchoolResource::productsName($request->input('company.code')))
+            ->where('ProductsID','=',$id)
+            ->update($request->except(['company.code','ProductsID']));
+    }
 }
