@@ -28,7 +28,7 @@ class Product extends Model
         return DB::connection('setting_database')
             ->table(ESchoolResource::productsName($request->input('company.code')))
             ->where('ProductsID','=',$id)
-            ->update($request->except(['company.code','ProductsID']));
+            ->update($request->except(['company','ProductsID']));
     }
 
     public static function addProduct(ProductRequest $request)
