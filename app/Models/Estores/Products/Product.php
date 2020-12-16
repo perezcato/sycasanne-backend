@@ -36,10 +36,10 @@ class Product extends Model
         return DB::connection('setting_database')
             ->table(ESchoolResource::productsName($request->input('company.code')))
             ->insert([
-                'ItemName' => $request->input('product.item_name'),
-                'UniversalID' => $request->input('product.universal_id'),
-                'SP' => $request->input('product.sp'),
-                'CP' => $request->input('product.cp'),
+                'ItemName' => $request->input('products.item_name'),
+                'UniversalID' => $request->input('products.universal_id'),
+                'SP' => $request->input('products.sp'),
+                'CP' => $request->input('products.cp'),
                 'NP' => 1,
             ]);
     }
