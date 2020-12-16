@@ -53,6 +53,7 @@ Route::middleware(['estores.locked'])->prefix('estores')->group(function(){
         Route::get('/products/search',[ProductsController::class,'searchProduct']);
         Route::get('/branches',[BranchesController::class,'index']);
         Route::put('/products',[ProductsController::class,'update']);
+        Route::post('/products',[ProductsController::class,'store']);
     });
 
 });

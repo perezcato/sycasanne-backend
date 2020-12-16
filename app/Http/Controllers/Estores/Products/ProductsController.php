@@ -3,6 +3,7 @@
 namespace App\Http\Controllers\Estores\Products;
 
 use App\Http\Controllers\Controller;
+use App\Http\Requests\Estores\Products\ProductRequest;
 use App\Models\Estores\Products\Product;
 use Illuminate\Http\Request;
 use Illuminate\Http\Response;
@@ -19,5 +20,11 @@ class ProductsController extends Controller
     {
         Product::updateProduct($request, $id);
         return response()->json([],Response::HTTP_OK);
+    }
+
+    public function store(ProductRequest $request)
+    {
+        Product::addProduct($request);
+        return response()->json([],Response::HTTP_CREATED);
     }
 }

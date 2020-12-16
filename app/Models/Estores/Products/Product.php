@@ -2,6 +2,7 @@
 
 namespace App\Models\Estores\Products;
 
+use App\Http\Requests\Estores\Products\ProductRequest;
 use App\Models\Configuration\ESchoolResource;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
@@ -28,5 +29,18 @@ class Product extends Model
             ->table(ESchoolResource::productsName($request->input('company.code')))
             ->where('ProductsID','=',$id)
             ->update($request->except(['company.code','ProductsID']));
+    }
+
+    public static function addProduct(ProductRequest $request)
+    {
+        return DB::connection('setting_database')
+            ->table(ESchoolResource::productsName($request->input('company.code')))
+            ->insert([
+                'ItemName' => $request->input('product.item_name'),
+                'UniversalID' => $request->input('product.universal_id'),
+                'SP' => $request->input('product.sp'),
+                'CP' => $request->input('product.cp'),
+                'NP' => 1,
+            ]);
     }
 }
