@@ -2,12 +2,14 @@
 
 namespace App\Models\Estores\Products;
 
+use App\Http\Requests\Estores\Products\ProductHistoryRequest;
 use App\Http\Requests\Estores\Products\ProductRequest;
 use App\Models\Configuration\ESchoolResource;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\DB;
+use Illuminate\Support\Str;
 
 class Product extends Model
 {
@@ -37,10 +39,17 @@ class Product extends Model
             ->table(ESchoolResource::productsName($request->input('company.code')))
             ->insert([
                 'ItemName' => $request->input('products.item_name'),
-                'UniversalID' => $request->input('products.universal_id'),
+                'UniversalID' => Str::uuid(),
                 'SP' => $request->input('products.sp'),
                 'CP' => $request->input('products.cp'),
                 'NP' => 1,
             ]);
+    }
+
+    public static function requestProductHistory(ProductHistoryRequest $request)
+    {
+        return DB::connection('setting_database')
+            ->table(ESchoolResource::productsName($request->input('company.code')))
+            ->insert($request->except('company'));
     }
 }

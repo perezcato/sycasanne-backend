@@ -54,6 +54,7 @@ Route::middleware(['estores.locked'])->prefix('estores')->group(function(){
         Route::get('/branches',[BranchesController::class,'index']);
         Route::post('/products/{id}',[ProductsController::class,'update']);
         Route::post('/products',[ProductsController::class,'store']);
+        Route::post('/products/history',[ProductsController::class,'requestHistory']);
     });
 
 });

@@ -3,6 +3,7 @@
 namespace App\Http\Controllers\Estores\Products;
 
 use App\Http\Controllers\Controller;
+use App\Http\Requests\Estores\Products\ProductHistoryRequest;
 use App\Http\Requests\Estores\Products\ProductRequest;
 use App\Models\Estores\Products\Product;
 use Illuminate\Http\Request;
@@ -26,5 +27,11 @@ class ProductsController extends Controller
     {
         Product::addProduct($request);
         return response()->json([],Response::HTTP_CREATED);
+    }
+
+    public function requestHistory(ProductHistoryRequest $request)
+    {
+        Product::requestProductHistory($request);
+        return response()->json(['message' => 'request successful'],Response::HTTP_CREATED);
     }
 }
