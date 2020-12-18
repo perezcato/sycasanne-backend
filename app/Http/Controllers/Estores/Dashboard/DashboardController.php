@@ -19,12 +19,12 @@ class DashboardController extends Controller
             ->get())->toArray();
 
         $dailySales = array_reduce($branches, function ($sales, $branchSale){
-            $sales += $branchSale['DailySALES'];
+            $sales += $branchSale->DailySALES;
             return $sales;
         });
 
         $monthlySales = array_reduce($branches, function ($sales, $branchSale){
-            $sales += $branchSale['MonthlySALES'];
+            $sales += $branchSale->MonthlySALES;
             return $sales;
         });
 
