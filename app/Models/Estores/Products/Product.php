@@ -49,7 +49,7 @@ class Product extends Model
     public static function requestProductHistory(ProductHistoryRequest $request)
     {
         return DB::connection('setting_database')
-            ->table(ESchoolResource::productsName($request->input('company.code')))
+            ->table('ViewSales')
             ->insert($request->except('company'));
     }
 }
