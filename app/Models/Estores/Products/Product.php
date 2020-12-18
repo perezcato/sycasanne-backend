@@ -50,6 +50,6 @@ class Product extends Model
     {
         return DB::connection('setting_database')
             ->table(ESchoolResource::productsName($request->input('company.code')))
-            ->insert($request->except('company'));
+            ->insert($request->input('product'));
     }
 }
