@@ -24,14 +24,14 @@ class ProductHistoryRequest extends FormRequest
     public function rules()
     {
         return [
-            'product.CompCODE' => 'required|string',
-            'product.SDate' => 'required|string',
-            'product.EDate' => 'required|string',
-            'product.CBranch' => 'required|string',
-            'product.Product' => 'required|string',
-            'product.ProductUUID' => 'required|string',
-            'product.UserRequesting' => 'required|string',
-            'product.UserEmail' => 'required|string',
+            'CompCODE' => 'required|string',
+            'SDate' => 'required|string',
+            'EDate' => 'required|string',
+            'CBranch' => 'required|string',
+            'Product' => 'required|string',
+            'ProductUUID' => 'required|string',
+            'UserRequesting' => 'required|string',
+            'UserEmail' => 'required|string',
         ];
     }
 }
