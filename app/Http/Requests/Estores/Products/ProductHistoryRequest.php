@@ -27,9 +27,6 @@ class ProductHistoryRequest extends FormRequest
             'CompCODE' => 'required|string',
             'SDate' => 'required|string',
             'EDate' => 'required|string',
-            'CBranch' => 'required|string',
-            'Product' => 'required|string',
-            'ProductUUID' => 'required|string',
             'UserRequesting' => 'required|string',
             'UserEmail' => 'required|string',
         ];
