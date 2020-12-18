@@ -20,4 +20,13 @@ class Branch extends Model
             ->select('BranchName')
             ->get();
     }
+
+    public static function getBranchesNumber(Request $request)
+    {
+        $company = $request->get('company_code');
+        return DB::connection('setting_database')
+            ->table(ESchoolResource::branchName($company))
+            ->select()
+            ->count();
+    }
 }

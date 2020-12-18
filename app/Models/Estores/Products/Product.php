@@ -25,6 +25,14 @@ class Product extends Model
             ->get();
     }
 
+    public static function getProductNumber(Request $request)
+    {
+        return DB::connection('setting_database')
+            ->table(ESchoolResource::productsName($request->get('company_code')))
+            ->select()
+            ->count();
+    }
+
     public static function updateProduct(Request $request,$id)
     {
         return DB::connection('setting_database')
