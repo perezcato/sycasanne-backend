@@ -22,7 +22,7 @@ class Product extends Model
             ->table(ESchoolResource::productsName($request->get('company_code')))
             ->where('ItemName','LIKE', "%{$searchTerm}%")
             ->select()
-            ->simplePaginate(16);
+            ->simplePaginate(1);
     }
 
     public static function getProductNumber(Request $request)
