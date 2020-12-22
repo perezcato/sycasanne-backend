@@ -5,6 +5,7 @@ namespace App\Models\Estores\Products;
 use App\Http\Requests\Estores\Products\ProductHistoryRequest;
 use App\Http\Requests\Estores\Products\ProductRequest;
 use App\Models\Configuration\ESchoolResource;
+use Database\Factories\ProductsFactory;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
 use Illuminate\Http\Request;
@@ -14,6 +15,8 @@ use Illuminate\Support\Str;
 class Product extends Model
 {
     use HasFactory;
+    protected $table = 'VENUSPRODUCTS';
+    protected $connection = 'setting_database';
 
     public static function getProduct(Request $request)
     {
