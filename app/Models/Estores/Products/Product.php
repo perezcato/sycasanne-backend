@@ -18,6 +18,9 @@ class Product extends Model
     protected $table = 'VENUSPRODUCTS';
     protected $connection = 'setting_database';
 
+    public $timestamps = false;
+
+
     public static function getProduct(Request $request)
     {
         $searchTerm = $request->get('s_term');
