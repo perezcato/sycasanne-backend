@@ -17,7 +17,14 @@ class AuthController extends Controller
     public function signIn(SiginRequest $request)
     {
         $user = Users::getUser($request);
-        if(!$user){
+        if(!$user ){
+            if($user->LoginStatus == '0'){
+                return response()
+                    ->json(
+                        ['message' => 'User Locked'],
+                        Response::HTTP_UNAUTHORIZED
+                    );
+            }
             return response()
                 ->json(
                     ['message' => 'Invalid username or password'],
