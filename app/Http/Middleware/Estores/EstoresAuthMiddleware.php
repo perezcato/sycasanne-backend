@@ -6,6 +6,7 @@ use App\Models\Estores\Auth;
 use Closure;
 use Illuminate\Http\Request;
 use Illuminate\Http\Response;
+use Illuminate\Support\Facades\DB;
 
 class EstoresAuthMiddleware
 {
@@ -19,7 +20,7 @@ class EstoresAuthMiddleware
     public function handle(Request $request, Closure $next)
     {
         if(!$this->checkHeader($request)){
-            return response()->json(['message' => 'user unauthorized'],Response::HTTP_UNAUTHORIZED);
+            return response()->json(['message' => 'user locked'],Response::HTTP_UNAUTHORIZED);
         }
         return $next($request);
     }
@@ -31,7 +32,10 @@ class EstoresAuthMiddleware
             if($authorization){
                 $token = Auth::where('token','=',trim($authorization))->first();
                 if($token){
-                    return true;
+                    $user = DB::where('UserName','=',$token->user)->first();
+                    if($user && ($user->LoginStatus == '0')){
+                        return true;
+                    }
                 }
             }
         }
