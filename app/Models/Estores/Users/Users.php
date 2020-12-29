@@ -19,7 +19,7 @@ class Users extends Model
         $company = ESchoolResource::userTableName($request->input('company.code'));
         return DB::connection('setting_database')->table(Str::upper($company))
             ->where('UserName', $request->input('user.username'))
-            ->where('UserPass', $request->input('user.password'))
+            ->where('UserPass', md5($request->input('user.password')))
             ->first();
     }
 
