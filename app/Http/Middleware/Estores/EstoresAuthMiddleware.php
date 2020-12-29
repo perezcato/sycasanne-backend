@@ -40,7 +40,7 @@ class EstoresAuthMiddleware
                     $user = DB::connection('setting_database')->table($userTable)
                         ->where('UserName','=',$token->user)
                         ->first();
-                    if($user && ($user->LoginStatus == '0')){
+                    if($user && ($user->LoginStatus == '1')){
                         return true;
                     }
                 }
