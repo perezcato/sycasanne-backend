@@ -2,6 +2,7 @@
 
 namespace App\Http\Middleware\Estores;
 
+use App\Models\Configuration\ESchoolResource;
 use App\Models\Estores\Auth;
 use Closure;
 use Illuminate\Http\Request;
@@ -27,12 +28,18 @@ class EstoresAuthMiddleware
 
     public function checkHeader(Request $request):bool
     {
+        $code = $request->method() === 'POST' ?
+            $request->input('company.code') :
+            $request->get('company_code');
+        $userTable = ESchoolResource::userTableName($code);
         if($request->hasHeader('authorization')){
             $authorization = $request->header('authorization');
             if($authorization){
                 $token = Auth::where('token','=',trim($authorization))->first();
                 if($token){
-                    $user = DB::where('UserName','=',$token->user)->first();
+                    $user = DB::connection('setting_database')->table($userTable)
+                        ->where('UserName','=',$token->user)
+                        ->first();
                     if($user && ($user->LoginStatus == '0')){
                         return true;
                     }
