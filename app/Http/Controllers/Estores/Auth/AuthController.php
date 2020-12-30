@@ -48,4 +48,9 @@ class AuthController extends Controller
         Users::addUser($request);
         return response()->json(['message' => 'user added']);
     }
+    public function signOut(Request $request)
+    {
+        Auth::signOut($request);
+        return response()->json(['message' => 'user signed out']);
+    }
 }

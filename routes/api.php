@@ -57,7 +57,7 @@ Route::middleware(['estores.locked'])->prefix('estores')->group(function(){
         Route::post('/products/history',[ProductsController::class,'requestHistory']);
         Route::post('/products/{id}',[ProductsController::class,'update']);
         Route::post('/products',[ProductsController::class,'store']);
-
+        Route::post('/signout',[AuthController::class, 'signOut']);
     });
 
 });

@@ -3,6 +3,7 @@
 namespace App\Models\MobileBanker;
 
 use App\Http\Requests\Loan\LoanDescriptionRequest;
+use Carbon\Carbon;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
 
@@ -21,7 +22,7 @@ class LoanDescription extends Model
         return self::create([
            'LoanREf' => $request->input('data.loan_id'),
            'DetDescp' => $request->input('data.description'),
-           'CreatedAt' => $request->input('data.created_at'),
+           'CreatedAt' => Carbon::now(),
            'UserRef' => $request->input('data.user_ref'),
            'deviceRef' => $request->input('data.device_ref')
         ]);

@@ -5,6 +5,7 @@ namespace App\Models\Estores;
 use Carbon\Carbon;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
+use Illuminate\Http\Request;
 use Illuminate\Support\Str;
 
 class Auth extends Model
@@ -31,5 +32,13 @@ class Auth extends Model
         ]);
 
         return $token;
+    }
+
+    public static function signOut(Request $request)
+    {
+        $authCode = $request->header('authorization');
+        $token = self::where('token','=',$authCode)->first();
+        $token->delete();
+        return true;
     }
 }
