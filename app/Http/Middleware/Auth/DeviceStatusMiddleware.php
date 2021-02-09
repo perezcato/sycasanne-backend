@@ -18,9 +18,9 @@ class DeviceStatusMiddleware
      */
     public function handle(Request $request, Closure $next)
     {
-        if(!$this->getDeviceStatus($request)){
-            return response()->json(['message' => 'Device Locked is not locked'], Response::HTTP_LOCKED);
-        }
+//         if(!$this->getDeviceStatus($request)){
+//             return response()->json(['message' => 'Device Locked is not locked'], Response::HTTP_LOCKED);
+//         }
         return $next($request);
     }
 
