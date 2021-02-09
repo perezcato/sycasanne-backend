@@ -31,7 +31,8 @@ class Client extends Model
             'DateCreated' => $clientRequest->input('data.date_created'),
             'UserREF' => $clientRequest->input('data.user_ref'),
             'DeviceREF' => $clientRequest->input('data.device_id'),
-            'PicturePath' => $picture
+            'PicturePath' => $picture,
+            'GroupName' => $clientRequest->input('data.groupName')
         ]);
     }
 
