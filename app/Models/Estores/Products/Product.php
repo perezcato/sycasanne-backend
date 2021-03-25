@@ -54,6 +54,7 @@ class Product extends Model
             ->insert([
                 'ItemName' => $request->input('products.item_name'),
                 'UniversalID' => Str::uuid(),
+                'ItemDescription' => request->input('products.item_description'),
                 'SP' => $request->input('products.sp'),
                 'CP' => $request->input('products.cp'),
                 'NP' => 1,
