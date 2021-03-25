@@ -29,4 +29,14 @@ class Branch extends Model
             ->select()
             ->count();
     }
+
+    public static function getBranchesLastUpdate(Request $request)
+    {
+        $company = $request->get('company_code');
+
+        return DB::connection('setting_database')
+            ->table(ESchoolResource::branchName($company))
+            ->select('BranchName','updated_at')
+            ->get();
+    }
 }
