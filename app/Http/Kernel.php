@@ -5,6 +5,8 @@ namespace App\Http;
 use App\Http\Middleware\Auth\DeviceStatusMiddleware;
 use App\Http\Middleware\Configuration\DbConfigMiddleware;
 use App\Http\Middleware\Configuration\VerifyUserMiddleware;
+use App\Http\Middleware\Estores\CompanyMiddleware;
+use App\Http\Middleware\Estores\EstoresAuthMiddleware;
 use Illuminate\Foundation\Http\Kernel as HttpKernel;
 
 class Kernel extends HttpKernel
@@ -67,6 +69,8 @@ class Kernel extends HttpKernel
         'verified' => \Illuminate\Auth\Middleware\EnsureEmailIsVerified::class,
         'db' => DbConfigMiddleware::class,
         'user.token' => VerifyUserMiddleware::class,
-        'user.locked' => DeviceStatusMiddleware::class
+        'user.locked' => DeviceStatusMiddleware::class,
+        'estores.locked' => CompanyMiddleware::class,
+        'estores.auth' => EstoresAuthMiddleware::class
     ];
 }

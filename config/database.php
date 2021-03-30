@@ -46,12 +46,12 @@ return [
         'setting_database' => [
             'driver' => 'mysql',
             'url' => env('DATABASE_URL'),
-            'host' => env('DB_HOST', '107.180.51.38'),
-            'port' => env('DB_PORT', '3306'),
-            'database' => env('DB_DATABASE', 'infosourcedb'),
-            'username' => env('DB_USERNAME', 'rootinfosourcedb'),
-            'password' => env('DB_PASSWORD', '1234#$Admin'),
-            'unix_socket' => env('DB_SOCKET', ''),
+            'host' => '107.180.51.38',
+            'port' => '3306',
+            'database' =>  'infosourcedb',
+            'username' => 'rootinfosourcedb',
+            'password' => '1234#$Admin',
+            'unix_socket' =>  '',
             'charset' => 'utf8',
             'collation' => 'utf8_unicode_ci',
             'prefix' => '',
@@ -65,12 +65,12 @@ return [
         'mysql' => [
             'driver' => 'mysql',
             'url' => env('COMPANY_DATABASE_URL'),
-            'host' => env('COMPANY_DB_HOST', '41.218.225.78'),
-            'port' => env('COMPANY_DB_PORT', '3306'),
-            'database' => env('COMPANY_DB_DATABASE', 'welcome'),
-            'username' => env('COMPANY_DB_USERNAME', 'root'),
-            'password' => env('COMPANY_DB_PASSWORD', 'elpaso'),
-            'unix_socket' => env('COMPANY_DB_SOCKET', ''),
+            'host' =>  '41.218.225.78',
+            'port' => '3306',
+            'database' => 'welcome',
+            'username' =>  'root',
+            'password' =>  'elpaso',
+            'unix_socket' => '',
             'charset' => 'utf8',
             'collation' => 'utf8_unicode_ci',
             'prefix' => '',
@@ -95,6 +95,8 @@ return [
             'prefix_indexes' => true,
             'schema' => 'public',
             'sslmode' => 'prefer',
+
+
         ],
 
         'sqlsrv' => [

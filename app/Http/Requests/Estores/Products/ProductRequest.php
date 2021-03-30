@@ -1,10 +1,10 @@
 <?php
 
-namespace App\Http\Requests\Configuration;
+namespace App\Http\Requests\Estores\Products;
 
 use Illuminate\Foundation\Http\FormRequest;
 
-class ESchoolResourceRequest extends FormRequest
+class ProductRequest extends FormRequest
 {
     /**
      * Determine if the user is authorized to make this request.
@@ -24,7 +24,10 @@ class ESchoolResourceRequest extends FormRequest
     public function rules()
     {
         return [
-            'code' => ['required','string']
+            'products.item_name' => 'required|string',
+            'products.universal_id' => 'required|string',
+            'products.sp' => 'required|string',
+            'products.cp' => 'required|string',
         ];
     }
 }
