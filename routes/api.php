@@ -2,6 +2,8 @@
 
 use App\Http\Controllers\Client\ClientController;
 use App\Http\Controllers\Client\ClientStatementController;
+use App\Http\Controllers\Company\ClientController as CompanyClient;
+use App\Http\Controllers\Company\LoansController;
 use App\Http\Controllers\Configuration\ESchoolResourceController;
 use App\Http\Controllers\Estores\Auth\AuthController;
 use App\Http\Controllers\Estores\Branches\BranchesController;
@@ -21,6 +23,7 @@ Route::post('/config',[ESchoolResourceController::class,'index']);
 
 Route::middleware(['db'])->group(function(){
     Route::post('/login',[LoginController::class,'login']);
+    Route::post('/register/existing',[CompanyClient::class,'registerExistingClient']);
     Route::post('/unlock-device', function (){
         return response()->json(['message'=>'device unlocked']);
     });
@@ -28,6 +31,8 @@ Route::middleware(['db'])->group(function(){
     Route::post('/register-device', [LoginController::class, 'registerDevice']);
     Route::post('/request-token', [LoginController::class, 'requestToken']);
     Route::post('/verify-token', [LoginController::class, 'verifyToken']);
+
+    Route::post('/clientLoans', [LoansController::class, 'getClientLoans']);
 
     Route::middleware(['user.locked'])->group(static function (){
         Route::get('/loans',[LoanController::class, 'index']);
