@@ -8,7 +8,7 @@ use App\Http\Requests\Auth\RegisterDeviceRequest;
 use App\Http\Requests\Auth\TokenRequest;
 use App\Http\Requests\Auth\VerifyTokenRequest;
 use App\Http\Resources\UserResource;
-use App\Libraries\SMS;
+use App\Libraries\SMxS;
 use App\Models\Auth\Device;
 use App\Models\Auth\Staff;
 use App\Models\Auth\User;

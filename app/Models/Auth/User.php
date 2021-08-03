@@ -15,6 +15,7 @@ class User extends Authenticatable
     protected $connection = 'mysql';
     protected $table = 'users';
     protected $primaryKey = 'MyIndex';
+    public $timestamps = false;
 
     protected $accessToken;
 
