@@ -115,4 +115,40 @@ class ClientController extends Controller
             'token' => $token
         ], 200);
     }
+
+    public function registerAgent(Request $request)
+    {
+        $firstName = $request->input('data.firstname');
+        $surName = $request->input('data.surname');
+        $dob = $request->input('data.dob');
+        $phoneNumber = $request->input('data.phonenumber');
+        $idType = $request->input('data.idtype');
+        $idNumber = $request->input('data.idnumber');
+        $idImage = $request->input('data.idimage');
+
+        $agent = new AgentsModel();
+        $agent->AgentName = "{$surName} {$firstName}";
+        $agent->AgentTel1 = $phoneNumber;
+        $agent->AgentIDType = $idType;
+        $agent->AgentIDNumber = $idNumber;
+        $agent->AgentIDPic = $idImage;
+        $agent->IsCERTIFIED = 0;
+        $agent->IsALLOWED = 0;
+
+        $agent->save();
+
+        Http::get('https://sms.arkesel.com/sms/api', [
+            'action' => 'send-sms',
+            'api_key' => 'cE9QRUdCakRKdW9LQ3lxSXF6dD0=',
+            'to' => $phoneNumber,
+            'from' => 'Sycasane',
+            'sms' => 'Your Application to become a loan agent has been received and is under review. Thank you'
+        ]);
+
+        return response()->json([
+           'message' => 'Application received'
+        ]);
+
+
+    }
 }
