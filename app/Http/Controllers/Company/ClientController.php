@@ -91,6 +91,7 @@ class ClientController extends Controller
 
         error_log($password);
         error_log($request->input('data.password'));
+        error_log($request->input('data.phoneNumber'));
 
         $agent = AgentsModel::where('AgentTel1', $phoneNumber)
             ->first();
