@@ -97,7 +97,7 @@ class ClientController extends Controller
 
         if(!$agent){
             return response()->json([
-                'error' => 'Invalid agent'
+                'error' => 'Invalid username/password'
             ], 401);
         }
 
