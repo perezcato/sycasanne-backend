@@ -89,6 +89,9 @@ class ClientController extends Controller
         $phoneNumber = $request->input('data.phoneNumber');
         $password = md5($request->input('data.password'));
 
+        error_log($password);
+        error_log($request->input('data.password'));
+
         $agent = AgentsModel::where('AgentTel1', $phoneNumber)
             ->where('LoginPass', $password)
             ->first();
