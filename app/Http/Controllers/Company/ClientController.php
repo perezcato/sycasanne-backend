@@ -112,6 +112,7 @@ class ClientController extends Controller
         $authLog->save();
 
         return response()->json([
+            'id' => $agent->AgentID,
             'name' => $agent->AgentName,
             'email' => $agent->AgentEMail,
             'token' => $token
