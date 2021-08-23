@@ -169,6 +169,7 @@ class ClientController extends Controller
         $client->Photo = $picture;
         $client->Telephone = $phoneNumber;
         $client->UserREF = $agentId;
+        $client->DateCreated = date('Y-m-d H:i:s');
 
         $client->save();
 
