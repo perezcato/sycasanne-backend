@@ -184,8 +184,11 @@ class ClientController extends Controller
         $agentId = $request->get('agentId');
 
         $clients = NewClientModel::query()
-            ->where('UserREF', $agentId)
-            ->get();
+//            ->where('UserREF', $agentId)
+            ->orWhere(function ($query) use($clientName){
+                $query->where('Surname', 'LIKE', "%{$clientName}%")
+                    ->where('Firstname', 'LIKE', "%{$clientName}%");
+            })->get();
 
 
         return response()->json([
