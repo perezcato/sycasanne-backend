@@ -177,4 +177,22 @@ class ClientController extends Controller
             'message' => 'Application received'
         ]);
     }
+
+    public function searchClients(Request $request)
+    {
+        $clientName = $request->get('clientName');
+        $agentId = $request->get('agentId');
+
+        $clients = NewClientModel::query()
+            ->where('UserREF', $agentId)
+            ->orWhere(function ($query) use($clientName){
+                $query->where('Surname', 'LIKE', "%{$clientName}%")
+                    ->where('Firstname', 'LIKE', "%{$clientName}%");
+            })->get();
+
+
+        return response()->json([
+            'clients' => $clients
+        ]);
+    }
 }
