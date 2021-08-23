@@ -93,9 +93,9 @@ class ClientController extends Controller
         error_log($request->input('data.password'));
 
         $agent = AgentsModel::where('AgentTel1', $phoneNumber)
-            ->where('LoginPass', $password)
             ->first();
 
+        error_log('This is the agent');
         error_log(print_r($agent, true));
 
         if(!$agent){
