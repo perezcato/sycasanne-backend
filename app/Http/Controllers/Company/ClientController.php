@@ -183,6 +183,9 @@ class ClientController extends Controller
         $clientName = $request->get('clientName');
         $agentId = $request->get('agentId');
 
+        error_log($agentId);
+        error_log($clientName);
+
         $clients = NewClientModel::where('UserREF', $agentId)
             ->orWhere(function ($query) use($clientName){
                 $query->where('Surname', 'LIKE', "%{$clientName}%")
