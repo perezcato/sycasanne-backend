@@ -91,8 +91,6 @@ class ClientController extends Controller
 
         $agent = AgentsModel::where('AgentTel1', $phoneNumber)
             ->where('LoginPass', $password)
-            ->where('isALLOWED', 1)
-            ->where('isCERTIFIED', 1)
             ->first();
 
         error_log(print_r($agent, true));
