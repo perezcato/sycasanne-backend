@@ -95,6 +95,8 @@ class ClientController extends Controller
             ->where('isCERTIFIED', 1)
             ->first();
 
+        error_log(print_r($agent, true));
+
         if(!$agent){
             return response()->json([
                 'error' => 'Invalid telephone/password'
