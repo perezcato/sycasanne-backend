@@ -29,6 +29,9 @@ Route::middleware(['db'])->group(function(){
         Route::post('/existing',[CompanyClient::class,'sendPasswordToAgent']);
         Route::post('/login',[CompanyClient::class,'loginAgent']);
         Route::post('/register',[CompanyClient::class,'registerAgent']);
+
+
+        Route::post('/client/create',[CompanyClient::class,'createClient']);
     });
 
     Route::post('/unlock-device', function (){

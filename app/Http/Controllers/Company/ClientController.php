@@ -7,6 +7,8 @@ use App\Models\Auth\User;
 use App\Models\Company\AgentsModel;
 use App\Models\Company\AuthLogModel;
 use App\Models\Company\ClientModel;
+use App\Models\Company\NewClientModel;
+use Illuminate\Database\Eloquent\Model;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Http;
 use Illuminate\Support\Str;
@@ -148,7 +150,29 @@ class ClientController extends Controller
         return response()->json([
            'message' => 'Application received'
         ]);
+    }
 
+    public function createClient(Request $request)
+    {
+        $firstName = $request->input('data.firstname');
+        $surName = $request->input('data.surname');
+        $phoneNumber = $request->input('data.phonenumber');
+        $picture = $request->input('data.picture');
+        $agentId = $request->input('data.agentId');
+        $clientType = $request->input('data.clienttype');
 
+        $client = new NewClientModel();
+        $client->ClientType = $clientType;
+        $client->surname = $surName;
+        $client->firstName = $firstName;
+        $client->Photo = $picture;
+        $client->Telephone = $phoneNumber;
+        $client->UserREF = $agentId;
+
+        $client->save();
+
+        return response()->json([
+            'message' => 'Application received'
+        ]);
     }
 }

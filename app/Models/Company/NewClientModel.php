@@ -10,4 +10,6 @@ class NewClientModel extends Model
     use HasFactory;
 
     protected $table = 'newclients';
+
+    public $timestamps = false;
 }
