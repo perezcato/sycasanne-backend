@@ -32,6 +32,7 @@ Route::middleware(['db'])->group(function(){
 
 
         Route::post('/client/create',[CompanyClient::class,'createClient']);
+        Route::post('/client/search',[CompanyClient::class,'searchClients']);
     });
 
     Route::post('/unlock-device', function (){
