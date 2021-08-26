@@ -8,6 +8,7 @@ use App\Models\Company\AgentsModel;
 use App\Models\Company\AuthLogModel;
 use App\Models\Company\ClientModel;
 use App\Models\Company\NewClientModel;
+use App\Models\Company\NewLoanModel;
 use Illuminate\Database\Eloquent\Model;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Http;
@@ -197,5 +198,30 @@ class ClientController extends Controller
         return response()->json([
             'clients' => $clients
         ]);
+    }
+
+    public function bookLoan(Request $request){
+        $loanAmount = $request->input('data.amount');
+        $tenor = $request->input('data.tenor');
+        $purpose = $request->input('data.purpose');
+        $affordability = $request->input('data.affordability');
+        $clientId = $request->input('data.clientId');
+        $agentId = $request->input('data.agentId');
+
+        $newLoan = new NewLoanModel();
+        $newLoan->ClientREF = $clientId;
+        $newLoan->LoanAmount = $loanAmount;
+        $newLoan->Tenor = $tenor;
+        $newLoan->LoanPurpose = $purpose;
+        $newLoan->Affordability = $affordability;
+        $newLoan->DateRequested = date('Y-m-d H:i:s');
+        $newLoan->LoanStatus = 0;
+        $newLoan->agentID = $agentId;
+        $newLoan->save();
+
+        return response()->json([
+           'message' => 'Loan Booked successfully'
+        ]);
+
     }
 }
