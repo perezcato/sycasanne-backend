@@ -162,6 +162,10 @@ class ClientController extends Controller
         $picture = $request->input('data.picture');
         $agentId = $request->input('data.agentId');
         $clientType = $request->input('data.clienttype');
+        $payrollId = $request->input('data.payrollId');
+        $idType = $request->input('data.idType');
+        $idNumber = $request->input('data.idNumber');
+        $idImage = $request->input('data.idImage');
 
         $client = new NewClientModel();
         $client->ClientType = $clientType;
@@ -170,6 +174,10 @@ class ClientController extends Controller
         $client->Photo = $picture;
         $client->Telephone = $phoneNumber;
         $client->UserREF = $agentId;
+        $client->GovermentPayrollNo = $payrollId;
+        $client->IDType = $idType;
+        $client->IDNumber = $idNumber;
+        $client->IDPhoto = $idImage;
         $client->DateCreated = date('Y-m-d H:i:s');
 
         $client->save();
