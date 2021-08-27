@@ -129,6 +129,7 @@ class ClientController extends Controller
         $idType = $request->input('data.idtype');
         $idNumber = $request->input('data.idnumber');
         $idImage = $request->input('data.idimage');
+        $agentPic = $request->input('data.agentpic');
 
         $agent = new AgentsModel();
         $agent->AgentName = "{$surName} {$firstName}";
@@ -138,6 +139,7 @@ class ClientController extends Controller
         $agent->AgentIDPic = $idImage;
         $agent->IsCERTIFIED = 0;
         $agent->IsALLOWED = 0;
+        $agent->agentPic = $agentPic;
 
         $agent->save();
 
