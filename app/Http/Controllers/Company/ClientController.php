@@ -195,7 +195,7 @@ class ClientController extends Controller
         $clientName = $request->get('clientName') || '';
         $agentId = $request->get('agentId') || '';
 
-        $clients = DB::raw("select * from newclients where UserREF = {$agentId} AND (Surname LIKE '%{$clientName}%')");
+        $clients = DB::raw("select * from newclients where UserREF = {$agentId}");
 
 //        $clients = NewClientModel::query()
 //            ->where('UserREF', $agentId)
