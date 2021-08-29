@@ -11,6 +11,7 @@ use App\Models\Company\NewClientModel;
 use App\Models\Company\NewLoanModel;
 use Illuminate\Database\Eloquent\Model;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\DB;
 use Illuminate\Support\Facades\Http;
 use Illuminate\Support\Str;
 
@@ -194,16 +195,14 @@ class ClientController extends Controller
         $clientName = $request->get('clientName');
         $agentId = $request->get('agentId');
 
-        error_log($agentId);
-        error_log($clientName);
+        $clients = DB::raw("select * from newclients where UserREF = {$agentId} AND (Surname LIKE %{$clientName}% OR Firstname LIKE %{$clientName}%)");
 
-        $clients = NewClientModel::query()
-            ->where('UserREF', $agentId)
-            ->where(function ($query) use($clientName){
-                $query->where('Surname', 'LIKE', "%{$clientName}%")
-                    ->orWhere('Firstname', 'LIKE', "%{$clientName}%");
-            })->get();
-
+//        $clients = NewClientModel::query()
+//            ->where('UserREF', $agentId)
+//            ->where(function ($query) use($clientName){
+//                $query->where('Surname', 'LIKE', "%{$clientName}%")
+//                    ->orWhere('Firstname', 'LIKE', "%{$clientName}%");
+//            })->get();
 
         return response()->json([
             'clients' => $clients
