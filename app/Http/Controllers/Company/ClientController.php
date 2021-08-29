@@ -192,7 +192,7 @@ class ClientController extends Controller
 
     public function searchClients(Request $request)
     {
-        $clientName = $request->get('clientName');
+        $clientName = $request->get('clientName') || '';
         $agentId = $request->get('agentId') || '';
 
         $clients = DB::raw("select * from newclients where UserREF = {$agentId} AND (Surname LIKE '%{$clientName}%')");
