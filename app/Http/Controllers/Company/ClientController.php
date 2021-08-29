@@ -197,9 +197,9 @@ class ClientController extends Controller
 
         $clients = DB::table('newclients')
             ->where('UserREF',$agentId)
-            ->orWhere(function($query) use($clientName){
+            ->where(function($query) use($clientName){
                 $query->where('Surname','LIKE', "%{$clientName}%")
-                    ->where('Firstname','LIKE', "%{$clientName}%");
+                    ->orWhere('Firstname','LIKE', "%{$clientName}%");
             })
             ->get();
 
