@@ -192,10 +192,10 @@ class ClientController extends Controller
 
     public function searchClients(Request $request)
     {
-        $clientName = $request->get('clientName') || '';
-        $agentId = $request->get('agentId') || '';
+        $clientName = $request->get('clientName');
+        $agentId = $request->get('agentId');
 
-        $clients = DB::raw("select * from newclients where UserREF = {$agentId}");
+        $clients = DB::raw("select * from newclients where UserREF = {$agentId} AND (Surname LIKE '%{$clientName}%' OR Firstname LIKE '%{$clientName}%')");
 
 //        $clients = NewClientModel::query()
 //            ->where('UserREF', $agentId)
@@ -203,6 +203,8 @@ class ClientController extends Controller
 //                $query->where('Surname', 'LIKE', "%{$clientName}%")
 //                    ->orWhere('Firstname', 'LIKE', "%{$clientName}%");
 //            })->get();
+
+        error_log(print_r($clients, true));
 
         return response()->json([
             'clients' => $clients
