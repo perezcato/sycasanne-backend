@@ -32,6 +32,7 @@ Route::middleware(['db'])->group(function(){
 
 
         Route::post('/client/create',[CompanyClient::class,'createClient']);
+        Route::post('/client/edit/{id}',[CompanyClient::class,'editClient']);
         Route::get('/client/search',[CompanyClient::class,'searchClients']);
 
         Route::post('/client/loan/book',[CompanyClient::class,'bookLoan']);

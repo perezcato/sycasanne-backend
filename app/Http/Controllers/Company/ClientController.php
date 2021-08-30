@@ -190,6 +190,49 @@ class ClientController extends Controller
         ]);
     }
 
+    public function editClient(Request $request, $id)
+    {
+
+        $firstName = $request->input('data.firstname');
+        $surName = $request->input('data.surname');
+        $phoneNumber = $request->input('data.phonenumber');
+        $picture = $request->input('data.picture');
+        $agentId = $request->input('data.agentId');
+        $clientType = $request->input('data.clienttype');
+        $payrollId = $request->input('data.payrollId');
+        $idType = $request->input('data.idType');
+        $idNumber = $request->input('data.idNumber');
+        $idImage = $request->input('data.idImage');
+
+        $client = NewClientModel::query()
+            ->where('MyIndex', $id)
+            ->first();
+
+        if(!$client){
+            return response()->json([
+                'message' => 'Client not found'
+            ], 404);
+        }
+
+        $client->ClientType = $clientType;
+        $client->surname = $surName;
+        $client->firstName = $firstName;
+        $client->Photo = $picture;
+        $client->Telephone = $phoneNumber;
+        $client->UserREF = $agentId;
+        $client->GovermentPayrollNo = $payrollId;
+        $client->IDType = $idType;
+        $client->IDNumber = $idNumber;
+        $client->IDPhoto = $idImage;
+        $client->DateCreated = date('Y-m-d H:i:s');
+
+        $client->save();
+
+        return response()->json([
+            'message' => 'Client Received'
+        ]);
+    }
+
     public function searchClients(Request $request)
     {
         $clientName = $request->get('clientName');
