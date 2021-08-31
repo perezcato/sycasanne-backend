@@ -4,6 +4,7 @@ use App\Http\Controllers\Client\ClientController;
 use App\Http\Controllers\Client\ClientStatementController;
 use App\Http\Controllers\Company\ClientController as CompanyClient;
 use App\Http\Controllers\Company\LoansController;
+use App\Http\Controllers\Company\Staff\StaffController;
 use App\Http\Controllers\Configuration\ESchoolResourceController;
 use App\Http\Controllers\Estores\Auth\AuthController;
 use App\Http\Controllers\Estores\Branches\BranchesController;
@@ -38,6 +39,10 @@ Route::middleware(['db'])->group(function(){
         Route::post('/client/loan/book',[CompanyClient::class,'bookLoan']);
         Route::post('/client/password-change',[CompanyClient::class,'changePassword']);
 
+    });
+
+    Route::prefix('/staff')->group(function (){
+        Route::post('/login',[StaffController::class,'login']);
     });
 
     Route::post('/unlock-device', function (){
