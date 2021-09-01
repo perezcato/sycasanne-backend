@@ -85,7 +85,7 @@ class StaffController extends Controller
 
     public function searchLoans (Request $request)
     {
-        $loanID = $request->get('loandid');
+        $loanID = $request->get('loanid');
 
         $loans = DB::table('agencyagents')
             ->where('MyLoanID',$loanID)
