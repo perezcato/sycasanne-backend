@@ -11,4 +11,5 @@ class NewLoanModel extends Model
 
     protected $table = 'newloans';
     public $timestamps = false;
+    protected $primaryKey = 'MyLoanID';
 }
