@@ -82,4 +82,17 @@ class StaffController extends Controller
             'agents' => 'Agent Certified'
         ]);
     }
+
+    public function searchLoans (Request $request)
+    {
+        $loanID = $request->get('loandid');
+
+        $loans = DB::table('agencyagents')
+            ->where('MyLoanID',$loanID)
+            ->get();
+
+        return response()->json([
+            'loans' => $loans
+        ]);
+    }
 }
