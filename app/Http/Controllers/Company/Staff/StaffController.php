@@ -3,6 +3,7 @@
 namespace App\Http\Controllers\Company\Staff;
 
 use App\Http\Controllers\Controller;
+use App\Models\Company\AgentsModel;
 use App\Models\Company\Staff\UsersModel;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\DB;
@@ -57,6 +58,28 @@ class StaffController extends Controller
 
         return response()->json([
             'agents' => $clients
+        ]);
+    }
+
+    public function certifyAgent (Request $request)
+    {
+        $agentId = $request->input('data.agentId');
+
+        $agent = AgentsModel::query()
+            ->where('AgentID', $agentId)
+            ->first();
+
+        if(!$agent){
+            return response()->json([
+               'message' => 'Agent does not exist'
+            ], 404);
+        }
+
+        $agent->IsCERTIFIED = 1;
+        $agent->save();
+
+        return response()->json([
+            'agents' => 'Agent Certified'
         ]);
     }
 }
