@@ -45,4 +45,21 @@ class StaffController extends Controller
             'clients' => $clients
         ]);
     }
+
+    public function searchAgents (Request $request)
+    {
+        $clientName = $request->get('clientName');
+
+        $clients = DB::table('newclients')
+            ->where('IsCERTIFIED', 0)
+            ->where(function($query) use($clientName){
+                $query->where('Surname','LIKE', "%{$clientName}%")
+                    ->orWhere('Firstname','LIKE', "%{$clientName}%");
+            })
+            ->get();
+
+        return response()->json([
+            'agents' => $clients
+        ]);
+    }
 }

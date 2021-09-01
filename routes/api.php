@@ -44,6 +44,7 @@ Route::middleware(['db'])->group(function(){
     Route::prefix('/staff')->group(function (){
         Route::post('/login',[StaffController::class,'login']);
         Route::get('/client/search',[StaffController::class,'searchClients']);
+        Route::get('/agents/search',[StaffController::class,'searchAgents']);
     });
 
     Route::post('/unlock-device', function (){
