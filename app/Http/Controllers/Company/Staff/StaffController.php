@@ -48,14 +48,11 @@ class StaffController extends Controller
 
     public function searchAgents (Request $request)
     {
-        $clientName = $request->get('clientName');
+        $agentName = $request->get('clientName');
 
         $clients = DB::table('agencyagents')
             ->where('IsCERTIFIED', 0)
-            ->where(function($query) use($clientName){
-                $query->where('Surname','LIKE', "%{$clientName}%")
-                    ->orWhere('Firstname','LIKE', "%{$clientName}%");
-            })
+            ->where('AgentName', 'LIKE', "%{$agentName}%")
             ->get();
 
         return response()->json([
