@@ -87,7 +87,7 @@ class StaffController extends Controller
     {
         $loanID = $request->get('loanid');
 
-        $loans = DB::table('agencyagents')
+        $loans = DB::table('newloans')
             ->where('MyLoanID',$loanID)
             ->get();
 
