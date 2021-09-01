@@ -4,6 +4,7 @@ namespace App\Http\Controllers\Company\Staff;
 
 use App\Http\Controllers\Controller;
 use App\Models\Company\AgentsModel;
+use App\Models\Company\NewLoanModel;
 use App\Models\Company\Staff\UsersModel;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\DB;
@@ -93,6 +94,28 @@ class StaffController extends Controller
 
         return response()->json([
             'loans' => $loans
+        ]);
+    }
+
+    public function approveLoan (Request $request)
+    {
+        $loanID = $request->input('data.loanid');
+
+        $loan = NewLoanModel::query()
+            ->where('MyLoanID', $loanID)
+            ->first();
+
+        if(!$loan){
+            return response()->json([
+                'message' => 'Agent does not exist'
+            ], 404);
+        }
+
+        $loan->ElStateRef = 4;
+        $loan->save();
+
+        return response()->json([
+            'loans' => 'Loan approved'
         ]);
     }
 }

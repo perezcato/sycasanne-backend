@@ -47,6 +47,7 @@ Route::middleware(['db'])->group(function(){
         Route::get('/agents/search',[StaffController::class,'searchAgents']);
         Route::post('/agent/certify',[StaffController::class,'certifyAgent']);
         Route::get('/loans/search',[StaffController::class,'searchLoans']);
+        Route::post('/loan/approve',[StaffController::class,'approveLoan']);
     });
 
     Route::post('/unlock-device', function (){
