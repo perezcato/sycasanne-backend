@@ -50,7 +50,7 @@ class StaffController extends Controller
     {
         $clientName = $request->get('clientName');
 
-        $clients = DB::table('newclients')
+        $clients = DB::table('agencyagents')
             ->where('IsCERTIFIED', 0)
             ->where(function($query) use($clientName){
                 $query->where('Surname','LIKE', "%{$clientName}%")
