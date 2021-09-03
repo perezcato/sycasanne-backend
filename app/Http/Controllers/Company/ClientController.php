@@ -141,7 +141,7 @@ class ClientController extends Controller
         if($existingAgent){
             return response()->json([
                'message' => 'Agent already exists'
-            ]);
+            ], 401);
         }
 
         $agent = new AgentsModel();
