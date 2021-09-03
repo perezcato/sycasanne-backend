@@ -287,6 +287,7 @@ class ClientController extends Controller
         $affordability = $request->input('data.affordability');
         $clientId = $request->input('data.clientId');
         $agentId = $request->input('data.agentId');
+        $loanType = $request->input('data.loanType');
 
         $newLoan = new NewLoanModel();
 
@@ -296,7 +297,7 @@ class ClientController extends Controller
         $newLoan->LoanPurpose = $purpose;
         $newLoan->Affordability = $affordability;
         $newLoan->ApplicDate = date('Y-m-d H:i:s');
-        //$newLoan->LoanStatus = 0;
+        $newLoan->LoanTypeRef = $loanType;
         $newLoan->agentID = $agentId;
         $newLoan->LStateRef = 1;
 

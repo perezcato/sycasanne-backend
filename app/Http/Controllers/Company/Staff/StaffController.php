@@ -78,7 +78,7 @@ class StaffController extends Controller
         }
 
         $password = Str::random(8);
-        
+
 
         $agent->IsCERTIFIED = 1;
         $agent->IsALLOWED = 1;
@@ -93,8 +93,22 @@ class StaffController extends Controller
     {
         $loanID = $request->get('loanid');
 
-        $loans = DB::table('newloans')
-            ->where('MyLoanID',$loanID)
+        $loans = DB::table('loans')
+            ->where('LApplicIndex', 'LIKE' ,"%{$loanID}%")
+            ->where('LStateRef', 1)
+            ->get();
+
+        return response()->json([
+            'loans' => $loans
+        ]);
+    }
+
+    public function searchAllLoans (Request $request)
+    {
+        $loanID = $request->get('loanid');
+
+        $loans = DB::table('loans')
+            ->where('LApplicIndex', 'LIKE' ,"%{$loanID}%")
             ->get();
 
         return response()->json([
