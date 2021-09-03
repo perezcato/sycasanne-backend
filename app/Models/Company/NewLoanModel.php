@@ -9,7 +9,7 @@ class NewLoanModel extends Model
 {
     use HasFactory;
 
-    protected $table = 'newloans';
+    protected $table = 'loans';
     public $timestamps = false;
-    protected $primaryKey = 'MyLoanID';
+    protected $primaryKey = 'LApplicIndex';
 }

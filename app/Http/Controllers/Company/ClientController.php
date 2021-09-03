@@ -289,14 +289,17 @@ class ClientController extends Controller
         $agentId = $request->input('data.agentId');
 
         $newLoan = new NewLoanModel();
+
         $newLoan->ClientREF = $clientId;
-        $newLoan->LoanAmount = $loanAmount;
+        $newLoan->Amt = $loanAmount;
         $newLoan->Tenor = $tenor;
         $newLoan->LoanPurpose = $purpose;
         $newLoan->Affordability = $affordability;
-        $newLoan->DateRequested = date('Y-m-d H:i:s');
+        $newLoan->ApplicDate = date('Y-m-d H:i:s');
         $newLoan->LoanStatus = 0;
         $newLoan->agentID = $agentId;
+        $newLoan->LStateRef = 1;
+
         $newLoan->save();
 
         return response()->json([
