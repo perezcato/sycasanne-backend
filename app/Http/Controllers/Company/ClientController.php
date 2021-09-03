@@ -136,7 +136,7 @@ class ClientController extends Controller
 
         $existingAgent = AgentsModel::query()
             ->where('AgentTel1', $phoneNumber)
-            ->get();
+            ->first();
 
         if($existingAgent){
             return response()->json([
