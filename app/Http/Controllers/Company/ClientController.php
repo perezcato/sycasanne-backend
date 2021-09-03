@@ -341,4 +341,21 @@ class ClientController extends Controller
            'loanTypes' => $loanTypes
         ]);
     }
+
+    public function addLoanComment (Request $request){
+        $loanId = $request->input('data.loanId');
+        $comment = md5($request->input('data.comment'));
+        $agentId = md5($request->input('data.agentId'));
+
+        $loanComment = DB::table('loancomments')
+            ->insert([
+                "LoanRef" => $loanId,
+                "Descp" => $comment,
+                "UserRef" => $agentId
+            ]);
+
+        return response()->json([
+            'message' => 'comment added'
+        ]);
+    }
 }
