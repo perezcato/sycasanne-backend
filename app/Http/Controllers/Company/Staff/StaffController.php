@@ -8,6 +8,7 @@ use App\Models\Company\NewLoanModel;
 use App\Models\Company\Staff\UsersModel;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\DB;
+use Illuminate\Support\Str;
 
 class StaffController extends Controller
 {
@@ -76,7 +77,11 @@ class StaffController extends Controller
             ], 404);
         }
 
+        $password = Str::random(8);
+        
+
         $agent->IsCERTIFIED = 1;
+        $agent->IsALLOWED = 1;
         $agent->save();
 
         return response()->json([

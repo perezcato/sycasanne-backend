@@ -131,6 +131,18 @@ class ClientController extends Controller
         $idNumber = $request->input('data.idnumber');
         $idImage = $request->input('data.idimage');
         $agentPic = $request->input('data.agentpic');
+        $email = $request->input('data.email');
+
+
+        $existingAgent = AgentsModel::query()
+            ->where('AgentTel1', $phoneNumber)
+            ->get();
+
+        if($existingAgent){
+            return response()->json([
+               'message' => 'Agent already exists'
+            ]);
+        }
 
         $agent = new AgentsModel();
         $agent->AgentName = "{$surName} {$firstName}";
@@ -141,6 +153,7 @@ class ClientController extends Controller
         $agent->IsCERTIFIED = 0;
         $agent->IsALLOWED = 0;
         $agent->agentPic = $agentPic;
+        $agent->AgentEMail = $email;
 
         $agent->save();
 
