@@ -194,6 +194,8 @@ class ClientController extends Controller
             ], 422);
         }
 
+        error_log($agentId);
+
         $client = new NewClientModel();
         $client->ClientTypeStr = $clientType;
         $client->Surname = $surName;
