@@ -296,7 +296,7 @@ class ClientController extends Controller
         $newLoan->LoanPurpose = $purpose;
         $newLoan->Affordability = $affordability;
         $newLoan->ApplicDate = date('Y-m-d H:i:s');
-        $newLoan->LoanStatus = 0;
+        //$newLoan->LoanStatus = 0;
         $newLoan->agentID = $agentId;
         $newLoan->LStateRef = 1;
 
