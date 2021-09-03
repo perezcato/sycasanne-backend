@@ -331,4 +331,13 @@ class ClientController extends Controller
             'message' => 'Password Successfully Changed'
         ]);
     }
+
+    public function getLoanTypes (){
+        $loanTypes = DB::table('agentloantypes')
+            ->get();
+
+        return response()->json([
+           'loanTypes' => $loanTypes
+        ]);
+    }
 }
