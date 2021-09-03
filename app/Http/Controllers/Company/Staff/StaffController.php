@@ -37,7 +37,7 @@ class StaffController extends Controller
     {
         $clientName = $request->get('clientName');
 
-        $clients = DB::table('newclients')
+        $clients = DB::table('clients')
             ->where(function($query) use($clientName){
                 $query->where('Surname','LIKE', "%{$clientName}%")
                     ->orWhere('Firstname','LIKE', "%{$clientName}%");
@@ -130,7 +130,7 @@ class StaffController extends Controller
             ], 404);
         }
 
-        $loan->ElStateRef = 4;
+        $loan->lStateRef = 4;
         $loan->save();
 
         return response()->json([
