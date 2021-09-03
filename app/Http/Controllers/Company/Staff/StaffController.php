@@ -42,6 +42,8 @@ class StaffController extends Controller
             ->orWhere('Firstname','LIKE', "%{$clientName}%")
             ->get();
 
+        error_log(print_r($clients, true));
+
         return response()->json([
             'clients' => $clients
         ]);
