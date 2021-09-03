@@ -194,8 +194,6 @@ class ClientController extends Controller
             ], 422);
         }
 
-        DB::raw('set session foreign_key_checks = 0');
-
         $client = new NewClientModel();
         $client->ClientTypeStr = $clientType;
         $client->Surname = $surName;
