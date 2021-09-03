@@ -121,7 +121,7 @@ class StaffController extends Controller
         $loanID = $request->input('data.loanid');
 
         $loan = NewLoanModel::query()
-            ->where('MyLoanID', $loanID)
+            ->where('LApplicIndex', $loanID)
             ->first();
 
         if(!$loan){
