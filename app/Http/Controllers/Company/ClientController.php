@@ -344,8 +344,8 @@ class ClientController extends Controller
 
     public function addLoanComment (Request $request){
         $loanId = $request->input('data.loanId');
-        $comment = md5($request->input('data.comment'));
-        $agentId = md5($request->input('data.agentId'));
+        $comment = $request->input('data.comment');
+        $agentId = $request->input('data.agentId');
 
         $loanComment = DB::table('loancomments')
             ->insert([
