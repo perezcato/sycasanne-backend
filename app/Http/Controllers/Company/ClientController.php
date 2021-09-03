@@ -242,7 +242,6 @@ class ClientController extends Controller
             ], 404);
         }
 
-        $client = new NewClientModel();
         $client->ClientTypeStr = $clientType;
         $client->Surname = $surName;
         $client->Firstname = $firstName;
@@ -269,7 +268,7 @@ class ClientController extends Controller
         $agentId = $request->get('agentId');
 
         $clients = DB::table('clients')
-            ->where('AgentRef',$agentId)
+            ->where('UserREF',$agentId)
             ->where(function($query) use($clientName){
                 $query->where('Surname','LIKE', "%{$clientName}%")
                     ->orWhere('Firstname','LIKE', "%{$clientName}%");
