@@ -9,8 +9,8 @@ class NewClientModel extends Model
 {
     use HasFactory;
 
-    protected $table = 'newclients';
-    protected $primaryKey = 'MyIndex';
+    protected $table = 'clients';
+    protected $primaryKey = 'ClientIndex';
 
     public $timestamps = false;
 }

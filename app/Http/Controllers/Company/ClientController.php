@@ -182,19 +182,31 @@ class ClientController extends Controller
         $idType = $request->input('data.idType');
         $idNumber = $request->input('data.idNumber');
         $idImage = $request->input('data.idImage');
+        $email = $request->input('data.email');
+
+        $existingClient = NewClientModel::query()
+            ->where('ExtClientIDA', $payrollId)
+            ->first();
+
+        if($existingClient){
+            return response()->json([
+               'message' => 'Payroll Id already exists'
+            ], 422);
+        }
 
         $client = new NewClientModel();
-        $client->ClientType = $clientType;
-        $client->surname = $surName;
-        $client->firstName = $firstName;
+        $client->ClientTypeStr = $clientType;
+        $client->Surname = $surName;
+        $client->Firstname = $firstName;
         $client->Photo = $picture;
-        $client->Telephone = $phoneNumber;
-        $client->UserREF = $agentId;
-        $client->GovermentPayrollNo = $payrollId;
+        $client->Tel1 = $phoneNumber;
+        $client->AgentRef = $agentId;
+        $client->ExtClientIDA = $payrollId;
         $client->IDType = $idType;
-        $client->IDNumber = $idNumber;
+        $client->ClientID = $idNumber;
         $client->IDPhoto = $idImage;
-        $client->DateCreated = date('Y-m-d H:i:s');
+        $client->Email = $email;
+        $client->DateEnrolled = date('Y-m-d H:i:s');
 
         $client->save();
 
