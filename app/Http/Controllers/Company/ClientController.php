@@ -101,10 +101,11 @@ class ClientController extends Controller
 
         $agent_test = AgentsModel::query()
             ->where('AgentTel1', $phoneNumber)
-            ->where('LoginPass', $password)
             ->first();
 
-        error_log(print_r($agent_test, true));
+        error_log($password);
+
+        error_log(print_r($agent_test->LoginPass, true));
 
         if(!$agent){
             return response()->json([
