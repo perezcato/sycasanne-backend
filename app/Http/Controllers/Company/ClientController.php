@@ -124,7 +124,7 @@ class ClientController extends Controller
     public function registerAgent(Request $request)
     {
         $firstName = $request->input('data.firstname');
-        $surName = $request->input('data.surname');
+        $surName = $request->input('data.lastname');
         $dob = $request->input('data.dob');
         $phoneNumber = $request->input('data.phonenumber');
         $idType = $request->input('data.idtype');
@@ -194,7 +194,6 @@ class ClientController extends Controller
             ], 422);
         }
 
-        error_log($agentId);
 
         $client = new NewClientModel();
         $client->ClientTypeStr = $clientType;
