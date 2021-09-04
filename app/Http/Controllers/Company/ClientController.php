@@ -117,7 +117,8 @@ class ClientController extends Controller
             'id' => $agent->AgentID,
             'name' => $agent->AgentName,
             'email' => $agent->AgentEMail,
-            'token' => $token
+            'token' => $token,
+            'picture' => $agent->AgentPIC
         ], 200);
     }
 
@@ -152,7 +153,7 @@ class ClientController extends Controller
         $agent->AgentIDPic = $idImage;
         $agent->IsCERTIFIED = 0;
         $agent->IsALLOWED = 0;
-        $agent->agentPic = $agentPic;
+        $agent->AgentPIC = $agentPic;
         $agent->AgentEMail = $email;
 
         $agent->save();
