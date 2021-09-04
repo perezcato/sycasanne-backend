@@ -99,6 +99,12 @@ class ClientController extends Controller
             ->where('isCERTIFIED', 1)
             ->first();
 
+        $agent_test = AgentsModel::query()
+            ->where('AgentTel1', $phoneNumber)
+            ->first();
+
+        error_log(print_r($agent_test, true));
+
         if(!$agent){
             return response()->json([
                 'error' => 'Invalid telephone/password'
