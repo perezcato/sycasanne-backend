@@ -106,6 +106,8 @@ class ClientController extends Controller
         error_log($password);
 
         error_log(print_r($agent_test->LoginPass, true));
+        error_log(print_r($agent_test->IsCERTIFIED, true));
+        error_log(print_r($agent_test->IsALLOWED, true));
 
         if(!$agent){
             return response()->json([
