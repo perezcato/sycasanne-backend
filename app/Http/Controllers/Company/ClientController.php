@@ -375,7 +375,7 @@ class ClientController extends Controller
         $agentId = $request->get('agentId');
 
         $loans = LoansModel::where('AgentID', $agentId)
-            ->with('client')
+            ->with('client:Surname,Firstname')
             ->get();
 
         return response()->json([
