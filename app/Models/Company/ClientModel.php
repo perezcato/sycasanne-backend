@@ -10,4 +10,11 @@ class ClientModel extends Model
     use HasFactory;
 
     protected $table = 'clients';
+    protected $primaryKey = 'ClientIndex';
+    public $timestamps = false;
+
+    public function loans()
+    {
+        return $this->hasMany(NewLoanModel::class);
+    }
 }

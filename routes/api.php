@@ -41,6 +41,8 @@ Route::middleware(['db'])->group(function(){
         Route::get('/client/loanTypes',[CompanyClient::class,'getLoanTypes']);
         Route::post('/client/loan/comment',[CompanyClient::class,'addLoanComment']);
 
+
+        Route::get('/loans', [CompanyClient::class, 'getAgentLoans']);
     });
 
     Route::prefix('/staff')->group(function (){

@@ -7,6 +7,7 @@ use App\Models\Auth\User;
 use App\Models\Company\AgentsModel;
 use App\Models\Company\AuthLogModel;
 use App\Models\Company\ClientModel;
+use App\Models\Company\LoansModel;
 use App\Models\Company\NewClientModel;
 use App\Models\Company\NewLoanModel;
 use Illuminate\Database\Eloquent\Model;
@@ -357,7 +358,7 @@ class ClientController extends Controller
         $comment = $request->input('data.comment');
         $agentId = $request->input('data.agentId');
 
-        $loanComment = DB::table('loancomments')
+        DB::table('loancomments')
             ->insert([
                 "LoanRef" => $loanId,
                 "Descp" => $comment,
@@ -366,6 +367,19 @@ class ClientController extends Controller
 
         return response()->json([
             'message' => 'comment added'
+        ]);
+    }
+
+    public function getAgentLoans(Request $request)
+    {
+        $agentId = $request->get('agentId');
+
+        $loans = LoansModel::with(['client'])
+            ->where('AgentID', $agentId)
+            ->get();
+
+        return response()->json([
+            'loans' => $loans
         ]);
     }
 }
