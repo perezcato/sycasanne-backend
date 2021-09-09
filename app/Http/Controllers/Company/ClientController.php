@@ -375,7 +375,7 @@ class ClientController extends Controller
         $agentId = $request->get('agentId');
 
         $loans = LoansModel::query()
-            ->select('Tenor','Amt','ApplicDate','LApplicIndex')
+            ->select('Tenor','Amt','ApplicDate','LApplicIndex','ClientRef')
             ->where('AgentID', $agentId)
             ->with(['client' => function($query){
                 $query->select('ClientIndex','Firstname', 'Surname','Tel1');
