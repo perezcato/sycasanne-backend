@@ -374,8 +374,11 @@ class ClientController extends Controller
     {
         $agentId = $request->get('agentId');
 
-        $loans = LoansModel::with(['client'])
+        $loans = LoansModel::with(['client' => function($query){
+            $query->get(['Firstname', 'Surname', 'ClientIndex']);
+        }])
             ->where('AgentID', $agentId)
+            ->select(['ApplicDate', 'Tenor', 'Amt', 'LApplicIndex'])
             ->get();
 
         return response()->json([
@@ -391,7 +394,7 @@ class ClientController extends Controller
             ->where('agentId', $agentId)
             ->count();
 
-        $currentDate = date('Y-m-d H:i:s');
+        $currentDate = date('Y-m-d');
         $dailyLoans = LoansModel::query()
             ->where('ApplicDate', $currentDate)
             ->where('agentId', $agentId)
