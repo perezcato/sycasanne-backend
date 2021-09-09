@@ -382,4 +382,36 @@ class ClientController extends Controller
             'loans' => $loans
         ]);
     }
+
+    public function getAgentDashboardOverview(Request $request)
+    {
+        $agentId = $request->get('agentId');
+
+        $totalLoans = LoansModel::query()
+            ->where('agentId', $agentId)
+            ->count();
+
+        $currentDate = date('Y-m-d H:i:s');
+        $dailyLoans = LoansModel::query()
+            ->where('ApplicDate', $currentDate)
+            ->where('agentId', $agentId)
+            ->count();
+
+        $totalClients = ClientModel::query()
+            ->where('AgentRef', $agentId)
+            ->count();
+
+        $dailyClients = ClientModel::query()
+            ->where('AgentRef', $agentId)
+            ->where('DateEnrolled', $currentDate)
+            ->count();
+
+        return response()->json([
+           'totalClients' => $totalClients,
+           'totalLoans' => $totalLoans,
+           'dailyClients' => $dailyClients,
+           'dailyLoans' => $dailyLoans
+        ]);
+
+    }
 }

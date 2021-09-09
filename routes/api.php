@@ -43,6 +43,7 @@ Route::middleware(['db'])->group(function(){
 
 
         Route::get('/loans', [CompanyClient::class, 'getAgentLoans']);
+        Route::get('/overview', [CompanyClient::class, 'getAgentDashboardOverview']);
     });
 
     Route::prefix('/staff')->group(function (){
