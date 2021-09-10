@@ -439,7 +439,7 @@ class ClientController extends Controller
     {
         $agentId = $request->get('agentId');
 
-        $loans = ClientModel::query()
+        $clients = ClientModel::query()
             ->select(
                 'ClientIndex',
                 'Firstname',
@@ -458,7 +458,7 @@ class ClientController extends Controller
             },])->get();
 
         return response()->json([
-            'loans' => $loans
+            'clients' => $clients
         ]);
     }
 }
