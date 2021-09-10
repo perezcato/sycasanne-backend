@@ -450,7 +450,8 @@ class ClientController extends Controller
                 'DateEnrolled',
                 'ExtClientIDA',
                 'IDType',
-                'IDPhoto'
+                'IDPhoto',
+                'ClientID'
             )
             ->where('AgentRef', $agentId)
             ->with(['loans' => function($query){
