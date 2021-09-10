@@ -15,6 +15,6 @@ class ClientModel extends Model
 
     public function loans()
     {
-        return $this->hasMany(NewLoanModel::class,'LoanRef');
+        return $this->hasMany(NewLoanModel::class,'ClientRef');
     }
 }
