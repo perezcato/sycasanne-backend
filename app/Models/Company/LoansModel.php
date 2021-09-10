@@ -17,4 +17,9 @@ class LoansModel extends Model
     {
         return $this->belongsTo(NewClientModel::class, 'ClientRef');
     }
+
+    public function comments()
+    {
+        return $this->hasMany(LoanCommentModel::class);
+    }
 }

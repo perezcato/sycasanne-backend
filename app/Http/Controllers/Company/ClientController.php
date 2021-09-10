@@ -380,6 +380,8 @@ class ClientController extends Controller
             ->where('AgentID', $agentId)
             ->with(['client' => function($query){
                 $query->select('ClientIndex','Firstname', 'Surname','Tel1');
+            }, 'comments' => function($query){
+                $query->select('CIndex','LoanREf','Descp');
             }])->get();
 
         return response()->json([
