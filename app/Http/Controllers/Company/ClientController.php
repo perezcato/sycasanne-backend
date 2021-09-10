@@ -129,7 +129,8 @@ class ClientController extends Controller
             'name' => $agent->AgentName,
             'email' => $agent->AgentEMail,
             'token' => $token,
-            'picture' => $agent->AgentPIC
+            'picture' => $agent->AgentPIC,
+            'LoanOfficerAssigned' => $agent->LoanOfficerAssigned
         ], 200);
     }
 
@@ -379,8 +380,7 @@ class ClientController extends Controller
             ->where('AgentID', $agentId)
             ->with(['client' => function($query){
                 $query->select('ClientIndex','Firstname', 'Surname','Tel1');
-            }])
-            ->get();
+            }])->get();
 
         return response()->json([
             'loans' => $loans
