@@ -7,6 +7,7 @@ use App\Models\Auth\User;
 use App\Models\Company\AgentsModel;
 use App\Models\Company\AuthLogModel;
 use App\Models\Company\ClientModel;
+use App\Models\Company\LoanCommentModel;
 use App\Models\Company\LoansModel;
 use App\Models\Company\NewClientModel;
 use App\Models\Company\NewLoanModel;
@@ -356,15 +357,16 @@ class ClientController extends Controller
 
     public function addLoanComment (Request $request){
         $loanId = $request->input('data.loanId');
-        $comment = $request->input('data.comment');
+        $loanComment = $request->input('data.comment');
         $agentId = $request->input('data.agentId');
 
-        DB::table('loancomments')
-            ->insert([
-                "LoanRef" => $loanId,
-                "Descp" => $comment,
-                "UserRef" => $agentId
-            ]);
+        $comment = new LoanCommentModel();
+        $comment->LoanREf = $loanId;
+        $comment->Descp = $loanComment;
+        $comment->UserRef = $agentId;
+        $comment->TheDate = date('Y-m-d');
+
+        $comment->save();
 
         return response()->json([
             'message' => 'comment added'
