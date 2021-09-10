@@ -434,4 +434,31 @@ class ClientController extends Controller
            'comments' => $comments
         ]);
     }
+
+    public function getAgentClients(Request $request)
+    {
+        $agentId = $request->get('agentId');
+
+        $loans = ClientModel::query()
+            ->select(
+                'ClientIndex',
+                'Firstname',
+                'Surname',
+                'Tel1',
+                'Photo',
+                'Email',
+                'DateEnrolled',
+                'ExtClientIDA',
+                'IDType',
+                'IDPhoto'
+            )
+            ->where('AgentRef', $agentId)
+            ->with(['loans' => function($query){
+                $query->select('Tenor','Amt', 'ApplicDate','LApplicIndex','ClientRef');
+            },])->get();
+
+        return response()->json([
+            'loans' => $loans
+        ]);
+    }
 }
