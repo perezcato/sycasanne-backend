@@ -420,4 +420,18 @@ class ClientController extends Controller
         ]);
 
     }
+
+    public function getLoanComments(Request $request)
+    {
+        $loanId = $request->get('loanId');
+
+        $comments = LoanCommentModel::query()
+            ->select('CIndex','Descp','TheDate')
+            ->where('LoanREf',$loanId)
+            ->get();
+
+        return response()->json([
+           'comments' => $comments
+        ]);
+    }
 }
