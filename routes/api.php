@@ -25,6 +25,7 @@ Route::post('/config',[ESchoolResourceController::class,'index']);
 Route::middleware(['db'])->group(function(){
     Route::post('/login',[LoginController::class,'login']);
     Route::post('/register/existing',[CompanyClient::class,'registerExistingClient']);
+    Route::post('/register/new',[CompanyClient::class,'registerNewClient']);
 
     Route::prefix('/agent')->group(function (){
         Route::post('/existing',[CompanyClient::class,'sendPasswordToAgent']);

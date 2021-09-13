@@ -61,6 +61,60 @@ class ClientController extends Controller
         ]], 200);
     }
 
+    public function registerNewClient(Request $request)
+    {
+
+        $firstName = $request->input('data.firstname');
+        $surName = $request->input('data.surname');
+        $phoneNumber = $request->input('data.phonenumber');
+        $picture = $request->input('data.picture');
+        $clientType = $request->input('data.clienttype');
+        $payrollId = $request->input('data.payrollId');
+        $idType = $request->input('data.idType');
+        $idNumber = $request->input('data.idNumber');
+        $idImage = $request->input('data.idImage');
+        $email = $request->input('data.email');
+
+        $existingClient = NewClientModel::query()
+            ->where('ExtClientIDA', $payrollId)
+            ->first();
+
+        if($existingClient){
+            return response()->json([
+                'message' => 'Payroll Id already exists'
+            ], 422);
+        }
+
+
+        $client = new NewClientModel();
+        $client->ClientTypeStr = $clientType;
+        $client->Surname = $surName;
+        $client->Firstname = $firstName;
+        $client->Photo = $picture;
+        $client->Tel1 = $phoneNumber;
+        $client->ExtClientIDA = $payrollId;
+        $client->IDType = $idType;
+        $client->ClientID = $idNumber;
+        $client->IDPhoto = $idImage;
+        $client->Email = $email;
+        $client->DateEnrolled = date('Y-m-d H:i:s');
+
+        Http::get('https://sms.arkesel.com/sms/api', [
+            'action' => 'send-sms',
+            'api_key' => 'cE9QRUdCakRKdW9LQ3lxSXF6dD0=',
+            'to' => $client->Tel1,
+            'from' => 'Sycasane',
+            'sms' => "Your application is being processed we will notify you once it's done"
+        ]);
+
+        $client->save();
+
+        return response()->json([
+            'message' => 'Application received'
+        ]);
+
+    }
+
     public function sendPasswordToAgent(Request $request)
     {
         $phoneNumber = $request->input('data.phoneNumber');
