@@ -68,7 +68,6 @@ class ClientController extends Controller
         $surName = $request->input('data.surname');
         $phoneNumber = $request->input('data.phonenumber');
         $picture = $request->input('data.picture');
-        $clientType = $request->input('data.clienttype');
         $payrollId = $request->input('data.payrollId');
         $idType = $request->input('data.idType');
         $idNumber = $request->input('data.idNumber');
@@ -87,7 +86,6 @@ class ClientController extends Controller
 
 
         $client = new NewClientModel();
-        $client->ClientTypeStr = $clientType;
         $client->Surname = $surName;
         $client->Firstname = $firstName;
         $client->Photo = $picture;
