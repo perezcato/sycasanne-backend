@@ -97,6 +97,11 @@ class ClientController extends Controller
         $idNumber = $request->input('data.idNumber');
         $idImage = $request->input('data.idImage');
         $email = $request->input('data.email');
+        $dob = $request->input('data.dob');
+        $sex = $request->input('data.sex');
+        $kin = $request->input('data.kin');
+        $kinContact = $request->input('data.kinContact');
+
 
         $existingClient = NewClientModel::query()
             ->where('ExtClientIDA', $payrollId)
@@ -118,6 +123,10 @@ class ClientController extends Controller
         $client->IDType = $idType;
         $client->ClientID = $idNumber;
         $client->IDPhoto = $idImage;
+        $client->Sex = $sex;
+        $client->DoB = $dob;
+        $client->NextOfKin = $kin;
+        $client->NextOfKinContact = $kinContact;
         $client->Email = $email;
         $client->DateEnrolled = date('Y-m-d H:i:s');
 
