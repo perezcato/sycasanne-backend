@@ -32,6 +32,4 @@ class User extends Authenticatable
     {
         return User::select('MyIndex','UserName','Userpass')->get();
     }
-
-
 }

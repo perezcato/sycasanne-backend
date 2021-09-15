@@ -19,6 +19,29 @@ use Illuminate\Support\Str;
 
 class ClientController extends Controller
 {
+    public function loginClient(Request $request)
+    {
+        $phoneNumber = $request->input('data.phoneNumber');
+        $password = md5($request->input('data.password'));
+
+        $client = NewClientModel::query()
+            ->where('Tel1', $phoneNumber)
+            ->where('LoginPASS', $password)
+            ->select('Tel1','Email','ClientIndex','Photo','Firstname','Surname')
+            ->first();
+
+        if(!$client){
+            return response()->json([
+                'error' => 'Invalid telephone/password'
+            ], 401);
+        }
+
+        return response()->json([
+            'client' => $client
+        ], 200);
+
+    }
+
     public function registerExistingClient(Request $request)
     {
         $clientId = $request->input('clientId');

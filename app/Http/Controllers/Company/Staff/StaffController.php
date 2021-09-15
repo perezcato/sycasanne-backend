@@ -79,7 +79,6 @@ class StaffController extends Controller
 
         $password = Str::random(8);
 
-
         $agent->IsCERTIFIED = 1;
         $agent->IsALLOWED = 1;
         $agent->save();

@@ -27,6 +27,11 @@ Route::middleware(['db'])->group(function(){
     Route::post('/register/existing',[CompanyClient::class,'registerExistingClient']);
     Route::post('/register/new',[CompanyClient::class,'registerNewClient']);
 
+    Route::prefix('/client')->group(function(){
+        Route::post('/login', [CompanyClient::class, 'loginClient']);
+    });
+
+
     Route::prefix('/agent')->group(function (){
         Route::post('/existing',[CompanyClient::class,'sendPasswordToAgent']);
         Route::post('/login',[CompanyClient::class,'loginAgent']);
