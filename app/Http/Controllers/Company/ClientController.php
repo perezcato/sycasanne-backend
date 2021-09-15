@@ -6,6 +6,7 @@ use App\Http\Controllers\Controller;
 use App\Models\Auth\User;
 use App\Models\Company\AgentsModel;
 use App\Models\Company\AuthLogModel;
+use App\Models\Company\ClientLoanModel;
 use App\Models\Company\ClientModel;
 use App\Models\Company\LoanCommentModel;
 use App\Models\Company\LoansModel;
@@ -393,6 +394,31 @@ class ClientController extends Controller
 
         return response()->json([
            'message' => 'Loan Booked successfully'
+        ]);
+    }
+
+    public function clientBookLoan(Request $request){
+
+        $loanAmount = $request->input('data.amount');
+        $tenor = $request->input('data.tenor');
+        $purpose = $request->input('data.purpose');
+        $affordability = $request->input('data.affordability');
+        $clientId = $request->input('data.clientId');
+
+        $newLoan = new ClientLoanModel();
+
+        $newLoan->ClientREF = $clientId;
+        $newLoan->LoanAmount = $loanAmount;
+        $newLoan->Tenor = $tenor;
+        $newLoan->LoanPurpose = $purpose;
+        $newLoan->Affordability = $affordability;
+        $newLoan->DateRequested = date('Y-m-d H:i:s');
+        $newLoan->ELStateRef = 1;
+
+        $newLoan->save();
+
+        return response()->json([
+            'message' => 'Loan Booked successfully'
         ]);
     }
 
