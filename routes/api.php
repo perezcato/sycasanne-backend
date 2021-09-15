@@ -31,6 +31,7 @@ Route::middleware(['db'])->group(function(){
         Route::post('/login', [CompanyClient::class, 'loginClient']);
         Route::post('/loan/book', [CompanyClient::class, 'clientBookLoan']);
         Route::post('/change_password', [CompanyClient::class, 'clientChangePassword']);
+        Route::get('/loans', [CompanyClient::class, 'getClientLoans'])
     });
 
 

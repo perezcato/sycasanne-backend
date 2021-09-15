@@ -515,6 +515,20 @@ class ClientController extends Controller
         ]);
     }
 
+    public function getClientLoans(Request $request)
+    {
+        $clientId = $request->get('clientId');
+
+        $loans = ClientLoanModel::query()
+            ->select('Tenor','LoanAmount','DateRequested','MyLoanID', 'LoanPurpose', 'Affordability')
+            ->where('AgentID', $clientId)
+            ->get();
+
+        return response()->json([
+            'loans' => $loans
+        ]);
+    }
+
     public function getAgentDashboardOverview(Request $request)
     {
         $agentId = $request->get('agentId');
