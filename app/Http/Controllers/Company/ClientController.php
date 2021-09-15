@@ -461,7 +461,7 @@ class ClientController extends Controller
         if(!$client){
             return response()->json([
                 'message' => 'Invalid agent'
-            ]);
+            ], 404);
         }
 
         $client->LoginPass = $newPassword;
