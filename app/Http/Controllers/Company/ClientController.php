@@ -521,7 +521,7 @@ class ClientController extends Controller
 
         $loans = ClientLoanModel::query()
             ->select('Tenor','LoanAmount','DateRequested','MyLoanID', 'LoanPurpose', 'Affordability')
-            ->where('AgentID', $clientId)
+            ->where('ClientREF', $clientId)
             ->get();
 
         return response()->json([
