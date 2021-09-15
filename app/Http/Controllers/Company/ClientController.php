@@ -447,6 +447,31 @@ class ClientController extends Controller
         ]);
     }
 
+    public function clientChangePassword(Request $request)
+    {
+        $clientId = $request->input('data.clientId');
+        $oldPassword = md5($request->input('data.oldPassword'));
+        $newPassword = md5($request->input('data.newPassword'));
+
+        $client = NewClientModel::query()
+            ->where('ClientIndex', $clientId)
+            ->where('LoginPASS', $oldPassword)
+            ->first();
+
+        if(!$client){
+            return response()->json([
+                'message' => 'Invalid agent'
+            ]);
+        }
+
+        $client->LoginPass = $newPassword;
+        $client->save();
+
+        return response()->json([
+            'message' => 'Password Successfully Changed'
+        ]);
+    }
+
     public function getLoanTypes (){
         $loanTypes = DB::table('agentloantypes')
             ->get();

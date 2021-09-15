@@ -30,6 +30,7 @@ Route::middleware(['db'])->group(function(){
     Route::prefix('/client')->group(function(){
         Route::post('/login', [CompanyClient::class, 'loginClient']);
         Route::post('/loan/book', [CompanyClient::class, 'clientBookLoan']);
+        Route::post('/change_password', [CompanyClient::class, 'clientChangePassword']);
     });
 
 
