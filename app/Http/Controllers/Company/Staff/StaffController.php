@@ -94,7 +94,7 @@ class StaffController extends Controller
         $loanID = $request->get('loanid');
 
         $loans = LoansModel::query()
-            ->select('Tenor','Amt','ApplicDate','LApplicIndex','ClientRef')
+            ->select('Tenor','Amt','ApplicDate','LApplicIndex','ClientRef','LoanPurpose','Affordability')
             ->where('LApplicIndex', 'LIKE' ,"%{$loanID}%")
             ->where('LStateRef', 1)
             ->with(['client' => function($query){
@@ -112,7 +112,7 @@ class StaffController extends Controller
         $loanID = $request->get('loanid');
 
         $loans = LoansModel::query()
-            ->select('Tenor','Amt','ApplicDate','LApplicIndex','ClientRef')
+            ->select('Tenor','Amt','ApplicDate','LApplicIndex','ClientRef','LoanPurpose','Affordability')
             ->where('LApplicIndex', 'LIKE' ,"%{$loanID}%")
             ->with(['client' => function($query){
                 $query->select('ClientIndex','Firstname', 'Surname','Tel1');
