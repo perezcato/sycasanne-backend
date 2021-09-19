@@ -4,6 +4,7 @@ namespace App\Http\Controllers\Company\Staff;
 
 use App\Http\Controllers\Controller;
 use App\Models\Company\AgentsModel;
+use App\Models\Company\LoansModel;
 use App\Models\Company\NewLoanModel;
 use App\Models\Company\Staff\UsersModel;
 use Illuminate\Http\Request;
@@ -92,9 +93,13 @@ class StaffController extends Controller
     {
         $loanID = $request->get('loanid');
 
-        $loans = DB::table('loans')
+        $loans = LoansModel::query()
+            ->select('Tenor','Amt','ApplicDate','LApplicIndex','ClientRef')
             ->where('LApplicIndex', 'LIKE' ,"%{$loanID}%")
             ->where('LStateRef', 1)
+            ->with(['client' => function($query){
+                $query->select('ClientIndex','Firstname', 'Surname','Tel1');
+            },])
             ->get();
 
         return response()->json([
@@ -106,8 +111,12 @@ class StaffController extends Controller
     {
         $loanID = $request->get('loanid');
 
-        $loans = DB::table('loans')
+        $loans = LoansModel::query()
+            ->select('Tenor','Amt','ApplicDate','LApplicIndex','ClientRef')
             ->where('LApplicIndex', 'LIKE' ,"%{$loanID}%")
+            ->with(['client' => function($query){
+                $query->select('ClientIndex','Firstname', 'Surname','Tel1');
+            },])
             ->get();
 
         return response()->json([
@@ -129,7 +138,7 @@ class StaffController extends Controller
             ], 404);
         }
 
-        $loan->lStateRef = 4;
+        $loan->lStateRef = 3;
         $loan->save();
 
         return response()->json([
